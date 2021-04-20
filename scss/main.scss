@@ -46,3 +46,23 @@ nav {
     }
   }
 }
+/////
+h1 {
+  font-family: "TT-Norms-Light";
+  color: map-get($colors, stone);
+}
+.intro_h1 {
+  grid-area: header;
+}
+.intro_p {
+  grid-area: info;
+}
+.intro {
+  background-color: greenyellow;
+  display: grid;
+  grid-template-columns: 2.7vw 11.1vw 11.1vw 11.1vw 11.1vw 11.1vw 11.1vw 11.1vw 11.1vw 2.7vw;
+  grid-template-rows: auto;
+  grid-template-areas:
+    ". . header header header header header header . ."
+    ". . . info info info info info . .";
+}

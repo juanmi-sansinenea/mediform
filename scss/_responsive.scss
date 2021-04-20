@@ -26,6 +26,9 @@
           height: map-get($nav-heights, xl);
           font-size: map-get($font-sizes-xl, p);
         }
+        h1 {
+            font-size: map-get($font-sizes-xl, h1);
+        }
       }
     }
   }

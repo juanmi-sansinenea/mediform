@@ -82,6 +82,9 @@ table {
     height: 179px;
     font-size: 20px;
   }
+  h1 {
+    font-size: 80px;
+  }
 }
 
 @font-face {
@@ -142,5 +145,35 @@ nav #menu-right ul {
 
 nav #menu-right ul li {
   padding-left: 2.5rem;
+}
+
+h1 {
+  font-family: "TT-Norms-Light";
+  color: #737B82;
+}
+
+.intro_h1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 6;
+  grid-area: header;
+}
+
+.intro_p {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 5;
+  grid-area: info;
+}
+
+.intro {
+  background-color: greenyellow;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2.7vw 11.1vw 11.1vw 11.1vw 11.1vw 11.1vw 11.1vw 11.1vw 11.1vw 2.7vw;
+      grid-template-columns: 2.7vw 11.1vw 11.1vw 11.1vw 11.1vw 11.1vw 11.1vw 11.1vw 11.1vw 2.7vw;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: ". . header header header header header header . ." ". . . info info info info info . .";
 }
 /*# sourceMappingURL=main.css.map */
