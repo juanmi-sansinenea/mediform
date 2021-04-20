@@ -65,6 +65,53 @@ table {
 body {
   font-family: "TT-Norms-Medium";
   margin: 0;
-  color: #636951;
+  color: #737B82;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 180px;
+  background-color: cyan;
+}
+
+nav #menu-left {
+  width: 45vw;
+  margin-left: 2.78vw;
+}
+
+nav #menu-left ul {
+  width: 35vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav #logo {
+  height: 70px;
+}
+
+nav #menu-right {
+  width: 11vw;
+  margin-right: 2.78vw;
+}
+
+nav #menu-right ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=main.css.map */

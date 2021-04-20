@@ -1,19 +1,49 @@
 @import "./reset";
 @import "./variables";
 @font-face {
-    font-family: "TT-Norms-Light";
-    src: url(../fonts/TT-Norms-Light.woff2) format("woff2"),
+  font-family: "TT-Norms-Light";
+  src: url(../fonts/TT-Norms-Light.woff2) format("woff2"),
     url(../fonts/TT-Norms-Light.woff) format("woff");
 }
 @font-face {
-    font-family: "TT-Norms-Medium";
-    src: url(../fonts/TT-Norms-Medium.woff2) format("woff2"),
+  font-family: "TT-Norms-Medium";
+  src: url(../fonts/TT-Norms-Medium.woff2) format("woff2"),
     url(../fonts/TT-Norms-Medium.woff) format("woff");
 }
 
 ///
 body {
-    font-family: "TT-Norms-Medium";
-    margin: 0;
-    color: map-get($colors, forest)
+  font-family: "TT-Norms-Medium";
+  margin: 0;
+  color: map-get($colors, stone);
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 180px;
+  background-color: cyan;
+  #menu-left {
+    width: 45vw;
+    margin-left: 2.78vw; // 1 4 4 4 4 4 4 4 4 1
+    ul {
+        width: 35vw;
+        display: flex;
+        justify-content: space-between;
+      }
+  }
+  #logo {
+    height: 70px;
+  }
+  #menu-right {
+    width: 11vw;
+    margin-right: 2.78vw; // 1 4 4 4 4 4 4 4 4 1
+    ul {
+        display: flex;
+        justify-content: space-between;
+      }
+  }
+  
+
+
 }

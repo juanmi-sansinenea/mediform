@@ -1,8 +1,49 @@
 $colors: (
-  "forest": #636951,
-  "secondary": #e233ff,
-  "middle-grey": rgb(78, 78, 78),
-  "light-grey": rgb(228, 228, 228),
-  "dark-grey": #333,
+    "steel": #50565B,
+    "stone": #737B82,
+    "forest": #636951,
+    "lila": #5C3C78,
+    "ocean": #1E505F,
+    "rain": #3B4C5B,
+    "snow": #E9EAE5,
 );
+
+
+$media-widths: (
+  "sm": 0px,
+  "md": 799px,
+  "lg": 1023px,
+  "xl": 1439px,
+);
+
+//--------FONT SIZES---------------
+$font-sizes-sm: (
+    "h1": 36px,
+    "h2": 30px,
+    "h3": 24px,
+    "p": 20px,
+    "sm": 18px,
+);
+$font-sizes-md: (
+    "h1": 5vw,
+    "h2": 2.5vw,
+    "h3": 2vw,
+    "p": 1.7vw,
+    "sm": 1.4vw,
+);
+$font-sizes-lg: (
+    "h1": 5vw,
+    "h2": 2.5vw,
+    "h3": 2vw,
+    "p": 1.7vw,
+    "sm": 1.4vw,
+);
+$font-sizes-xl: (
+    "h1": 80px,
+    "h2": 42px,
+    "h3": 30px,
+    "p": 24px,
+    "sm": 20px,
+);
+//-------
 
