@@ -15,11 +15,23 @@ $media-widths: (
   "lg": 1023px,
   "xl": 1439px,
 );
-$nav-heights: (
-    "sm": 87px,
-    "md": 87px,
+$vert-heights: (
+    "sm": 90px,
+    "md": 90px,
     "lg": 120px,
-    "xl": 179px,
+    "xl": 180px,
+);
+$vert-heights-half: (
+    "sm": 45px,
+    "md": 45px,
+    "lg": 60px,
+    "xl": 90px,
+);
+$vert-heights-quarter: (
+    "sm": 22px,
+    "md": 22px,
+    "lg": 30px,
+    "xl": 45px,
 );
 
 //--------FONT SIZES---------------
@@ -52,4 +64,10 @@ $font-sizes-xl: (
     "sm": 20px,
 );
 //-------
-
+$line-heights: (
+    "h1": 1.2,
+    "h2": 1.2,
+    "h3": 1.2,
+    "p": 1.3,
+    "sm": 1.3,
+);

@@ -2,32 +2,73 @@
 @media (min-width: map-get($media-widths, sm)) {
   nav {
     background-color: rgb(255, 255, 128);
-    height: map-get($nav-heights, sm);
+    height: map-get($vert-heights, sm);
     font-size: map-get($font-sizes-sm, p);
+  }
+  h1 {
+    font-size: map-get($font-sizes-sm, h1);
+    line-height: map-get($line-heights, h1);
+  }
+  p {
+    font-size: map-get($font-sizes-sm, p);
+    line-height: map-get($line-heights, p);
   }
   //TABLET md
   @media (min-width: map-get($media-widths, md)) {
     nav {
       background-color: rgb(205, 255, 105);
-      height: map-get($nav-heights, md);
+      height: map-get($vert-heights, md);
       font-size: map-get($font-sizes-md, p);
+    }
+    h1 {
+      font-size: map-get($font-sizes-md, h1);
+      line-height: map-get($line-heights, h1);
+    }
+    p {
+      font-size: map-get($font-sizes-md, p);
+      line-height: map-get($line-heights, p);
     }
     //DESKTOP lg
     @media (min-width: map-get($media-widths, lg)) {
       nav {
         background-color: rgb(183, 254, 183);
-        height: map-get($nav-heights, lg);
+        height: map-get($vert-heights, lg);
         font-size: map-get($font-sizes-lg, p);
+      }
+      h1 {
+        font-size: map-get($font-sizes-lg, h1);
+        line-height: map-get($line-heights, h1);
+      }
+      p {
+        font-size: map-get($font-sizes-lg, p);
+        line-height: map-get($line-heights, p);
       }
       //HD xl
       @media (min-width: map-get($media-widths, xl)) {
         nav {
+          position: fixed;
+          top: 0;
+          z-index: 10;
           background-color: rgb(183, 255, 255);
-          height: map-get($nav-heights, xl);
+          height: map-get($vert-heights, xl);
           font-size: map-get($font-sizes-xl, p);
         }
+        .content {
+          position: relative;
+          top: map-get($vert-heights, xl);
+          scroll-behavior: smooth;
+        }
+        .space {
+            height: map-get($vert-heights, xl);
+            width: 100vw;
+        }
         h1 {
-            font-size: map-get($font-sizes-xl, h1);
+          font-size: map-get($font-sizes-xl, h1);
+          line-height: map-get($line-heights, h1);
+        }
+        p {
+          font-size: map-get($font-sizes-xl, p);
+          line-height: map-get($line-heights, p);
         }
       }
     }
