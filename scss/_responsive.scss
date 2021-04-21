@@ -3,7 +3,7 @@
   nav {
     background-color: rgb(255, 255, 128);
     height: map-get($vert-heights, sm);
-    font-size: map-get($font-sizes-sm, p);
+    font-size: map-get($font-sizes-sm, small);
   }
   h1 {
     font-size: map-get($font-sizes-sm, h1);
@@ -18,7 +18,7 @@
     nav {
       background-color: rgb(205, 255, 105);
       height: map-get($vert-heights, md);
-      font-size: map-get($font-sizes-md, p);
+      font-size: map-get($font-sizes-md, small);
     }
     h1 {
       font-size: map-get($font-sizes-md, h1);
@@ -33,7 +33,7 @@
       nav {
         background-color: rgb(183, 254, 183);
         height: map-get($vert-heights, lg);
-        font-size: map-get($font-sizes-lg, p);
+        font-size: map-get($font-sizes-lg, small);
       }
       h1 {
         font-size: map-get($font-sizes-lg, h1);
@@ -51,7 +51,7 @@
           z-index: 10;
           background-color: rgb(183, 255, 255);
           height: map-get($vert-heights, xl);
-          font-size: map-get($font-sizes-xl, p);
+          font-size: map-get($font-sizes-xl, small);
         }
         .content {
           position: relative;
