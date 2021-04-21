@@ -86,9 +86,27 @@ table {
 
 @media (min-width: 0px) and (min-width: 799px) and (min-width: 1023px) {
   nav {
+    position: fixed;
+    top: 0;
+    z-index: 10;
     background-color: #b7feb7;
     height: 120px;
     font-size: 1.38vw;
+  }
+  .bg-illu {
+    width: 33.33vw;
+    position: absolute;
+    left: 58.28vw;
+    top: 120px;
+  }
+  .content {
+    position: relative;
+    top: 120px;
+    scroll-behavior: smooth;
+  }
+  .space {
+    height: 120px;
+    width: 100vw;
   }
   h1 {
     font-size: 5.71vw;
@@ -102,15 +120,14 @@ table {
 
 @media (min-width: 0px) and (min-width: 799px) and (min-width: 1023px) and (min-width: 1439px) {
   nav {
-    position: fixed;
-    top: 0;
-    z-index: 10;
     background-color: #b7ffff;
     height: 180px;
     font-size: 20px;
   }
+  .bg-illu {
+    top: 180px;
+  }
   .content {
-    position: relative;
     top: 180px;
     scroll-behavior: smooth;
   }
