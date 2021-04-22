@@ -39,9 +39,9 @@
         font-size: map-get($font-sizes-lg, small);
       }
       .bg-illu {
-        width: 33.33vw;
+        width: 36vw;
         position: absolute;
-        left: 58.28vw;
+        left: calc(2vw + 4*12vw);
         top: map-get($vert-heights, lg);
       }
       .content {
@@ -65,22 +65,15 @@
       //HD xl
       @media (min-width: map-get($media-widths, xl)) {
         nav {
-          //position: fixed;
-          //top: 0;
-          //z-index: 10;
           background-color: rgb(183, 255, 255);
           height: map-get($vert-heights, xl);
           font-size: map-get($font-sizes-xl, small);
         }
         .bg-illu {
-          //width: 33.33vw;
-          //position: absolute;
-          //left: 58.28vw;
           top: map-get($vert-heights, xl);
           
         }
         .content {
-          //position: relative;
           top: map-get($vert-heights, xl);
           scroll-behavior: smooth;
         }

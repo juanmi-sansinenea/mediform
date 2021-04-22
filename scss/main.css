@@ -94,9 +94,9 @@ table {
     font-size: 1.38vw;
   }
   .bg-illu {
-    width: 33.33vw;
+    width: 36vw;
     position: absolute;
-    left: 58.28vw;
+    left: calc(2vw + 4*12vw);
     top: 120px;
   }
   .content {
@@ -175,7 +175,7 @@ nav {
 }
 
 nav #menu-left {
-  margin-left: 2.78vw;
+  margin-left: 2vw;
 }
 
 nav #menu-left ul {
@@ -193,7 +193,7 @@ nav #logo {
 }
 
 nav #menu-right {
-  margin-right: 2.78vw;
+  margin-right: 2vw;
 }
 
 nav #menu-right ul {
@@ -235,10 +235,61 @@ h1 {
 .intro {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2.7vw 11.1vw 11.1vw 11.1vw 11.1vw 11.1vw 11.1vw 11.1vw 11.1vw 2.7vw;
-      grid-template-columns: 2.7vw 11.1vw 11.1vw 11.1vw 11.1vw 11.1vw 11.1vw 11.1vw 11.1vw 2.7vw;
+  -ms-grid-columns: 2vw 12vw 12vw 12vw 12vw 12vw 12vw 12vw 12vw 2vw;
+      grid-template-columns: 2vw 12vw 12vw 12vw 12vw 12vw 12vw 12vw 12vw 2vw;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
       grid-template-areas: ". . header header header header header header . ." ". . down-arrow . . . . . . ." ". . . info info info info info . .";
+}
+
+.teaser-small {
+  width: calc(3 * 12vw + -1vw);
+  height: calc(3 * 12vw + -1vw);
+}
+
+.reconstructive {
+  background-color: #D7DACD;
+  color: #636951;
+      justify-self: start;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: A;
+}
+
+.aesthetic {
+  background-color: #D6D1DB;
+  color: #5C3C78;
+      justify-self: end;
+  -ms-grid-row: 1;
+  -ms-grid-column: 8;
+  grid-area: B;
+}
+
+.general {
+  background-color: #C7D9DD;
+  color: #1E505F;
+      justify-self: start;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: C;
+}
+
+.hand {
+  background-color: #CCD3D6;
+  color: #3B4C5B;
+      justify-self: end;
+  -ms-grid-row: 2;
+  -ms-grid-column: 8;
+  grid-area: D;
+}
+
+.teasers {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2vw 12vw 12vw 12vw 12vw 12vw 12vw 12vw 12vw 2vw;
+      grid-template-columns: 2vw 12vw 12vw 12vw 12vw 12vw 12vw 12vw 12vw 2vw;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: ". . A . . . . B . ." ". . C . . . . D . .";
 }
 /*# sourceMappingURL=main.css.map */

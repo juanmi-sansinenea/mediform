@@ -17,7 +17,6 @@ body {
   font-family: "TT-Norms-Medium";
   margin: 0;
   color: map-get($colors, steel);
-
 }
 nav {
   //font-size: (responsive)
@@ -27,7 +26,7 @@ nav {
   width: 100vw;
   //height: (responsive)
   #menu-left {
-    margin-left: 2.78vw; // 1 4 4 4 4 4 4 4 4 1
+    margin-left: 2vw; // 1 4 4 4 4 4 4 4 4 1
     ul {
       display: flex;
       li {
@@ -39,7 +38,7 @@ nav {
     height: 50%;
   }
   #menu-right {
-    margin-right: 2.78vw; // 1 4 4 4 4 4 4 4 4 1
+    margin-right: 2vw; // 1 4 4 4 4 4 4 4 4 1
     ul {
       display: flex;
       li {
@@ -60,16 +59,55 @@ h1 {
   grid-area: info;
 }
 .down-arrow {
-    width: 34px;
-    grid-area: down-arrow;
+  width: 34px;
+  grid-area: down-arrow;
 }
 .intro {
   display: grid;
-  grid-template-columns: 2.7vw 11.1vw 11.1vw 11.1vw 11.1vw 11.1vw 11.1vw 11.1vw 11.1vw 2.7vw;
+  grid-template-columns: 2vw 12vw 12vw 12vw 12vw 12vw 12vw 12vw 12vw 2vw;
   grid-template-rows: auto;
   grid-template-areas:
     ". . header header header header header header . ."
     ". . down-arrow . . . . . . ."
     ". . . info info info info info . .";
 }
-
+.teaser-small {
+  width: calc(3 * 12vw + -1vw);
+  height: calc(3 * 12vw + -1vw);
+}
+.reconstructive {
+  background-color: map-get($colors, forest-tint);
+  color: map-get($colors, forest);
+  //left: calc(2vw + 12vw);
+  justify-self: start;
+  grid-area: A;
+}
+.aesthetic {
+  background-color: map-get($colors, lila-tint);
+  color: map-get($colors, lila);
+  //left: calc(2vw + 4*12vw + 1vw);
+  justify-self: end;
+  grid-area: B;
+}
+.general {
+  background-color: map-get($colors, ocean-tint);
+  color: map-get($colors, ocean);
+  //left: calc(2vw + 12vw);
+  justify-self: start;
+  grid-area: C;
+}
+.hand {
+  background-color: map-get($colors, rain-tint);
+  color: map-get($colors, rain);
+  //left: calc(2vw + 4*12vw + 1vw);
+  justify-self: end;
+  grid-area: D;
+}
+.teasers {
+  display: grid;
+  grid-template-columns: 2vw 12vw 12vw 12vw 12vw 12vw 12vw 12vw 12vw 2vw;
+  grid-template-rows: auto;
+  grid-template-areas:
+    ". . A . . . . B . ."
+    ". . C . . . . D . .";
+}
