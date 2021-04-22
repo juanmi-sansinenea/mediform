@@ -71,10 +71,7 @@ h1 {
     ". . down-arrow . . . . . . ."
     ". . . info info info info info . .";
 }
-.teaser-small {
-  width: calc(3 * 12vw + -1vw);
-  height: calc(3 * 12vw + -1vw);
-}
+
 .reconstructive {
   background-color: map-get($colors, forest-tint);
   color: map-get($colors, forest);
@@ -110,4 +107,13 @@ h1 {
   grid-template-areas:
     ". . A . . . . B . ."
     ". . C . . . . D . .";
+}
+.teaser-small {
+  width: calc(3 * 12vw + -1vw + -2*3vw); // make it 1vw narrower than 3 columns and compensate for the padding
+  height: calc(3 * 12vw + -1vw + -2*3vw); // make it 1vw narrower than 3 columns and compensate for the padding
+  padding: 3vw;
+  
+}
+.arrow-right {
+  width: 6vw;
 }

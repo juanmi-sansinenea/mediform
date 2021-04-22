@@ -35,6 +35,7 @@
         top: 0;
         z-index: 10;
         //background-color: rgb(183, 254, 183);
+        background-color: white;
         height: map-get($vert-heights, lg);
         font-size: map-get($font-sizes-lg, small);
       }
@@ -63,6 +64,19 @@
         line-height: map-get($line-heights, p);
         padding-bottom: map-get($vert-heights, lg);
       }
+      .reconstructive {
+        margin-bottom: map-get($vert-heights-quarter, lg );
+      }
+      .aesthetic {
+        margin-bottom: map-get($vert-heights-quarter, lg );
+      }
+      h2 {
+        font-family: "TT-Norms-Light";
+        font-size: map-get($font-sizes-lg, h2);
+        line-height: map-get($line-heights, h2);
+        margin-bottom: map-get($vert-heights-quarter, lg )
+      }
+      
       //HD xl
       @media (min-width: map-get($media-widths, xl)) {
         nav {
@@ -89,6 +103,21 @@
           font-size: map-get($font-sizes-xl, p);
           line-height: map-get($line-heights, p);
           padding-bottom: map-get($vert-heights, xl);
+        }
+        .reconstructive {
+          margin-bottom: map-get($vert-heights-quarter, xl );
+        }
+        .aesthetic {
+          margin-bottom: map-get($vert-heights-quarter, xl );
+        }
+        h2 {
+          font-family: "TT-Norms-Light";
+          font-size: map-get($font-sizes-xl, h2);
+          line-height: map-get($line-heights, h2);
+        }
+        small {
+          font-size: map-get($font-sizes-xl, small);
+          line-height: map-get($line-heights, small);
         }
       }
     }
