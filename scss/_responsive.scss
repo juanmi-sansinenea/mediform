@@ -1,7 +1,7 @@
 //MOBILE sm
 @media (min-width: map-get($media-widths, sm)) {
   nav {
-    background-color: rgb(255, 255, 128);
+    //background-color: rgb(255, 255, 128);
     height: map-get($vert-heights, sm);
     font-size: map-get($font-sizes-sm, small);
   }
@@ -16,7 +16,7 @@
   //TABLET md
   @media (min-width: map-get($media-widths, md)) {
     nav {
-      background-color: rgb(205, 255, 105);
+      //background-color: rgb(205, 255, 105);
       height: map-get($vert-heights, md);
       font-size: map-get($font-sizes-md, small);
     }
@@ -34,14 +34,14 @@
         position: fixed;
         top: 0;
         z-index: 10;
-        background-color: rgb(183, 254, 183);
+        //background-color: rgb(183, 254, 183);
         height: map-get($vert-heights, lg);
         font-size: map-get($font-sizes-lg, small);
       }
       .bg-illu {
         width: 36vw;
         position: absolute;
-        left: calc(2vw + 4*12vw);
+        left: calc(2vw + 4 * 12vw);
         top: map-get($vert-heights, lg);
       }
       .content {
@@ -61,17 +61,17 @@
       p {
         font-size: map-get($font-sizes-lg, p);
         line-height: map-get($line-heights, p);
+        padding-bottom: map-get($vert-heights, lg);
       }
       //HD xl
       @media (min-width: map-get($media-widths, xl)) {
         nav {
-          background-color: rgb(183, 255, 255);
+          //background-color: rgb(183, 255, 255);
           height: map-get($vert-heights, xl);
           font-size: map-get($font-sizes-xl, small);
         }
         .bg-illu {
           top: map-get($vert-heights, xl);
-          
         }
         .content {
           top: map-get($vert-heights, xl);
@@ -88,6 +88,7 @@
         p {
           font-size: map-get($font-sizes-xl, p);
           line-height: map-get($line-heights, p);
+          padding-bottom: map-get($vert-heights, xl);
         }
       }
     }
