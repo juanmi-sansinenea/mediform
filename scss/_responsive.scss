@@ -1,6 +1,10 @@
 //MOBILE sm
 @media (min-width: map-get($media-widths, sm)) {
   nav {
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 10;
     display: flex;
     background-color: white;
     height: vert-heights(sm);
@@ -13,23 +17,37 @@
     }
     #logo {
       height: 50%;
+      //margin-left: 3vw;
     }
     .burger {
-      width: 6vw;
+      width: 9vw;
     }
   }
   .bg-illu {
-    width: 48vw;
+    width: 60vw;
     position: absolute;
-    left: calc(50vw + -2vw);
-    top: vert-heights(lg);
+    left: calc(40vw);
+    top: vert-heights(sm);
     z-index: -10;
+  }
+  .content {
+    position: relative;
+    top: vert-heights(sm);
+    scroll-behavior: smooth;
+  }
+  .space {
+    height: vert-heights(sm);
+    width: 100vw;
   }
   h1 {
     font-size: font-sizes-sm(h1);
     line-height: line-heights(h1);
     font-family: "TT-Norms-Light";
     color: colors(stone);
+  }
+  p {
+    font-size: font-sizes-sm(p);
+    line-height: line-heights(p);
   }
   .intro_h1 {
     grid-area: header;
@@ -38,12 +56,8 @@
     grid-area: info;
   }
   .arrow-down {
-    width: 34px;
+    width: vert-heights-quarter(sm);
     grid-area: down-arrow;
-  }
-  p {
-    font-size: font-sizes-sm(p);
-    line-height: line-heights(p);
   }
   .reconstructive {
     background-color: colors(forest-tint);
@@ -70,7 +84,20 @@
     grid-area: D;
   }
   .arrow-right {
-    width: 6vw;
+    width: 4vw;
+  }
+  h2 {
+    font-family: "TT-Norms-Light";
+    font-size: font-sizes-sm(h2);
+    line-height: line-heights(h2);
+    margin-bottom: vert-heights-quarter(sm);
+  }
+  small {
+    font-size: font-sizes-sm(small);
+    line-height: line-heights(small);
+  }
+  .teasers {
+    margin-bottom: vert-heights(sm);
   }
 
   //TABLET md
@@ -79,9 +106,19 @@
       height: vert-heights(md);
       font-size: font-sizes-md(small);
     }
+    #logo {
+      margin-left: 0;
+    }
+    .content {
+      top: vert-heights(md);
+    }
+    .space {
+      height: vert-heights(md);
+    }
     .bg-illu {
-      width: 36vw;
-      left: calc(2vw + 4 * 12vw);
+      top: vert-heights(md);
+      width: 40vw;
+      left: calc(55vw);
     }
 
     h1 {
@@ -91,10 +128,27 @@
     p {
       font-size: font-sizes-md(p);
       line-height: line-heights(p);
+      padding-bottom: vert-heights(md);
+    }
+    .arrow-down {
+      width: vert-heights-quarter(md);
+    }
+    .reconstructive {
+      margin-bottom: vert-heights-quarter(md);
+    }
+    .aesthetic {
+      margin-bottom: vert-heights-quarter(md);
+    }
+    h2 {
+      font-size: font-sizes-md(h2);
+      margin-bottom: vert-heights-quarter(md);
+    }
+    small {
+      font-size: font-sizes-md(small);
     }
     .intro {
       display: grid;
-      grid-template-columns: 2vw 12vw 12vw 12vw 12vw 12vw 12vw 12vw 12vw 2vw;
+      grid-template-columns: 4vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 4vw;
       grid-template-rows: auto;
       grid-template-areas:
         ". . header header header header header header . ."
@@ -103,32 +157,30 @@
     }
     .teasers {
       display: grid;
-      grid-template-columns: 2vw 12vw 12vw 12vw 12vw 12vw 12vw 12vw 12vw 2vw;
+      grid-template-columns: 4vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 4vw;
       grid-template-rows: auto;
       grid-template-areas:
         ". . A . . . . B . ."
         ". . C . . . . D . .";
+      margin-bottom: vert-heights(md);
     }
     .teaser-small {
       width: calc(
-        3 * 12vw + -1vw + -2 * 3vw
+        3 * 11.5vw + -1vw + -2 * 3vw
       ); // make it 1vw narrower than 3 columns and compensate for the padding
       height: calc(
-        3 * 12vw + -1vw + -2 * 3vw
+        3 * 11.5vw + -1vw + -2 * 3vw
       ); // make it 1vw narrower than 3 columns and compensate for the padding
       padding: 3vw;
     }
     //DESKTOP lg
     @media (min-width: map-get($media-widths, lg)) {
       nav {
-        position: fixed;
-        top: 0;
-        z-index: 10;
         justify-content: space-between;
         height: vert-heights(lg);
         font-size: font-sizes-lg(small);
         #menu-left {
-          margin-left: 2vw; // 1 4 4 4 4 4 4 4 4 1
+          margin-left: 4vw;
           ul {
             display: flex;
             li {
@@ -138,7 +190,7 @@
           }
         }
         #menu-right {
-          margin-right: 2vw; // 1 4 4 4 4 4 4 4 4 1
+          margin-right: 4vw;
           ul {
             display: flex;
             li {
@@ -151,16 +203,15 @@
           display: none;
         }
       }
-      .content {
-        position: relative;
+      .bg-illu {
         top: vert-heights(lg);
-        scroll-behavior: smooth;
+      }
+      .content {
+        top: vert-heights(lg);
       }
       .space {
         height: vert-heights(lg);
-        width: 100vw;
       }
-
       h1 {
         font-size: font-sizes-lg(h1);
         line-height: line-heights(h1);
@@ -170,6 +221,9 @@
         line-height: line-heights(p);
         padding-bottom: vert-heights(lg);
       }
+      .arrow-down {
+        width: vert-heights-quarter(lg);
+      }
       .reconstructive {
         margin-bottom: vert-heights-quarter(lg);
       }
@@ -177,14 +231,11 @@
         margin-bottom: vert-heights-quarter(lg);
       }
       h2 {
-        font-family: "TT-Norms-Light";
         font-size: font-sizes-lg(h2);
-        line-height: line-heights(h2);
         margin-bottom: vert-heights-quarter(lg);
       }
       small {
         font-size: font-sizes-lg(small);
-        line-height: line-heights(small);
       }
       .teasers {
         margin-bottom: vert-heights(lg);
@@ -197,7 +248,11 @@
           font-size: font-sizes-xl(small);
         }
         .bg-illu {
+          width: 600px;
+          position: absolute;
+          left: calc(55vw);
           top: vert-heights(xl);
+          z-index: -10;
         }
         .content {
           top: vert-heights(xl);
@@ -216,6 +271,9 @@
           line-height: line-heights(p);
           padding-bottom: vert-heights(xl);
         }
+        .arrow-down {
+          width: vert-heights-quarter(xl);
+        }
         .reconstructive {
           margin-bottom: vert-heights-quarter(xl);
         }
@@ -224,14 +282,39 @@
         }
         h2 {
           font-size: font-sizes-xl(h2);
-          line-height: line-heights(h2);
+          margin-bottom: vert-heights-quarter(lg);
         }
         small {
           font-size: font-sizes-xl(small);
-          line-height: line-heights(small);
+        }
+        .intro {
+          display: grid;
+          justify-content: center;
+          grid-template-columns: 200px 200px 200px 200px 200px 200px 200px 200px;
+          grid-template-rows: auto;
+          grid-template-areas:
+            ". header header header header header header ."
+            ". down-arrow . . . . . ."
+            ". . info info info info info .";
         }
         .teasers {
+          display: grid;
+          justify-content: center;
+          grid-template-columns: 200px 200px 200px 200px 200px 200px 200px 200px;
+          grid-template-rows: auto;
+          grid-template-areas:
+            ". A . . . . B ."
+            ". C . . . . D .";
           margin-bottom: vert-heights(xl);
+        }
+        .teaser-small {
+          width: calc(
+            3 * 200px + -1vw + -2 * 50px
+          ); // make it 1vw narrower than 3 columns and compensate for the padding
+          height: calc(
+            3 * 200px + -1vw + -2 * 50px
+          ); // make it 1vw narrower than 3 columns and compensate for the padding
+          padding: 50px;
         }
       }
     }

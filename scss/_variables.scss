@@ -19,8 +19,8 @@ $media-widths: (
   "xl": 1439px,
 );
 $vert-heights: (
-  "sm": 120px,
-  "md": 140px,
+  "sm": 90px,
+  "md": 120px,
   "lg": 160px,
   "xl": 180px,
 );
@@ -33,10 +33,8 @@ $vert-heights-half: (
 $vert-heights-quarter: (
   "sm": 22px,
   "md": 22px,
-  "lg": 2vw,
-  //30px,
-  "xl": 2vw,
-  //45px,
+  "lg": 30px,
+  "xl": 45px,
 );
 
 //--------FONT SIZES---------------
