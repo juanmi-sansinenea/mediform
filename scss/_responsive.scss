@@ -1,4 +1,4 @@
-//MOBILE sm
+//MOBILE (sm) --------------------------------------------------------------------------
 @media (min-width: map-get($media-widths, sm)) {
   nav {
     justify-content: space-between;
@@ -21,11 +21,11 @@
       display: none;
     }
     .burger {
-      height: 40%;
-      margin-right: 4vw;
+      height: 30%;
+      margin-right: 6vw;
       img {
         bottom: 0;
-        width: 20px;
+        width: 25px;
       }
     }
   }
@@ -127,20 +127,21 @@
     
   }
 
-  //TABLET md
+  //TABLET (md) -----------------------------------------------------------------------------
   @media (min-width: map-get($media-widths, md)) {
     nav {
       height: vert-heights(md);
       font-size: font-sizes-md(small);
+      .burger {
+        img {
+          width: 30px; 
+        }
+      }
     }
     #logo {
       margin-left: 0;
     }
-    .burger {
-      img {
-        width: 70px; /////////<<<<< why doesn't it apply it????
-      }
-    }
+
     .content {
       top: vert-heights(md);
     }
@@ -206,7 +207,7 @@
       ); // make it 1vw narrower than 3 columns and compensate for the padding
       padding: 3vw;
     }
-    //DESKTOP lg
+    //DESKTOP (lg) --------------------------------------------------------------------------
     @media (min-width: map-get($media-widths, lg)) {
       nav {
         justify-content: space-between;
@@ -275,7 +276,7 @@
         margin-bottom: vert-heights(lg);
       }
 
-      //HD xl
+      //HD (xl) --------------------------------------------------------------------------
       @media (min-width: map-get($media-widths, xl)) {
         nav {
           height: vert-heights(xl);
