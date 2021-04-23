@@ -1,17 +1,16 @@
 $colors: (
-    "steel": #50565B,
-    "stone": #737B82,
-    "forest": #636951,
-    "forest-tint": #D7DACD,
-    "lila": #5C3C78,
-    "lila-tint": #D6D1DB,
-    "ocean": #1E505F,
-    "ocean-tint": #C7D9DD,
-    "rain": #3B4C5B,
-    "rain-tint": #CCD3D6,
-    "snow": #E9EAE5,
+  "steel": #50565b,
+  "stone": #737b82,
+  "forest": #636951,
+  "forest-tint": #d7dacd,
+  "lila": #5c3c78,
+  "lila-tint": #d6d1db,
+  "ocean": #1e505f,
+  "ocean-tint": #c7d9dd,
+  "rain": #3b4c5b,
+  "rain-tint": #ccd3d6,
+  "snow": #e9eae5,
 );
-
 
 $media-widths: (
   "sm": 0px,
@@ -20,58 +19,90 @@ $media-widths: (
   "xl": 1439px,
 );
 $vert-heights: (
-    "sm": 90px,
-    "md": 90px,
-    "lg": 120px,
-    "xl": 180px,
+  "sm": 120px,
+  "md": 140px,
+  "lg": 160px,
+  "xl": 180px,
 );
 $vert-heights-half: (
-    "sm": 45px,
-    "md": 45px,
-    "lg": 60px,
-    "xl": 90px,
+  "sm": 45px,
+  "md": 45px,
+  "lg": 60px,
+  "xl": 90px,
 );
 $vert-heights-quarter: (
-    "sm": 22px,
-    "md": 22px,
-    "lg": 2vw,//30px,
-    "xl": 2vw,//45px,
+  "sm": 22px,
+  "md": 22px,
+  "lg": 2vw,
+  //30px,
+  "xl": 2vw,
+  //45px,
 );
 
 //--------FONT SIZES---------------
 $font-sizes-sm: (
-    "h1": 36px,
-    "h2": 30px,
-    "h3": 24px,
-    "p": 20px,
-    "small": 18px,
+  "h1": 36px,
+  "h2": 30px,
+  "h3": 24px,
+  "p": 20px,
+  "small": 18px,
 );
 $font-sizes-md: (
-    "h1": 5.71vw,
-    "h2": 3vw,
-    "h3": 2.14vw,
-    "p": 1.71vw,
-    "small": 1.38vw,
+  "h1": 5.71vw,
+  "h2": 3vw,
+  "h3": 2.14vw,
+  "p": 1.71vw,
+  "small": 1.38vw,
 );
 $font-sizes-lg: (
-    "h1": 5.71vw,
-    "h2": 3vw,
-    "h3": 2.14vw,
-    "p": 1.71vw,
-    "small": 1.38vw,
+  "h1": 5.71vw,
+  "h2": 3vw,
+  "h3": 2.14vw,
+  "p": 1.71vw,
+  "small": 1.38vw,
 );
 $font-sizes-xl: (
-    "h1": 80px,
-    "h2": 42px,
-    "h3": 30px,
-    "p": 24px,
-    "small": 20px,
+  "h1": 80px,
+  "h2": 42px,
+  "h3": 30px,
+  "p": 24px,
+  "small": 20px,
 );
 //-------
 $line-heights: (
-    "h1": 1.2,
-    "h2": 1.2,
-    "h3": 1.2,
-    "p": 1.3,
-    "small": 1.3,
+  "h1": 1.2,
+  "h2": 1.2,
+  "h3": 1.2,
+  "p": 1.3,
+  "small": 1.3,
 );
+@function colors($color) {
+  @return map-get($colors, $color);
+}
+@function media-widths($media-width) {
+  @return map-get($media-widths, $media-width);
+}
+@function vert-heights($vert-height) {
+  @return map-get($vert-heights, $vert-height);
+}
+@function vert-heights-half($vert-height-half) {
+  @return map-get($vert-heights-half, $vert-height-half);
+}
+@function vert-heights-quarter($vert-height-quarter) {
+  @return map-get($vert-heights-quarter, $vert-height-quarter);
+}
+@function font-sizes-sm($font-size-sm) {
+  @return map-get($font-sizes-sm, $font-size-sm);
+}
+@function font-sizes-md($font-size-md) {
+  @return map-get($font-sizes-md, $font-size-md);
+}
+@function font-sizes-lg($font-size-lg) {
+  @return map-get($font-sizes-lg, $font-size-lg);
+}
+@function font-sizes-xl($font-size-xl) {
+  @return map-get($font-sizes-xl, $font-size-xl);
+}
+@function line-heights($line-height) {
+  @return map-get($line-heights, $line-height);
+}

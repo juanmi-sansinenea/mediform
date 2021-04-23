@@ -1,32 +1,122 @@
 //MOBILE sm
 @media (min-width: map-get($media-widths, sm)) {
   nav {
-    //background-color: rgb(255, 255, 128);
-    height: map-get($vert-heights, sm);
-    font-size: map-get($font-sizes-sm, small);
+    display: flex;
+    background-color: white;
+    height: vert-heights(sm);
+    width: 100vw;
+    align-items: center;
+    ul {
+      li {
+        display: none;
+      }
+    }
+    #logo {
+      height: 50%;
+    }
+    .burger {
+      width: 6vw;
+    }
+  }
+  .bg-illu {
+    width: 48vw;
+    position: absolute;
+    left: calc(50vw + -2vw);
+    top: vert-heights(lg);
+    z-index: -10;
   }
   h1 {
-    font-size: map-get($font-sizes-sm, h1);
-    line-height: map-get($line-heights, h1);
+    font-size: font-sizes-sm(h1);
+    line-height: line-heights(h1);
+    font-family: "TT-Norms-Light";
+    color: colors(stone);
+  }
+  .intro_h1 {
+    grid-area: header;
+  }
+  .intro_p {
+    grid-area: info;
+  }
+  .arrow-down {
+    width: 34px;
+    grid-area: down-arrow;
   }
   p {
-    font-size: map-get($font-sizes-sm, p);
-    line-height: map-get($line-heights, p);
+    font-size: font-sizes-sm(p);
+    line-height: line-heights(p);
   }
+  .reconstructive {
+    background-color: colors(forest-tint);
+    color: map-get($colors, forest);
+    justify-self: start;
+    grid-area: A;
+  }
+  .aesthetic {
+    background-color: colors(lila-tint);
+    color: map-get($colors, lila);
+    justify-self: end;
+    grid-area: B;
+  }
+  .general {
+    background-color: colors(ocean-tint);
+    color: map-get($colors, ocean);
+    justify-self: start;
+    grid-area: C;
+  }
+  .hand {
+    background-color: colors(rain-tint);
+    color: map-get($colors, rain);
+    justify-self: end;
+    grid-area: D;
+  }
+  .arrow-right {
+    width: 6vw;
+  }
+
   //TABLET md
   @media (min-width: map-get($media-widths, md)) {
     nav {
-      //background-color: rgb(205, 255, 105);
-      height: map-get($vert-heights, md);
-      font-size: map-get($font-sizes-md, small);
+      height: vert-heights(md);
+      font-size: font-sizes-md(small);
     }
+    .bg-illu {
+      width: 36vw;
+      left: calc(2vw + 4 * 12vw);
+    }
+
     h1 {
-      font-size: map-get($font-sizes-md, h1);
-      line-height: map-get($line-heights, h1);
+      font-size: font-sizes-md(h1);
+      line-height: line-heights(h1);
     }
     p {
-      font-size: map-get($font-sizes-md, p);
-      line-height: map-get($line-heights, p);
+      font-size: font-sizes-md(p);
+      line-height: line-heights(p);
+    }
+    .intro {
+      display: grid;
+      grid-template-columns: 2vw 12vw 12vw 12vw 12vw 12vw 12vw 12vw 12vw 2vw;
+      grid-template-rows: auto;
+      grid-template-areas:
+        ". . header header header header header header . ."
+        ". . down-arrow . . . . . . ."
+        ". . . info info info info info . .";
+    }
+    .teasers {
+      display: grid;
+      grid-template-columns: 2vw 12vw 12vw 12vw 12vw 12vw 12vw 12vw 12vw 2vw;
+      grid-template-rows: auto;
+      grid-template-areas:
+        ". . A . . . . B . ."
+        ". . C . . . . D . .";
+    }
+    .teaser-small {
+      width: calc(
+        3 * 12vw + -1vw + -2 * 3vw
+      ); // make it 1vw narrower than 3 columns and compensate for the padding
+      height: calc(
+        3 * 12vw + -1vw + -2 * 3vw
+      ); // make it 1vw narrower than 3 columns and compensate for the padding
+      padding: 3vw;
     }
     //DESKTOP lg
     @media (min-width: map-get($media-widths, lg)) {
@@ -34,90 +124,114 @@
         position: fixed;
         top: 0;
         z-index: 10;
-        //background-color: rgb(183, 254, 183);
-        background-color: white;
-        height: map-get($vert-heights, lg);
-        font-size: map-get($font-sizes-lg, small);
-      }
-      .bg-illu {
-        width: 36vw;
-        position: absolute;
-        left: calc(2vw + 4 * 12vw);
-        top: map-get($vert-heights, lg);
+        justify-content: space-between;
+        height: vert-heights(lg);
+        font-size: font-sizes-lg(small);
+        #menu-left {
+          margin-left: 2vw; // 1 4 4 4 4 4 4 4 4 1
+          ul {
+            display: flex;
+            li {
+              display: block;
+              padding-right: 2.5rem;
+            }
+          }
+        }
+        #menu-right {
+          margin-right: 2vw; // 1 4 4 4 4 4 4 4 4 1
+          ul {
+            display: flex;
+            li {
+              display: block;
+              padding-left: 2.5rem;
+            }
+          }
+        }
+        .burger {
+          display: none;
+        }
       }
       .content {
         position: relative;
-        top: map-get($vert-heights, lg);
+        top: vert-heights(lg);
         scroll-behavior: smooth;
       }
       .space {
-        height: map-get($vert-heights, lg);
+        height: vert-heights(lg);
         width: 100vw;
       }
 
       h1 {
-        font-size: map-get($font-sizes-lg, h1);
-        line-height: map-get($line-heights, h1);
+        font-size: font-sizes-lg(h1);
+        line-height: line-heights(h1);
       }
       p {
-        font-size: map-get($font-sizes-lg, p);
-        line-height: map-get($line-heights, p);
-        padding-bottom: map-get($vert-heights, lg);
+        font-size: font-sizes-lg(p);
+        line-height: line-heights(p);
+        padding-bottom: vert-heights(lg);
       }
       .reconstructive {
-        margin-bottom: map-get($vert-heights-quarter, lg );
+        margin-bottom: vert-heights-quarter(lg);
       }
       .aesthetic {
-        margin-bottom: map-get($vert-heights-quarter, lg );
+        margin-bottom: vert-heights-quarter(lg);
       }
       h2 {
         font-family: "TT-Norms-Light";
-        font-size: map-get($font-sizes-lg, h2);
-        line-height: map-get($line-heights, h2);
-        margin-bottom: map-get($vert-heights-quarter, lg )
+        font-size: font-sizes-lg(h2);
+        line-height: line-heights(h2);
+        margin-bottom: vert-heights-quarter(lg);
       }
-      
+      small {
+        font-size: font-sizes-lg(small);
+        line-height: line-heights(small);
+      }
+      .teasers {
+        margin-bottom: vert-heights(lg);
+      }
+
       //HD xl
       @media (min-width: map-get($media-widths, xl)) {
         nav {
-          //background-color: rgb(183, 255, 255);
-          height: map-get($vert-heights, xl);
-          font-size: map-get($font-sizes-xl, small);
+          height: vert-heights(xl);
+          font-size: font-sizes-xl(small);
         }
         .bg-illu {
-          top: map-get($vert-heights, xl);
+          top: vert-heights(xl);
         }
         .content {
-          top: map-get($vert-heights, xl);
+          top: vert-heights(xl);
           scroll-behavior: smooth;
         }
         .space {
-          height: map-get($vert-heights, xl);
+          height: vert-heights(xl);
           width: 100vw;
         }
         h1 {
-          font-size: map-get($font-sizes-xl, h1);
-          line-height: map-get($line-heights, h1);
+          font-size: font-sizes-xl(h1);
+          line-height: line-heights(h1);
         }
         p {
-          font-size: map-get($font-sizes-xl, p);
-          line-height: map-get($line-heights, p);
-          padding-bottom: map-get($vert-heights, xl);
+          font-size: font-sizes-xl(p);
+          line-height: line-heights(p);
+          padding-bottom: vert-heights(xl);
         }
         .reconstructive {
-          margin-bottom: map-get($vert-heights-quarter, xl );
+          margin-bottom: vert-heights-quarter(xl);
         }
         .aesthetic {
-          margin-bottom: map-get($vert-heights-quarter, xl );
+          margin-bottom: vert-heights-quarter(xl);
         }
         h2 {
-          font-family: "TT-Norms-Light";
-          font-size: map-get($font-sizes-xl, h2);
-          line-height: map-get($line-heights, h2);
+          font-size: font-sizes-xl(h2);
+          line-height: line-heights(h2);
         }
         small {
-          font-size: map-get($font-sizes-xl, small);
-          line-height: map-get($line-heights, small);
+          font-size: font-sizes-xl(small);
+          line-height: line-heights(small);
+        }
+        .teasers {
+          margin-bottom: vert-heights(xl);
         }
       }
     }
