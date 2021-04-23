@@ -70,14 +70,23 @@ table {
         -ms-flex-align: center;
             align-items: center;
   }
-  nav ul li {
+  nav #menu-left {
     display: none;
   }
   nav #logo {
     height: 50%;
+    margin-left: 4vw;
+  }
+  nav #menu-right {
+    display: none;
   }
   nav .burger {
-    width: 9vw;
+    height: 40%;
+    margin-right: 4vw;
+  }
+  nav .burger img {
+    bottom: 0;
+    width: 20px;
   }
   .bg-illu {
     width: 60vw;
@@ -104,16 +113,24 @@ table {
   p {
     font-size: 20px;
     line-height: 1.3;
+    padding-bottom: 90px;
   }
   .intro_h1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
     grid-area: header;
   }
   .intro_p {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
     grid-area: info;
   }
   .arrow-down {
     width: 22px;
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
     grid-area: down-arrow;
+    margin-bottom: 10px;
   }
   .reconstructive {
     background-color: #d7dacd;
@@ -156,8 +173,33 @@ table {
     font-size: 18px;
     line-height: 1.3;
   }
+  .intro {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 6vw 88vw 6vw;
+        grid-template-columns: 6vw 88vw 6vw;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: ". header ." ". down-arrow ." ". info .";
+  }
   .teasers {
     margin-bottom: 90px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .teaser-small {
+    width: calc(88vw + -12vw);
+    height: calc(88vw + -12vw);
+    padding: 6vw;
+    margin-bottom: 6vw;
   }
 }
 
@@ -168,6 +210,9 @@ table {
   }
   #logo {
     margin-left: 0;
+  }
+  .burger img {
+    width: 70px;
   }
   .content {
     top: 120px;
@@ -191,6 +236,7 @@ table {
   }
   .arrow-down {
     width: 22px;
+    margin-bottom: 0;
   }
   .reconstructive {
     margin-bottom: 22px;
@@ -240,6 +286,7 @@ table {
     font-size: 1.38vw;
   }
   nav #menu-left {
+    display: block;
     margin-left: 4vw;
   }
   nav #menu-left ul {
@@ -248,10 +295,10 @@ table {
     display: flex;
   }
   nav #menu-left ul li {
-    display: block;
-    padding-right: 2.5rem;
+    padding-right: 2.2rem;
   }
   nav #menu-right {
+    display: block;
     margin-right: 4vw;
   }
   nav #menu-right ul {
@@ -261,7 +308,7 @@ table {
   }
   nav #menu-right ul li {
     display: block;
-    padding-left: 2.5rem;
+    padding-left: 2.2rem;
   }
   nav .burger {
     display: none;
