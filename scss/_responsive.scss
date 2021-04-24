@@ -21,7 +21,7 @@
       display: none;
     }
     .burger {
-      height: 30%;
+      height: 40%;
       margin-right: 6vw;
       img {
         bottom: 0;
@@ -30,7 +30,22 @@
     }
   }
   .mobile-menu {
+    .mobile-menu-top-space {
+      height: vert-heights(sm);
+      width: calc(100vw + 2 * -6vw);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      .close {
+        height: 40%;
+        img {
+          bottom: 0;
+          width: 25px;
+        }
+      }
+    }
     width: 100vw;
+    height: 100vh;
     position: fixed;
     z-index: 20;
     background-color: colors(medisnow);

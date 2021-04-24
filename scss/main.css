@@ -81,7 +81,7 @@ table {
     display: none;
   }
   nav .burger {
-    height: 30%;
+    height: 40%;
     margin-right: 6vw;
   }
   nav .burger img {
@@ -90,12 +90,33 @@ table {
   }
   .mobile-menu {
     width: 100vw;
+    height: 100vh;
     position: fixed;
     z-index: 20;
     background-color: #e9eae5;
     font-family: "TT-Norms-Light";
     font-size: 24px;
     padding-left: 6vw;
+  }
+  .mobile-menu .mobile-menu-top-space {
+    height: 90px;
+    width: calc(100vw + 2 * -6vw);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .mobile-menu .mobile-menu-top-space .close {
+    height: 40%;
+  }
+  .mobile-menu .mobile-menu-top-space .close img {
+    bottom: 0;
+    width: 25px;
   }
   .mobile-menu ul li {
     padding: 1.5rem 0 1.5rem 0;
