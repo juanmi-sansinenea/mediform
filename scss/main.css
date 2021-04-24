@@ -81,12 +81,13 @@ table {
     display: none;
   }
   nav .burger {
+    cursor: pointer;
     margin-right: 6vw;
   }
   nav .burger img {
     width: 25px;
   }
-  .mobile-menu {
+  .sub-menu {
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -95,7 +96,7 @@ table {
     font-family: "TT-Norms-Light";
     font-size: 24px;
   }
-  .mobile-menu .mobile-menu-top-space {
+  .sub-menu .sub-menu-top-space {
     height: 90px;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -107,13 +108,14 @@ table {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  .mobile-menu .mobile-menu-top-space .close-x {
+  .sub-menu .sub-menu-top-space .close-x {
+    cursor: pointer;
     margin-right: 6vw;
   }
-  .mobile-menu .mobile-menu-top-space .close-x img {
+  .sub-menu .sub-menu-top-space .close-x img {
     width: 25px;
   }
-  .mobile-menu ul li {
+  .sub-menu ul li {
     padding: 1.5rem 0vw 1.5rem 0vw;
     border-bottom: 1px solid white;
     margin: 0 6vw 0 6vw;
@@ -241,10 +243,10 @@ table {
   nav .burger img {
     width: 30px;
   }
-  .mobile-menu .mobile-menu-top-space {
+  .sub-menu .sub-menu-top-space {
     height: 120px;
   }
-  .mobile-menu .mobile-menu-top-space .close-x img {
+  .sub-menu .sub-menu-top-space .close-x img {
     width: 30px;
   }
   #logo {
@@ -334,7 +336,11 @@ table {
     display: flex;
   }
   nav #menu-left ul li {
-    padding-right: 1.9rem;
+    cursor: pointer;
+    margin-right: 2rem;
+  }
+  nav #menu-left ul .leistungen .nupsie {
+    height: 8px;
   }
   nav #menu-right {
     display: block;
@@ -347,10 +353,32 @@ table {
   }
   nav #menu-right ul li {
     display: block;
-    padding-left: 1.9rem;
+    padding-left: 2rem;
   }
   nav .burger {
     display: none;
+  }
+  .sub-menu {
+    height: auto;
+    position: fixed;
+    top: 160px;
+    font-size: 2.14vw;
+  }
+  .sub-menu .sub-menu-top-space {
+    height: 30px;
+  }
+  .sub-menu .sub-menu-top-space .close-x {
+    cursor: pointer;
+    margin-top: 4vw;
+    margin-right: 4vw;
+  }
+  .sub-menu .sub-menu-top-space .close-x img {
+    width: 25px;
+  }
+  .sub-menu ul li {
+    padding: 1.5rem 0vw 1.5rem 0vw;
+    border-bottom: 1px solid white;
+    margin: 0 4vw 0 4vw;
   }
   .bg-illu {
     top: 160px;
@@ -398,6 +426,9 @@ table {
   nav {
     height: 180px;
     font-size: 20px;
+  }
+  nav #menu-left ul .leistungen .nupsie {
+    height: 10px;
   }
   .bg-illu {
     width: 600px;
@@ -496,9 +527,5 @@ body {
 
 .invisible {
   visibility: hidden;
-}
-
-.nupsie {
-  height: 8px;
 }
 /*# sourceMappingURL=main.css.map */

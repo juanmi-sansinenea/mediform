@@ -1,15 +1,18 @@
-const mobileMenu = document.querySelector(".mobile-menu");
+const subMenu = document.querySelector(".sub-menu");
 const burger = document.querySelector(".burger");
 const closeX = document.querySelector(".close-x");
+const leistungen = document.querySelector(".leistungen");
 
-function visibleMobileMenu() {
-  mobileMenu.classList.remove("invisible");
-  mobileMenu.classList.add("visible");
+
+function visibleSubMenu() {
+  subMenu.classList.remove("invisible");
+  subMenu.classList.add("visible");
 }
-function inVisibleMobileMenu() {
-  mobileMenu.classList.add("invisible");
-  mobileMenu.classList.remove("visible");
+function inVisibleSubMenu() {
+  subMenu.classList.add("invisible");
+  subMenu.classList.remove("visible");
 }
 
-burger.addEventListener("click", visibleMobileMenu);
-closeX.addEventListener("click", inVisibleMobileMenu);
+burger.addEventListener("click", visibleSubMenu);
+closeX.addEventListener("click", inVisibleSubMenu);
+leistungen.addEventListener("click", visibleSubMenu);

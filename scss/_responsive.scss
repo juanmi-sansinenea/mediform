@@ -21,19 +21,21 @@
       display: none;
     }
     .burger {
+      cursor: pointer;
       margin-right: 6vw;
       img {
         width: 25px;
       }
     }
   }
-  .mobile-menu {
-    .mobile-menu-top-space {
+  .sub-menu {
+    .sub-menu-top-space {
       height: vert-heights(sm);
       align-items: center;
       display: flex;
       justify-content: flex-end;
       .close-x {
+        cursor: pointer;
         margin-right: 6vw;
         img {
           width: 25px;
@@ -163,8 +165,8 @@
         }
       }
     }
-    .mobile-menu {
-      .mobile-menu-top-space {
+    .sub-menu {
+      .sub-menu-top-space {
         height: vert-heights(md);
         .close-x {
           img {
@@ -259,7 +261,13 @@
           ul {
             display: flex;
             li {
-              padding-right: 1.9rem;
+              cursor: pointer;
+              margin-right: 2rem;
+            }
+            .leistungen {
+              .nupsie {
+                height: 8px;
+              }
             }
           }
         }
@@ -270,12 +278,39 @@
             display: flex;
             li {
               display: block;
-              padding-left: 1.9rem;
+              padding-left: 2rem;
             }
           }
         }
         .burger {
           display: none;
+        }
+      }
+      .sub-menu {
+        .sub-menu-top-space {
+          height: vert-heights-quarter(lg);
+          
+          
+          
+          .close-x {
+            cursor: pointer;
+            margin-top: 4vw;
+            margin-right: 4vw;
+            img {
+              width: 25px;
+            }
+          }
+        }
+        height: auto;
+        position: fixed;
+        top: vert-heights(lg);
+        font-size: font-sizes-lg(h3);
+        ul {
+          li {
+            padding: 1.5rem 0vw 1.5rem 0vw;
+            border-bottom: 1px solid white;
+            margin: 0 4vw 0 4vw;
+          }
         }
       }
       .bg-illu {
@@ -325,6 +360,14 @@
         nav {
           height: vert-heights(xl);
           font-size: font-sizes-xl(small);
+          #menu-left {
+          ul {
+            .leistungen {
+              .nupsie {
+                height: 10px;
+              }
+            }
+          }}
         }
         .bg-illu {
           width: 600px;
