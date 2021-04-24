@@ -175,6 +175,14 @@ table {
     height: 90px;
     width: 100vw;
   }
+  .space-half {
+    height: 45px;
+    width: 100vw;
+  }
+  .space-quarter {
+    height: 22px;
+    width: 100vw;
+  }
   h1 {
     font-size: 36px;
     line-height: 1.2;

@@ -118,6 +118,14 @@
     height: vert-heights(sm);
     width: 100vw;
   }
+  .space-half {
+    height: vert-heights-half(sm);
+    width: 100vw;
+  }
+  .space-quarter {
+    height: vert-heights-quarter(sm);
+    width: 100vw;
+  }
   h1 {
     font-size: font-sizes-sm(h1);
     line-height: line-heights(h1);

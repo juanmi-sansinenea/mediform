@@ -45,15 +45,12 @@ burger.addEventListener("click", visibleSubMenu);
 closeX.addEventListener("click", inVisibleSubMenu);
 leistungen.addEventListener("click", toggleSubmenu);
 
-submenuItem[0].addEventListener("click", toggleBorder);
-submenuItem[0].addEventListener("click", () => {
-  subSubmenu[0].classList.contains("display-none") === true
-    ? showSubSubmenu(0)
-    : hideSubSubmenu(0);
-});
-submenuItem[1].addEventListener("click", toggleBorder);
-submenuItem[1].addEventListener("click", () => {
-  subSubmenu[1].classList.contains("display-none") === true
-    ? showSubSubmenu(1)
-    : hideSubSubmenu(1);
-});
+// expand / collapse sub-submenus and remove border when expanded
+for (let i = 0; i < 3; i++) {
+  submenuItem[i].addEventListener("click", toggleBorder);
+  submenuItem[i].addEventListener("click", () => {
+    subSubmenu[i].classList.contains("display-none") === true
+      ? showSubSubmenu(i)
+      : hideSubSubmenu(i);
+  });
+}
