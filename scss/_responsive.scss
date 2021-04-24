@@ -11,6 +11,12 @@
   .invisible {
     visibility: hidden;
   }
+  .display-block {
+    display: block;
+  }
+  .display-none {
+    display: none;
+  }
   nav {
     justify-content: space-between;
     position: fixed;
@@ -53,37 +59,40 @@
         }
       }
     }
-    .sub-submenu {
-      font-family: "TT-Norms-Medium";
-      font-size: font-sizes-sm(small);
-      .sub-submenu-more {
-        margin-left: 6vw;
-        padding: 0.75rem 0 3rem 0;
-      }
-      .sub-submenu-title {
-        font-family: "TT-Norms-Light";
-        margin-left: 6vw;
-        padding: 0.75rem 0 0.75rem 0;
-      }
-      ul {
-        li{
-          padding: 0.75rem 0 0.75rem 0;
-          border-bottom: none;
-        }
-      }
-    }
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    z-index: 20;
-    background-color: colors(medisnow);
-    font-family: "TT-Norms-Light";
-    font-size: font-sizes-sm(h3);
-    ul {
-      li {
+    .scroll-me {
+      position: absolute;
+      overflow-y: scroll;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      z-index: 20;
+      background-color: colors(medisnow);
+      font-family: "TT-Norms-Light";
+      font-size: font-sizes-sm(h3);
+      ul > li {
+        cursor: pointer;
         padding: 1.5rem 0 1.5rem 0;
         border-bottom: 1px solid white;
         margin: 0 6vw 0 6vw;
+      }
+
+      .sub-submenu {
+        font-family: "TT-Norms-Medium";
+        font-size: font-sizes-sm(small);
+        .sub-submenu-more {
+          padding: 0.75rem 0 3rem 0;
+        }
+        .sub-submenu-title {
+          font-family: "TT-Norms-Light";
+          padding: 0.75rem 0 0.75rem 0;
+        }
+        ul {
+          li {
+            padding: 0.75rem 0 0.75rem 0;
+            border-bottom: none;
+            margin-left: 0;
+          }
+        }
       }
     }
   }
@@ -204,7 +213,7 @@
           }
         }
       }
-      font-size: font-sizes-md(h3);  
+      font-size: font-sizes-md(h3);
     }
 
     #logo {
@@ -388,13 +397,14 @@
           height: vert-heights(xl);
           font-size: font-sizes-xl(small);
           #menu-left {
-          ul {
-            .leistungen {
-              .nupsie {
-                height: 10px;
+            ul {
+              .leistungen {
+                .nupsie {
+                  height: 10px;
+                }
               }
             }
-          }}
+          }
         }
         .sub-menu {
           .sub-menu-top-space {
@@ -403,7 +413,7 @@
           top: vert-heights(xl);
           font-size: font-sizes-xl(h3);
         }
-      
+
         .bg-illu {
           width: 600px;
           position: absolute;

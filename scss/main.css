@@ -64,6 +64,12 @@ table {
   .invisible {
     visibility: hidden;
   }
+  .display-block {
+    display: block;
+  }
+  .display-none {
+    display: none;
+  }
   nav {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -98,15 +104,6 @@ table {
   nav .burger img {
     width: 25px;
   }
-  .sub-menu {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    z-index: 20;
-    background-color: #e9eae5;
-    font-family: "TT-Norms-Light";
-    font-size: 24px;
-  }
   .sub-menu .sub-menu-top-space {
     height: 90px;
     -webkit-box-align: center;
@@ -126,27 +123,38 @@ table {
   .sub-menu .sub-menu-top-space .close-x img {
     width: 25px;
   }
-  .sub-menu .sub-submenu {
-    font-family: "TT-Norms-Medium";
-    font-size: 18px;
-  }
-  .sub-menu .sub-submenu .sub-submenu-more {
-    margin-left: 6vw;
-    padding: 0.75rem 0 3rem 0;
-  }
-  .sub-menu .sub-submenu .sub-submenu-title {
+  .sub-menu .scroll-me {
+    position: absolute;
+    overflow-y: scroll;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 20;
+    background-color: #e9eae5;
     font-family: "TT-Norms-Light";
-    margin-left: 6vw;
-    padding: 0.75rem 0 0.75rem 0;
+    font-size: 24px;
   }
-  .sub-menu .sub-submenu ul li {
-    padding: 0.75rem 0 0.75rem 0;
-    border-bottom: none;
-  }
-  .sub-menu ul li {
+  .sub-menu .scroll-me ul > li {
+    cursor: pointer;
     padding: 1.5rem 0 1.5rem 0;
     border-bottom: 1px solid white;
     margin: 0 6vw 0 6vw;
+  }
+  .sub-menu .scroll-me .sub-submenu {
+    font-family: "TT-Norms-Medium";
+    font-size: 18px;
+  }
+  .sub-menu .scroll-me .sub-submenu .sub-submenu-more {
+    padding: 0.75rem 0 3rem 0;
+  }
+  .sub-menu .scroll-me .sub-submenu .sub-submenu-title {
+    font-family: "TT-Norms-Light";
+    padding: 0.75rem 0 0.75rem 0;
+  }
+  .sub-menu .scroll-me .sub-submenu ul li {
+    padding: 0.75rem 0 0.75rem 0;
+    border-bottom: none;
+    margin-left: 0;
   }
   .bg-illu {
     width: 60vw;
