@@ -56,10 +56,18 @@
     .sub-submenu {
       font-family: "TT-Norms-Medium";
       font-size: font-sizes-sm(small);
+      .sub-submenu-more {
+        margin-left: 6vw;
+        padding: 0.75rem 0 3rem 0;
+      }
+      .sub-submenu-title {
+        font-family: "TT-Norms-Light";
+        margin-left: 6vw;
+        padding: 0.75rem 0 0.75rem 0;
+      }
       ul {
         li{
-          padding: 0 0 0 0;
-          line-height: line-heights(small);
+          padding: 0.75rem 0 0.75rem 0;
           border-bottom: none;
         }
       }
