@@ -70,6 +70,9 @@ table {
   .display-none {
     display: none;
   }
+  .border-bottom {
+    border-bottom: 1px solid white;
+  }
   nav {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -134,10 +137,9 @@ table {
     font-family: "TT-Norms-Light";
     font-size: 24px;
   }
-  .sub-menu .scroll-me ul > li {
+  .sub-menu .scroll-me ul li {
     cursor: pointer;
     padding: 1.5rem 0 1.5rem 0;
-    border-bottom: 1px solid white;
     margin: 0 6vw 0 6vw;
   }
   .sub-menu .scroll-me .sub-submenu {

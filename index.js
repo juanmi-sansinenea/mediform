@@ -32,7 +32,12 @@ function toggleSubSubmenu() {
     : hideSubSubmenu();
 }
 
+function deborder (evt){
+    evt.target.classList.remove("border-bottom");
+}
+
 burger.addEventListener("click", visibleSubMenu);
 closeX.addEventListener("click", inVisibleSubMenu);
 leistungen.addEventListener("click", toggleSubmenu);
-submenuItem.addEventListener("click", toggleSubSubmenu);
+submenuItem.addEventListener("click", deborder, toggleSubSubmenu);
+

@@ -17,6 +17,9 @@
   .display-none {
     display: none;
   }
+  .border-bottom {
+    border-bottom: 1px solid white;
+  }
   nav {
     justify-content: space-between;
     position: fixed;
@@ -69,11 +72,13 @@
       background-color: colors(medisnow);
       font-family: "TT-Norms-Light";
       font-size: font-sizes-sm(h3);
-      ul > li {
-        cursor: pointer;
-        padding: 1.5rem 0 1.5rem 0;
-        border-bottom: 1px solid white;
-        margin: 0 6vw 0 6vw;
+      ul {
+        li {
+          cursor: pointer;
+          padding: 1.5rem 0 1.5rem 0;
+          //border-bottom: 1px solid white;
+          margin: 0 6vw 0 6vw;
+        }
       }
 
       .sub-submenu {
