@@ -87,7 +87,6 @@ table {
     width: 25px;
   }
   .mobile-menu {
-    opacity: 0.75;
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -335,7 +334,7 @@ table {
     display: flex;
   }
   nav #menu-left ul li {
-    padding-right: 2.2rem;
+    padding-right: 1.9rem;
   }
   nav #menu-right {
     display: block;
@@ -348,7 +347,7 @@ table {
   }
   nav #menu-right ul li {
     display: block;
-    padding-left: 2.2rem;
+    padding-left: 1.9rem;
   }
   nav .burger {
     display: none;
@@ -497,5 +496,9 @@ body {
 
 .invisible {
   visibility: hidden;
+}
+
+.nupsie {
+  height: 8px;
 }
 /*# sourceMappingURL=main.css.map */

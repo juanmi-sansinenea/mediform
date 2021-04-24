@@ -19,8 +19,12 @@ body {
   color: map-get($colors, steel);
 }
 .visible {
-  visibility:visible;
+  visibility: visible;
 }
 .invisible {
-  visibility:hidden;
+  visibility: hidden;
+}
+
+.nupsie {
+  height: 8px;
 }
