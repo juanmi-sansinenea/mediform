@@ -32,12 +32,14 @@ function toggleSubSubmenu() {
     : hideSubSubmenu();
 }
 
-function deborder (evt){
-    evt.target.classList.remove("border-bottom");
+function toggleBorder(evt) {
+    evt.target.classList.contains("border-bottom") === true
+    ? evt.target.classList.remove("border-bottom")
+    : evt.target.classList.add("border-bottom");
 }
 
 burger.addEventListener("click", visibleSubMenu);
 closeX.addEventListener("click", inVisibleSubMenu);
 leistungen.addEventListener("click", toggleSubmenu);
-submenuItem.addEventListener("click", deborder, toggleSubSubmenu);
-
+submenuItem.addEventListener("click", toggleBorder);
+submenuItem.addEventListener("click", toggleSubSubmenu);
