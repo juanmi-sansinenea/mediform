@@ -143,6 +143,7 @@ table {
   .sub-menu .scroll-me .sub-submenu {
     font-family: "TT-Norms-Medium";
     font-size: 18px;
+    margin-left: 6vw;
   }
   .sub-menu .scroll-me .sub-submenu .sub-submenu-more {
     padding: 0.75rem 0 3rem 0;
