@@ -1,5 +1,16 @@
 //MOBILE (sm) --------------------------------------------------------------------------
 @media (min-width: map-get($media-widths, sm)) {
+  body {
+    font-family: "TT-Norms-Medium";
+    margin: 0;
+    color: map-get($colors, steel);
+  }
+  .visible {
+    visibility: visible;
+  }
+  .invisible {
+    visibility: hidden;
+  }
   nav {
     justify-content: space-between;
     position: fixed;
