@@ -21,26 +21,22 @@
       display: none;
     }
     .burger {
-      height: 40%;
       margin-right: 6vw;
       img {
-        bottom: 0;
         width: 25px;
       }
     }
   }
   .mobile-menu {
-    opacity: 0.5;
+    opacity: 0.75;
     .mobile-menu-top-space {
       height: vert-heights(sm);
-      width: calc(100vw + 2 * -6vw);
-      display: flex;
       align-items: center;
+      display: flex;
       justify-content: flex-end;
       .close-x {
-        height: 40%;
+        margin-right: 6vw;
         img {
-          bottom: 0;
           width: 25px;
         }
       }
@@ -52,14 +48,13 @@
     background-color: colors(medisnow);
     font-family: "TT-Norms-Light";
     font-size: font-sizes-sm(h3);
-    ul{
-      li{
-        padding: 1.5rem 0 1.5rem 0;
+    ul {
+      li {
+        padding: 1.5rem 0vw 1.5rem 0vw;
         border-bottom: 1px solid white;
+        margin: 0 6vw 0 6vw;
       }
     }
-    padding-left: 6vw;
-
   }
   .bg-illu {
     width: 60vw;
@@ -156,7 +151,6 @@
     height: calc(88vw + -12vw);
     padding: 6vw;
     margin-bottom: 6vw;
-    
   }
 
   //TABLET (md) -----------------------------------------------------------------------------
@@ -166,10 +160,21 @@
       font-size: font-sizes-md(small);
       .burger {
         img {
-          width: 30px; 
+          width: 30px;
         }
       }
     }
+    .mobile-menu {
+      .mobile-menu-top-space {
+        height: vert-heights(md);
+        .close-x {
+          img {
+            width: 30px;
+          }
+        }
+      }
+    }
+
     #logo {
       margin-left: 0;
     }
@@ -202,7 +207,7 @@
     .arrow-right {
       width: vert-heights-half(md);
     }
-    
+
     .reconstructive {
       margin-bottom: vert-heights-quarter(md);
     }
@@ -298,7 +303,7 @@
       .arrow-right {
         width: vert-heights-half(lg);
       }
-      
+
       .reconstructive {
         margin-bottom: vert-heights-quarter(lg);
       }

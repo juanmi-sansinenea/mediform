@@ -81,15 +81,13 @@ table {
     display: none;
   }
   nav .burger {
-    height: 40%;
     margin-right: 6vw;
   }
   nav .burger img {
-    bottom: 0;
     width: 25px;
   }
   .mobile-menu {
-    opacity: 0.5;
+    opacity: 0.75;
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -97,31 +95,29 @@ table {
     background-color: #e9eae5;
     font-family: "TT-Norms-Light";
     font-size: 24px;
-    padding-left: 6vw;
   }
   .mobile-menu .mobile-menu-top-space {
     height: 90px;
-    width: calc(100vw + 2 * -6vw);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
   .mobile-menu .mobile-menu-top-space .close-x {
-    height: 40%;
+    margin-right: 6vw;
   }
   .mobile-menu .mobile-menu-top-space .close-x img {
-    bottom: 0;
     width: 25px;
   }
   .mobile-menu ul li {
-    padding: 1.5rem 0 1.5rem 0;
+    padding: 1.5rem 0vw 1.5rem 0vw;
     border-bottom: 1px solid white;
+    margin: 0 6vw 0 6vw;
   }
   .bg-illu {
     width: 60vw;
@@ -244,6 +240,12 @@ table {
     font-size: 1.38vw;
   }
   nav .burger img {
+    width: 30px;
+  }
+  .mobile-menu .mobile-menu-top-space {
+    height: 120px;
+  }
+  .mobile-menu .mobile-menu-top-space .close-x img {
     width: 30px;
   }
   #logo {
