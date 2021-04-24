@@ -53,6 +53,17 @@
         }
       }
     }
+    .sub-submenu {
+      font-family: "TT-Norms-Medium";
+      font-size: font-sizes-sm(small);
+      ul {
+        li{
+          padding: 0 0 0 0;
+          line-height: line-heights(small);
+          border-bottom: none;
+        }
+      }
+    }
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -62,7 +73,7 @@
     font-size: font-sizes-sm(h3);
     ul {
       li {
-        padding: 1.5rem 0vw 1.5rem 0vw;
+        padding: 1.5rem 0 1.5rem 0;
         border-bottom: 1px solid white;
         margin: 0 6vw 0 6vw;
       }
