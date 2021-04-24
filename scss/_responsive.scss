@@ -30,13 +30,14 @@
     }
   }
   .mobile-menu {
+    opacity: 0.5;
     .mobile-menu-top-space {
       height: vert-heights(sm);
       width: calc(100vw + 2 * -6vw);
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      .close {
+      .close-x {
         height: 40%;
         img {
           bottom: 0;
