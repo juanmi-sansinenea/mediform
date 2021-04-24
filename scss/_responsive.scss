@@ -63,9 +63,12 @@
     grid-area: info;
   }
   .arrow-down {
-    width: vert-heights-quarter(sm);
+    height: vert-heights-half(sm);
     grid-area: down-arrow;
     margin-bottom: 10px;
+  }
+  .arrow-right {
+    width: vert-heights-half(sm);
   }
   .reconstructive {
     background-color: colors(forest-tint);
@@ -90,9 +93,6 @@
     color: map-get($colors, rain);
     justify-self: end;
     grid-area: D;
-  }
-  .arrow-right {
-    width: 4vw;
   }
   h2 {
     font-family: "TT-Norms-Light";
@@ -164,9 +164,13 @@
       padding-bottom: vert-heights(md);
     }
     .arrow-down {
-      width: vert-heights-quarter(md);
+      height: vert-heights-half(md);
       margin-bottom: 0;
     }
+    .arrow-right {
+      width: vert-heights-half(md);
+    }
+    
     .reconstructive {
       margin-bottom: vert-heights-quarter(md);
     }
@@ -257,8 +261,12 @@
         padding-bottom: vert-heights(lg);
       }
       .arrow-down {
-        width: vert-heights-quarter(lg);
+        height: vert-heights-half(lg);
       }
+      .arrow-right {
+        width: vert-heights-half(lg);
+      }
+      
       .reconstructive {
         margin-bottom: vert-heights-quarter(lg);
       }
@@ -307,7 +315,10 @@
           padding-bottom: vert-heights(xl);
         }
         .arrow-down {
-          width: vert-heights-quarter(xl);
+          height: vert-heights-half(xl);
+        }
+        .arrow-right {
+          width: vert-heights-half(xl);
         }
         .reconstructive {
           margin-bottom: vert-heights-quarter(xl);

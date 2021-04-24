@@ -126,11 +126,14 @@ table {
     grid-area: info;
   }
   .arrow-down {
-    width: 22px;
+    height: 45px;
     -ms-grid-row: 2;
     -ms-grid-column: 2;
     grid-area: down-arrow;
     margin-bottom: 10px;
+  }
+  .arrow-right {
+    width: 45px;
   }
   .reconstructive {
     background-color: #d7dacd;
@@ -159,9 +162,6 @@ table {
     -ms-grid-column-align: end;
         justify-self: end;
     grid-area: D;
-  }
-  .arrow-right {
-    width: 4vw;
   }
   h2 {
     font-family: "TT-Norms-Light";
@@ -235,8 +235,11 @@ table {
     padding-bottom: 120px;
   }
   .arrow-down {
-    width: 22px;
+    height: 45px;
     margin-bottom: 0;
+  }
+  .arrow-right {
+    width: 45px;
   }
   .reconstructive {
     margin-bottom: 22px;
@@ -332,7 +335,10 @@ table {
     padding-bottom: 160px;
   }
   .arrow-down {
-    width: 30px;
+    height: 60px;
+  }
+  .arrow-right {
+    width: 60px;
   }
   .reconstructive {
     margin-bottom: 30px;
@@ -382,7 +388,10 @@ table {
     padding-bottom: 180px;
   }
   .arrow-down {
-    width: 45px;
+    height: 90px;
+  }
+  .arrow-right {
+    width: 90px;
   }
   .reconstructive {
     margin-bottom: 45px;
