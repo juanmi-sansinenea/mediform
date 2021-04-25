@@ -318,6 +318,7 @@
     .teaser-small-modal {
       display: flex;
       justify-content: space-between;
+      position: absolute;
       width: calc(6 * 11.5vw);
       img {
         height: calc(3 * 11.5vw + -1vw);
