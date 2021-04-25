@@ -459,9 +459,9 @@
           .sub-menu-top-space {
             height: vert-heights-quarter(xl);
           }
-          top: vert-heights(xl);
-          font-size: font-sizes-xl(h3);
           .scroll-me {
+            top: vert-heights(xl);
+            font-size: font-sizes-xl(h3);
             ul{
               .sub-submenu {
                 font-size: font-sizes-xl(small);

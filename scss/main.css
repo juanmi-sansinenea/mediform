@@ -526,12 +526,12 @@ table {
   nav #menu-left ul .leistungen .nupsie {
     height: 10px;
   }
-  .sub-menu {
-    top: 180px;
-    font-size: 30px;
-  }
   .sub-menu .sub-menu-top-space {
     height: 45px;
+  }
+  .sub-menu .scroll-me {
+    top: 180px;
+    font-size: 30px;
   }
   .sub-menu .scroll-me ul .sub-submenu {
     font-size: 20px;

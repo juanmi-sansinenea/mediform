@@ -28,7 +28,6 @@ function hideSubSubmenu(which) {
 }
 
 function toggleBorder(evt) {
-  console.log("hi :>> ", evt);
   evt.target.classList.contains("border-bottom") === true
     ? evt.target.classList.remove("border-bottom")
     : evt.target.classList.add("border-bottom");
