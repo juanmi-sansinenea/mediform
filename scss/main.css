@@ -527,6 +527,9 @@ table {
   .sub-menu .sub-menu-top-space {
     height: 45px;
   }
+  .sub-menu .scroll-me ul .sub-submenu {
+    font-size: 20px;
+  }
   .bg-illu {
     width: 600px;
     position: absolute;

@@ -387,8 +387,7 @@
               justify-content: center;
               grid-template-columns: 20% 20% 20% 20% 20%;
               grid-template-rows: auto;
-              grid-template-areas:
-                "col1 col2 col3 col4 col5";
+              grid-template-areas: "col1 col2 col3 col4 col5";
             }
           }
         }
@@ -456,6 +455,13 @@
           }
           top: vert-heights(xl);
           font-size: font-sizes-xl(h3);
+          .scroll-me {
+            ul{
+              .sub-submenu {
+                font-size: font-sizes-xl(small);
+              }
+            }
+          }
         }
 
         .bg-illu {
