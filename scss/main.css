@@ -153,6 +153,7 @@ table {
   }
   .sub-menu .scroll-me .sub-submenu .sub-submenu-more {
     padding: 0.75rem 0 3rem 0;
+    cursor: pointer;
   }
   .sub-menu .scroll-me .sub-submenu .sub-submenu-title {
     font-family: "TT-Norms-Light";
@@ -433,28 +434,33 @@ table {
     padding: 1.5rem 0vw 1.5rem 0vw;
     margin: 0 4vw 0 4vw;
   }
-  .sub-menu .scroll-me ul .sub-submenu-1 {
+  .sub-menu .scroll-me ul .sub-submenu-more {
     -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: more;
+  }
+  .sub-menu .scroll-me ul .sub-submenu-1 {
+    -ms-grid-row: 2;
     -ms-grid-column: 1;
     grid-area: col1;
   }
   .sub-menu .scroll-me ul .sub-submenu-2 {
-    -ms-grid-row: 1;
+    -ms-grid-row: 2;
     -ms-grid-column: 2;
     grid-area: col2;
   }
   .sub-menu .scroll-me ul .sub-submenu-3 {
-    -ms-grid-row: 1;
+    -ms-grid-row: 2;
     -ms-grid-column: 3;
     grid-area: col3;
   }
   .sub-menu .scroll-me ul .sub-submenu-4 {
-    -ms-grid-row: 1;
+    -ms-grid-row: 2;
     -ms-grid-column: 4;
     grid-area: col4;
   }
   .sub-menu .scroll-me ul .sub-submenu-5 {
-    -ms-grid-row: 1;
+    -ms-grid-row: 2;
     -ms-grid-column: 5;
     grid-area: col5;
   }
@@ -468,7 +474,7 @@ table {
         grid-template-columns: 20% 20% 20% 20% 20%;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
-        grid-template-areas: "col1 col2 col3 col4 col5";
+        grid-template-areas: "more . . . . " "col1 col2 col3 col4 col5";
   }
   .bg-illu {
     top: 160px;

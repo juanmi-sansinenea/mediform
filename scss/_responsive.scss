@@ -90,6 +90,7 @@
         margin-left: 6vw;
         .sub-submenu-more {
           padding: 0.75rem 0 3rem 0;
+          cursor: pointer;
         }
         .sub-submenu-title {
           font-family: "TT-Norms-Light";
@@ -365,6 +366,9 @@
               padding: 1.5rem 0vw 1.5rem 0vw;
               margin: 0 4vw 0 4vw;
             }
+            .sub-submenu-more {
+              grid-area: more;
+            }
             .sub-submenu-1 {
               grid-area: col1;
             }
@@ -387,7 +391,9 @@
               justify-content: center;
               grid-template-columns: 20% 20% 20% 20% 20%;
               grid-template-rows: auto;
-              grid-template-areas: "col1 col2 col3 col4 col5";
+              grid-template-areas: 
+              "more . . . . "
+              "col1 col2 col3 col4 col5";
             }
           }
         }
