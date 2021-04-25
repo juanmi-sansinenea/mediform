@@ -429,8 +429,42 @@ table {
     padding: 1.5rem 0vw 1.5rem 0vw;
     margin: 0 4vw 0 4vw;
   }
+  .sub-menu .scroll-me ul .sub-submenu-1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: col1;
+  }
+  .sub-menu .scroll-me ul .sub-submenu-2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: col2;
+  }
+  .sub-menu .scroll-me ul .sub-submenu-3 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: col3;
+  }
+  .sub-menu .scroll-me ul .sub-submenu-4 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+    grid-area: col4;
+  }
+  .sub-menu .scroll-me ul .sub-submenu-5 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+    grid-area: col5;
+  }
   .sub-menu .scroll-me ul .sub-submenu {
     margin-left: 4vw;
+    font-size: 1.38vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-columns: 20% 20% 20% 20% 20%;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "col1 col2 col3 col4 col5";
   }
   .bg-illu {
     top: 160px;

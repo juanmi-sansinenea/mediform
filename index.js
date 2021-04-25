@@ -26,13 +26,6 @@ function hideSubSubmenu(which) {
   subSubmenu[which].classList.add("display-none");
   subSubmenu[which].classList.remove("display-block");
 }
-function toggleSubSubmenu(which) {
-  console.log("which :>> ", which);
-  console.log("subSubmenu[which] :>> ", subSubmenu[which]);
-  subSubmenu[which].classList.contains("display-none") === true
-    ? showSubSubmenu(which)
-    : hideSubSubmenu(which);
-}
 
 function toggleBorder(evt) {
   console.log("hi :>> ", evt);

@@ -362,8 +362,30 @@
               padding: 1.5rem 0vw 1.5rem 0vw;
               margin: 0 4vw 0 4vw;
             }
-            .sub-submenu{
+            .sub-submenu-1 {
+              grid-area: col1;
+            }
+            .sub-submenu-2 {
+              grid-area: col2;
+            }
+            .sub-submenu-3 {
+              grid-area: col3;
+            }
+            .sub-submenu-4 {
+              grid-area: col4;
+            }
+            .sub-submenu-5 {
+              grid-area: col5;
+            }
+            .sub-submenu {
               margin-left: 4vw;
+              font-size: font-sizes-lg(small);
+              //display: grid;
+              justify-content: center;
+              grid-template-columns: 20% 20% 20% 20% 20%;
+              grid-template-rows: auto;
+              grid-template-areas:
+                "col1 col2 col3 col4 col5";
             }
           }
         }
