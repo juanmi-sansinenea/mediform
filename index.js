@@ -20,11 +20,11 @@ function toggleSubmenu() {
 }
 function showSubSubmenu(which) {
   subSubmenu[which].classList.remove("display-none");
-  subSubmenu[which].classList.add("display-block");
+  subSubmenu[which].classList.add("display-grid");
 }
 function hideSubSubmenu(which) {
   subSubmenu[which].classList.add("display-none");
-  subSubmenu[which].classList.remove("display-block");
+  subSubmenu[which].classList.remove("display-grid");
 }
 
 function toggleBorder(evt) {
