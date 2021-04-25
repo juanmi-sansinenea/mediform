@@ -307,23 +307,26 @@
     .teaser-small {
       width: calc(
         3 * 11.5vw + -1vw 
-      ); // make it 1vw narrower than 
+      ); // make it 1vw narrower  
       height: calc(
         3 * 11.5vw + -1vw 
-      ); // make it 1vw narrower than 
+      ); // make it 1vw narrower  
     }
     .paddington{
       padding: 3vw;
     }
     .teaser-small-modal {
       display: flex;
-      width: 10vw;
-      
+      justify-content: space-between;
+      width: calc(6 * 11.5vw);
       img {
         height: calc(3 * 11.5vw + -1vw);
       }
       .teaser-small-modal-info{
         background-color: colors(forest-tint);
+        width: calc(
+          3 * 11.5vw + 1vw 
+        );
 
       }
     }

@@ -382,13 +382,17 @@ table {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 10vw;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: calc(6 * 11.5vw);
   }
   .teaser-small-modal img {
     height: calc(3 * 11.5vw + -1vw);
   }
   .teaser-small-modal .teaser-small-modal-info {
     background-color: #d7dacd;
+    width: calc( 3 * 11.5vw + 1vw);
   }
 }
 
