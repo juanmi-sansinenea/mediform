@@ -6,6 +6,7 @@ const subSubmenu = document.querySelectorAll(".sub-submenu");
 const submenuItem = document.querySelectorAll(".submenu-item");
 const teaserSmall = document.querySelectorAll(".teaser-small");
 
+
 function visibleSubMenu() {
   subMenu.classList.remove("invisible");
   subMenu.classList.add("visible");
@@ -50,5 +51,6 @@ for (let i = 0; i < 3; i++) {
 
 
 teaserSmall[0].addEventListener("click", ()=>{
+    teaserSmall[0].querySelector(".teaser-small-modal").classList.add("invisible");
 
 })
