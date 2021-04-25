@@ -4,6 +4,7 @@ const closeX = document.querySelector(".close-x");
 const leistungen = document.querySelector(".leistungen");
 const subSubmenu = document.querySelectorAll(".sub-submenu");
 const submenuItem = document.querySelectorAll(".submenu-item");
+const scrollMe = document.querySelector(".scroll-me");
 
 function visibleSubMenu() {
   subMenu.classList.remove("invisible");

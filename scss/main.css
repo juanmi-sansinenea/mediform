@@ -131,11 +131,10 @@ table {
     width: 25px;
   }
   .sub-menu .scroll-me {
-    position: absolute;
+    position: fixed;
     overflow-y: scroll;
     width: 100vw;
     height: 100vh;
-    position: fixed;
     z-index: 20;
     background-color: #e9eae5;
     font-family: "TT-Norms-Light";
@@ -287,7 +286,7 @@ table {
   }
 }
 
-@media (min-width: 0px) and (min-width: 799px) {
+@media (min-width: 0px) and (min-width: 801px) {
   nav {
     height: 120px;
     font-size: 1.38vw;
@@ -373,7 +372,7 @@ table {
   }
 }
 
-@media (min-width: 0px) and (min-width: 799px) and (min-width: 1023px) {
+@media (min-width: 0px) and (min-width: 801px) and (min-width: 1025px) {
   nav {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -518,7 +517,7 @@ table {
   }
 }
 
-@media (min-width: 0px) and (min-width: 799px) and (min-width: 1023px) and (min-width: 1439px) {
+@media (min-width: 0px) and (min-width: 801px) and (min-width: 1025px) and (min-width: 1441px) {
   nav {
     height: 180px;
     font-size: 20px;
