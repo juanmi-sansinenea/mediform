@@ -213,12 +213,18 @@
   .teaser-small-modal {
     display: none;
   }
-  .paddington{
+  .paddington {
     padding: 6vw;
   }
 
   //TABLET (md) -----------------------------------------------------------------------------
   @media (min-width: map-get($media-widths, md)) {
+    h3 {
+      font-family: "TT-Norms-Light";
+      font-size: font-sizes-md(h3);
+      line-height: line-heights(h3);
+      text-decoration: underline;
+    }
     nav {
       height: vert-heights(md);
       font-size: font-sizes-md(small);
@@ -275,9 +281,21 @@
 
     .reconstructive {
       margin-bottom: vert-heights-quarter(md);
+      display: flex;
+      justify-content: flex-start;
     }
     .aesthetic {
       margin-bottom: vert-heights-quarter(md);
+      display: flex;
+      justify-content: flex-end;
+    }
+    .general {
+      display: flex;
+      justify-content: flex-start;
+    }
+    .hand {
+      display: flex;
+      justify-content: flex-end;
     }
     h2 {
       font-size: font-sizes-md(h2);
@@ -305,14 +323,10 @@
       margin-bottom: vert-heights(md);
     }
     .teaser-small {
-      width: calc(
-        3 * 11.5vw + -1vw 
-      ); // make it 1vw narrower  
-      height: calc(
-        3 * 11.5vw + -1vw 
-      ); // make it 1vw narrower  
+      width: calc(3 * 11.5vw + -1vw); // make it 1vw narrower
+      height: calc(3 * 11.5vw + -1vw); // make it 1vw narrower
     }
-    .paddington{
+    .paddington {
       padding: 3vw;
     }
     .teaser-small-modal {
@@ -322,18 +336,27 @@
       width: calc(6 * 11.5vw);
       img {
         height: calc(3 * 11.5vw + -1vw);
-      }
+      } 
     }
-    .teaser-small-modal-info{
-      background-color: colors(forest-tint);
-      width: calc(
-        3 * 11.5vw + 1vw 
-      );
+    .teaser-small-modal-info {
+      background-color: white;
+      width: calc(3 * 11.5vw + 1vw);
       padding: 3vw;
     }
+    .close-teaser {
+      height: 40px;
+      img {
+        height: 20px;
+      }
+    }
+   
 
     //DESKTOP (lg) --------------------------------------------------------------------------
     @media (min-width: map-get($media-widths, lg)) {
+      h3 {
+        font-size: font-sizes-lg(h3);
+        line-height: line-heights(h3);
+      }
       nav {
         justify-content: space-between;
         height: vert-heights(lg);
@@ -465,9 +488,19 @@
       .teasers {
         margin-bottom: vert-heights(lg);
       }
+      .close-teaser {
+        height: 50px;
+        img {
+          height: 25px;
+        }
+      }
 
       //HD (xl) --------------------------------------------------------------------------
       @media (min-width: map-get($media-widths, xl)) {
+        h3 {
+          font-size: font-sizes-xl(h3);
+          line-height: line-heights(h3);
+        }
         nav {
           height: vert-heights(xl);
           font-size: font-sizes-xl(small);
@@ -567,7 +600,7 @@
             3 * 166px + -14px
           ); // make it 1vw narrower than 3 columns and compensate for the padding
         }
-        .paddington{
+        .paddington {
           padding: 43px;
         }
         .teaser-small-modal {
@@ -576,12 +609,15 @@
             height: calc(3 * 166px + -14px);
           }
         }
-        .teaser-small-modal-info{
-          background-color: colors(forest-tint);
-          width: calc(
-            3 * 166px + 14px 
-          );
+        .teaser-small-modal-info {
+          width: calc(3 * 166px + 14px);
           padding: 43px;
+        }
+        .close-teaser {
+          height: 50px;
+          img {
+            height: 25px;
+          }
         }
       }
     }

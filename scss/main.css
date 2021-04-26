@@ -293,6 +293,12 @@ table {
 }
 
 @media (min-width: 0px) and (min-width: 801px) {
+  h3 {
+    font-family: "TT-Norms-Light";
+    font-size: 2.14vw;
+    line-height: 1.2;
+    text-decoration: underline;
+  }
   nav {
     height: 120px;
     font-size: 1.38vw;
@@ -341,9 +347,37 @@ table {
   }
   .reconstructive {
     margin-bottom: 22px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .aesthetic {
     margin-bottom: 22px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .general {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .hand {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   h2 {
     font-size: 3vw;
@@ -372,8 +406,8 @@ table {
     margin-bottom: 120px;
   }
   .teaser-small {
-    width: calc( 3 * 11.5vw + -1vw);
-    height: calc( 3 * 11.5vw + -1vw);
+    width: calc(3 * 11.5vw + -1vw);
+    height: calc(3 * 11.5vw + -1vw);
   }
   .paddington {
     padding: 3vw;
@@ -392,13 +426,23 @@ table {
     height: calc(3 * 11.5vw + -1vw);
   }
   .teaser-small-modal-info {
-    background-color: #d7dacd;
-    width: calc( 3 * 11.5vw + 1vw);
+    background-color: white;
+    width: calc(3 * 11.5vw + 1vw);
     padding: 3vw;
+  }
+  .close-teaser {
+    height: 40px;
+  }
+  .close-teaser img {
+    height: 20px;
   }
 }
 
 @media (min-width: 0px) and (min-width: 801px) and (min-width: 1025px) {
+  h3 {
+    font-size: 2.14vw;
+    line-height: 1.2;
+  }
   nav {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -541,9 +585,19 @@ table {
   .teasers {
     margin-bottom: 160px;
   }
+  .close-teaser {
+    height: 50px;
+  }
+  .close-teaser img {
+    height: 25px;
+  }
 }
 
 @media (min-width: 0px) and (min-width: 801px) and (min-width: 1025px) and (min-width: 1441px) {
+  h3 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
   nav {
     height: 180px;
     font-size: 20px;
@@ -643,9 +697,14 @@ table {
     height: calc(3 * 166px + -14px);
   }
   .teaser-small-modal-info {
-    background-color: #d7dacd;
-    width: calc( 3 * 166px + 14px);
+    width: calc(3 * 166px + 14px);
     padding: 43px;
+  }
+  .close-teaser {
+    height: 50px;
+  }
+  .close-teaser img {
+    height: 25px;
   }
 }
 
