@@ -4,8 +4,7 @@ const closeX = document.querySelector(".close-x");
 const leistungen = document.querySelector(".leistungen");
 const subSubmenu = document.querySelectorAll(".sub-submenu");
 const submenuItem = document.querySelectorAll(".submenu-item");
-const teaserSmall = document.querySelectorAll(".teaser-small");
-
+//const teaserSmall = document.querySelectorAll(".teaser-small");
 
 function visibleSubMenu() {
   subMenu.classList.remove("invisible");
@@ -49,17 +48,49 @@ for (let i = 0; i < 3; i++) {
   });
 }
 
-function visibleTeaserModal (which){
-    teaserSmall[which].querySelector(".teaser-small-modal").classList.add("visible");
-    teaserSmall[which].querySelector(".teaser-small-modal").classList.remove("invisible");
+/*
+function visibleTeaserModal(which) {
+  this.querySelector(".teaser-small-modal").classList.add("visible");
+  this.querySelector(".teaser-small-modal").classList.remove("invisible");
 }
-function invisibleTeaserModal (which){
-    teaserSmall[which].querySelector(".teaser-small-modal").classList.remove("visible");
-    teaserSmall[which].querySelector(".teaser-small-modal").classList.add("invisible");
+function invisibleTeaserModal(which) {
+  this.querySelector(".teaser-small-modal").classList.remove("visible");
+  this.querySelector(".teaser-small-modal").classList.add("invisible");
 }
 
-teaserSmall[0].addEventListener("click", ()=>{
-    teaserSmall[0].querySelector(".teaser-small-modal").classList.contains("invisible") === true
+teaserSmall[0].addEventListener("click", () => {
+  teaserSmall[0]
+    .querySelector(".teaser-small-modal")
+    .classList.contains("invisible") === true
     ? visibleTeaserModal(0)
-    : invisibleTeaserModal(0)
-})
+    : invisibleTeaserModal(0);
+});
+*/
+
+class teaserSmall extends HTMLElement {
+  constructor() {
+    super();
+    this.addEventListener("click", () => {
+      this.querySelector(".teaser-small-modal").classList.contains(
+        "invisible"
+      ) === true
+        ? this.visibleTeaserModal()
+        : this.invisibleTeaserModal();
+    });
+    this.visibleTeaserModal = function () {
+      this.querySelector(".teaser-small-modal").classList.add("visible");
+      this.querySelector(".teaser-small-modal").classList.remove("invisible");
+    };
+    this.invisibleTeaserModal = function () {
+      this.querySelector(".teaser-small-modal").classList.remove("visible");
+      this.querySelector(".teaser-small-modal").classList.add("invisible");
+    };
+  }
+  connectedCallback() {
+    this.querySelector(".teaser-small-modal").classList.add("invisible");
+  }
+  disconnectedCallback() {
+    /*called when the element is disconnected from the page*/
+  }
+}
+customElements.define("teaser-small", teaserSmall);
