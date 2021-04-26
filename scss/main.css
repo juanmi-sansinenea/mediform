@@ -640,7 +640,7 @@ table {
     width: calc(6 * 166px);
   }
   .teaser-small-modal img {
-    height: calc(3 * 166px);
+    height: calc(3 * 166px + -14px);
   }
   .teaser-small-modal-info {
     background-color: #d7dacd;

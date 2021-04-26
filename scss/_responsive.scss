@@ -573,7 +573,7 @@
         .teaser-small-modal {
           width: calc(6 * 166px);
           img {
-            height: calc(3 * 166px);
+            height: calc(3 * 166px + -14px);
           }
         }
         .teaser-small-modal-info{

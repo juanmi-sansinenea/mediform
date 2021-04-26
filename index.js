@@ -49,8 +49,17 @@ for (let i = 0; i < 3; i++) {
   });
 }
 
+function visibleTeaserModal (which){
+    teaserSmall[which].querySelector(".teaser-small-modal").classList.add("visible");
+    teaserSmall[which].querySelector(".teaser-small-modal").classList.remove("invisible");
+}
+function invisibleTeaserModal (which){
+    teaserSmall[which].querySelector(".teaser-small-modal").classList.remove("visible");
+    teaserSmall[which].querySelector(".teaser-small-modal").classList.add("invisible");
+}
 
 teaserSmall[0].addEventListener("click", ()=>{
-    teaserSmall[0].querySelector(".teaser-small-modal").classList.add("invisible");
-
+    teaserSmall[0].querySelector(".teaser-small-modal").classList.contains("invisible") === true
+    ? visibleTeaserModal(0)
+    : invisibleTeaserModal(0)
 })
