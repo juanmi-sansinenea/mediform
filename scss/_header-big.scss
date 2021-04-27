@@ -20,6 +20,13 @@
       ". down-arrow ."
       ". info .";
   }
+  .bg-illu {
+    width: 60vw;
+    position: absolute;
+    left: calc(40vw);
+    top: vert-heights(sm);
+    z-index: -10;
+  }
 
   //TABLET (md) ------------------------------------------------------------------------
   @media (min-width: map-get($media-widths, md)) {
@@ -36,10 +43,18 @@
         ". . down-arrow . . . . . . ."
         ". . . info info info info info . .";
     }
+    .bg-illu {
+      top: vert-heights(md);
+      width: 40vw;
+      left: calc(55vw);
+    }
     //DESKTOP (lg) ---------------------------------------------------------------------
     @media (min-width: map-get($media-widths, lg)) {
       .arrow-down {
         height: vert-heights-half(lg);
+      }
+      .bg-illu {
+        top: vert-heights(lg);
       }
       //HD (xl) ------------------------------------------------------------------------
       @media (min-width: map-get($media-widths, xl)) {
@@ -56,6 +71,13 @@
             ". down-arrow . . . . . ."
             ". . info info info info info .";
         }
+        .bg-illu {
+            width: 600px;
+            position: absolute;
+            left: calc(55vw);
+            top: vert-heights(xl);
+            z-index: -10;
+          }
       }
     }
   }

@@ -81,23 +81,15 @@
       }
     }
   }
-  .bg-illu {
-    width: 60vw;
-    position: absolute;
-    left: calc(40vw);
-    top: vert-heights(sm);
-    z-index: -10;
-  }
+
   .content {
     position: relative;
     top: vert-heights(sm);
     scroll-behavior: smooth;
   }
-  
 
   //TABLET (md) -----------------------------------------------------------------------------
   @media (min-width: map-get($media-widths, md)) {
-    
     nav {
       height: vert-heights(md);
       font-size: font-sizes-md(small);
@@ -124,17 +116,6 @@
     .content {
       top: vert-heights(md);
     }
-    .space {
-      height: vert-heights(md);
-    }
-    .bg-illu {
-      top: vert-heights(md);
-      width: 40vw;
-      left: calc(55vw);
-    }
-
-    
-    
 
     //DESKTOP (lg) --------------------------------------------------------------------------
     @media (min-width: map-get($media-widths, lg)) {
@@ -228,13 +209,9 @@
           }
         }
       }
-      .bg-illu {
-        top: vert-heights(lg);
-      }
       .content {
         top: vert-heights(lg);
       }
-      
 
       //HD (xl) --------------------------------------------------------------------------
       @media (min-width: map-get($media-widths, xl)) {
@@ -265,23 +242,10 @@
             }
           }
         }
-
-        .bg-illu {
-          width: 600px;
-          position: absolute;
-          left: calc(55vw);
-          top: vert-heights(xl);
-          z-index: -10;
-        }
         .content {
           top: vert-heights(xl);
           scroll-behavior: smooth;
         }
-        
-        
-        
-       
-        
       }
     }
   }
