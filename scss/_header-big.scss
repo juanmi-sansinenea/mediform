@@ -24,7 +24,6 @@
     width: 60vw;
     position: absolute;
     left: calc(40vw);
-    top: vert-heights(sm);
     z-index: -10;
   }
 
@@ -44,7 +43,6 @@
         ". . . info info info info info . .";
     }
     .bg-illu {
-      top: vert-heights(md);
       width: 40vw;
       left: calc(55vw);
     }
@@ -52,9 +50,6 @@
     @media (min-width: map-get($media-widths, lg)) {
       .arrow-down {
         height: vert-heights-half(lg);
-      }
-      .bg-illu {
-        top: vert-heights(lg);
       }
       //HD (xl) ------------------------------------------------------------------------
       @media (min-width: map-get($media-widths, xl)) {
@@ -75,7 +70,6 @@
             width: 600px;
             position: absolute;
             left: calc(55vw);
-            top: vert-heights(xl);
             z-index: -10;
           }
       }

@@ -612,7 +612,6 @@ table {
     width: 60vw;
     position: absolute;
     left: calc(40vw);
-    top: 90px;
     z-index: -10;
   }
 }
@@ -632,7 +631,6 @@ table {
         grid-template-areas: ". . header header header header header header . ." ". . down-arrow . . . . . . ." ". . . info info info info info . .";
   }
   .bg-illu {
-    top: 120px;
     width: 40vw;
     left: calc(55vw);
   }
@@ -641,9 +639,6 @@ table {
 @media (min-width: 0px) and (min-width: 801px) and (min-width: 1025px) {
   .arrow-down {
     height: 60px;
-  }
-  .bg-illu {
-    top: 160px;
   }
 }
 
@@ -667,7 +662,6 @@ table {
     width: 600px;
     position: absolute;
     left: calc(55vw);
-    top: 180px;
     z-index: -10;
   }
 }
