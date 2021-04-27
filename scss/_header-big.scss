@@ -1,0 +1,62 @@
+//MOBILE (sm) --------------------------------------------------------------------------
+@media (min-width: map-get($media-widths, sm)) {
+  .intro_h1 {
+    grid-area: header;
+  }
+  .intro_p {
+    grid-area: info;
+  }
+  .arrow-down {
+    height: vert-heights-half(sm);
+    grid-area: down-arrow;
+    margin-bottom: 10px;
+  }
+  .intro {
+    display: grid;
+    grid-template-columns: 6vw 88vw 6vw;
+    grid-template-rows: auto;
+    grid-template-areas:
+      ". header ."
+      ". down-arrow ."
+      ". info .";
+  }
+
+  //TABLET (md) ------------------------------------------------------------------------
+  @media (min-width: map-get($media-widths, md)) {
+    .arrow-down {
+      height: vert-heights-half(md);
+      margin-bottom: 0;
+    }
+    .intro {
+      display: grid;
+      grid-template-columns: 4vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 4vw;
+      grid-template-rows: auto;
+      grid-template-areas:
+        ". . header header header header header header . ."
+        ". . down-arrow . . . . . . ."
+        ". . . info info info info info . .";
+    }
+    //DESKTOP (lg) ---------------------------------------------------------------------
+    @media (min-width: map-get($media-widths, lg)) {
+      .arrow-down {
+        height: vert-heights-half(lg);
+      }
+      //HD (xl) ------------------------------------------------------------------------
+      @media (min-width: map-get($media-widths, xl)) {
+        .arrow-down {
+          height: vert-heights-half(xl);
+        }
+        .intro {
+          display: grid;
+          justify-content: center;
+          grid-template-columns: 166px 166px 166px 166px 166px 166px 166px 166px;
+          grid-template-rows: auto;
+          grid-template-areas:
+            ". header header header header header header ."
+            ". down-arrow . . . . . ."
+            ". . info info info info info .";
+        }
+      }
+    }
+  }
+}

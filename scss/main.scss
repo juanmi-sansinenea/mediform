@@ -1,6 +1,8 @@
 @import "./reset";
 @import "./variables";
-@import "./responsive";
+@import "./topnav";
+@import "./teasers-small";
+@import "./_header-big.scss";
 @font-face {
   font-family: "TT-Norms-Light";
   src: url(../fonts/TT-Norms-Light.woff2) format("woff2"),
@@ -11,5 +13,165 @@
   src: url(../fonts/TT-Norms-Medium.woff2) format("woff2"),
     url(../fonts/TT-Norms-Medium.woff) format("woff");
 }
-
-
+body {
+  font-family: "TT-Norms-Medium";
+  margin: 0;
+  color: map-get($colors, steel);
+}
+.visible {
+  visibility: visible;
+}
+.invisible {
+  visibility: hidden;
+}
+.display-block {
+  display: block;
+}
+.display-none {
+  display: none;
+}
+.display-grid {
+  display: grid;
+}
+.border-bottom {
+  border-bottom: 1px solid white;
+}
+////////////////////////////////////////////////////////////////////////////////////////
+//MOBILE (sm) --------------------------------------------------------------------------
+@media (min-width: map-get($media-widths, sm)) {
+  .space {
+    height: vert-heights(sm);
+    width: 100vw;
+  }
+  .space-half {
+    height: vert-heights-half(sm);
+    width: 100vw;
+  }
+  .space-quarter {
+    height: vert-heights-quarter(sm);
+    width: 100vw;
+  }
+  h1 {
+    font-family: "TT-Norms-Light";
+    font-size: font-sizes-sm(h1);
+    line-height: line-heights(h1);
+    color: colors(stone);
+  }
+  h2 {
+    font-family: "TT-Norms-Light";
+    font-size: font-sizes-sm(h2);
+    line-height: line-heights(h2);
+    margin-bottom: vert-heights-quarter(sm);
+  }
+  h3 {
+    font-family: "TT-Norms-Light";
+    font-size: font-sizes-sm(h3);
+    line-height: line-heights(h3);
+    text-decoration: underline;
+  }
+  p {
+    font-size: font-sizes-sm(p);
+    line-height: line-heights(p);
+    padding-bottom: vert-heights(sm);
+  }
+  small {
+    font-size: font-sizes-sm(small);
+    line-height: line-heights(small);
+  }
+  //TABLET (md) ------------------------------------------------------------------------
+  @media (min-width: map-get($media-widths, md)) {
+    .space {
+      height: vert-heights(md);
+    }
+    .space-half {
+      height: vert-heights-half(md);
+    }
+    .space-quarter {
+      height: vert-heights-quarter(md);
+    }
+    h1 {
+      font-size: font-sizes-md(h1);
+      line-height: line-heights(h1);
+    }
+    h2 {
+      font-size: font-sizes-md(h2);
+      line-height: line-heights(h2);
+    }
+    h3 {
+      font-size: font-sizes-md(h3);
+      line-height: line-heights(h3);
+      text-decoration: underline;
+    }
+    p {
+      font-size: font-sizes-md(p);
+      line-height: line-heights(p);
+      padding-bottom: vert-heights(md);
+    }
+    small {
+      font-size: font-sizes-md(small);
+      line-height: line-heights(small);
+    }
+    //DESKTOP (lg) ---------------------------------------------------------------------
+    @media (min-width: map-get($media-widths, lg)) {
+      .space {
+        height: vert-heights(lg);
+      }
+      .space-half {
+        height: vert-heights-half(lg);
+      }
+      .space-quarter {
+        height: vert-heights-quarter(lg);
+      }
+      h1 {
+        font-size: font-sizes-lg(h1);
+        line-height: line-heights(h1);
+      }
+      h2 {
+        font-size: font-sizes-lg(h2);
+        line-height: line-heights(h2);
+      }
+      h3 {
+        font-size: font-sizes-lg(h3);
+        line-height: line-heights(h3);
+      }
+      p {
+        font-size: font-sizes-lg(p);
+        line-height: line-heights(p);
+        padding-bottom: vert-heights(lg);
+      }
+      //HD (xl) ------------------------------------------------------------------------
+      @media (min-width: map-get($media-widths, xl)) {
+        .space {
+          height: vert-heights(xl);
+          width: 100vw;
+        }
+        .space-half {
+          height: vert-heights-half(xl);
+        }
+        .space-quarter {
+          height: vert-heights-quarter(xl);
+        }
+        h1 {
+          font-size: font-sizes-xl(h1);
+          line-height: line-heights(h1);
+        }
+        h2 {
+          font-size: font-sizes-xl(h2);
+          margin-bottom: vert-heights-quarter(xl);
+        }
+        h3 {
+          font-size: font-sizes-xl(h3);
+          line-height: line-heights(h3);
+        }
+        p {
+          font-size: font-sizes-xl(p);
+          line-height: line-heights(p);
+          padding-bottom: vert-heights(xl);
+        }
+        small {
+          font-size: font-sizes-xl(small);
+        }
+      }
+    }
+  }
+}
