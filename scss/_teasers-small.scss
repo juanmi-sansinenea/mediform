@@ -1,3 +1,26 @@
+.anim-arrow-in {
+  animation: arrow-in 0.5s ease forwards;
+}
+@keyframes arrow-in {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: 2vw;
+  }
+}
+.anim-arrow-out {
+  animation: arrow-out 0.5s ease;
+}
+@keyframes arrow-out {
+  from {
+    margin-left: 2vw;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
 //MOBILE (sm) --------------------------------------------------------------------------
 @media (min-width: map-get($media-widths, sm)) {
   .arrow-right {
@@ -123,7 +146,6 @@
       .arrow-right {
         width: vert-heights-half(lg);
       }
-
       .reconstructive {
         margin-bottom: vert-heights-quarter(lg);
       }

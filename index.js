@@ -53,10 +53,17 @@ class teaserSmall extends HTMLElement {
     super();
     this.clickArea = this.querySelector(".click-area");
     this.modal = this.querySelector(".teaser-small-modal");
-    this.closeX = this.querySelector(".teaser-small-modal")
-      .querySelector(".teaser-small-modal-info")
-      .querySelector(".close-teaser");
+    this.arrow = this.querySelector(".arrow-right");
+    this.closeX = this.querySelector(".close-teaser");
     //
+    this.clickArea.addEventListener("mouseover", () => {
+        this.arrow.classList.add("anim-arrow-in");
+        this.arrow.classList.remove("anim-arrow-out");
+    });
+    this.clickArea.addEventListener("mouseout", () => {
+        this.arrow.classList.add("anim-arrow-out");
+        this.arrow.classList.remove("anim-arrow-in");
+    });
     this.clickArea.addEventListener("click", () => {
       this.style.zIndex = 1;
       this.visibleTeaserModal();
@@ -80,7 +87,7 @@ class teaserSmall extends HTMLElement {
   }
   connectedCallback() {
     this.modal.classList.add("invisible");
-    this.modal.classList.add("visible");
+    this.clickArea.classList.add("visible");
   }
   disconnectedCallback() {
     /*called when the element is disconnected from the page*/
