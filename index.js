@@ -48,46 +48,39 @@ for (let i = 0; i < 3; i++) {
   });
 }
 
-/*
-function visibleTeaserModal(which) {
-  this.querySelector(".teaser-small-modal").classList.add("visible");
-  this.querySelector(".teaser-small-modal").classList.remove("invisible");
-}
-function invisibleTeaserModal(which) {
-  this.querySelector(".teaser-small-modal").classList.remove("visible");
-  this.querySelector(".teaser-small-modal").classList.add("invisible");
-}
-
-teaserSmall[0].addEventListener("click", () => {
-  teaserSmall[0]
-    .querySelector(".teaser-small-modal")
-    .classList.contains("invisible") === true
-    ? visibleTeaserModal(0)
-    : invisibleTeaserModal(0);
-});
-*/
-
 class teaserSmall extends HTMLElement {
   constructor() {
     super();
-    this.addEventListener("click", () => {
-      this.querySelector(".teaser-small-modal").classList.contains(
-        "invisible"
-      ) === true
-        ? this.visibleTeaserModal()
-        : this.invisibleTeaserModal();
+    this.clickArea = this.querySelector(".click-area");
+    this.modal = this.querySelector(".teaser-small-modal");
+    this.closeX = this.querySelector(".teaser-small-modal")
+      .querySelector(".teaser-small-modal-info")
+      .querySelector(".close-teaser");
+    //
+    this.clickArea.addEventListener("click", () => {
+      this.style.zIndex = 1;
+      this.visibleTeaserModal();
+    });
+    this.closeX.addEventListener("click", () => {
+      this.invisibleTeaserModal();
+      this.style.zIndex = 0;
     });
     this.visibleTeaserModal = function () {
-      this.querySelector(".teaser-small-modal").classList.add("visible");
-      this.querySelector(".teaser-small-modal").classList.remove("invisible");
+      this.modal.classList.add("visible");
+      this.modal.classList.remove("invisible");
+      this.clickArea.classList.add("invisible");
+      this.clickArea.classList.remove("visible");
     };
     this.invisibleTeaserModal = function () {
-      this.querySelector(".teaser-small-modal").classList.remove("visible");
-      this.querySelector(".teaser-small-modal").classList.add("invisible");
+      this.modal.classList.remove("visible");
+      this.modal.classList.add("invisible");
+      this.clickArea.classList.remove("invisible");
+      this.clickArea.classList.add("visible");
     };
   }
   connectedCallback() {
-    this.querySelector(".teaser-small-modal").classList.add("invisible");
+    this.modal.classList.add("invisible");
+    this.modal.classList.add("visible");
   }
   disconnectedCallback() {
     /*called when the element is disconnected from the page*/

@@ -439,8 +439,13 @@ table {
   }
   .teaser-small-modal-info {
     background-color: white;
-    width: calc(3 * 11.5vw + 1vw);
+    width: calc(3 * 11.5vw + -1vw);
     padding: 3vw;
+  }
+  .click-area {
+    width: calc(3 * 11.5vw + -1vw);
+    height: calc(3 * 11.5vw + -1vw);
+    position: absolute;
   }
   .close-teaser {
     height: 40px;
@@ -512,11 +517,15 @@ table {
     width: calc(6 * 166px);
   }
   .teaser-small-modal img {
-    height: calc(3 * 166px + -14px);
+    height: calc( 3 * 166px + -14px);
   }
   .teaser-small-modal-info {
-    width: calc(3 * 166px + 14px);
+    width: calc( 3 * 166px + -14px);
     padding: 43px;
+  }
+  .click-area {
+    width: calc( 3 * 166px + -14px);
+    height: calc( 3 * 166px + -14px);
   }
   .close-teaser {
     height: 50px;

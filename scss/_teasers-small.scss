@@ -85,9 +85,10 @@
         ". . C . . . . D . .";
       margin-bottom: vert-heights(md);
     }
+    $measure: calc(3 * 11.5vw + -1vw);
     .teaser-small {
-      width: calc(3 * 11.5vw + -1vw); // make it 1vw narrower
-      height: calc(3 * 11.5vw + -1vw); // make it 1vw narrower
+      width: $measure; // make it 1vw narrower
+      height: $measure; // make it 1vw narrower
     }
     .paddington {
       padding: 3vw;
@@ -98,13 +99,18 @@
       position: absolute;
       width: calc(6 * 11.5vw);
       img {
-        height: calc(3 * 11.5vw + -1vw);
+        height: $measure;
       }
     }
     .teaser-small-modal-info {
       background-color: white;
-      width: calc(3 * 11.5vw + 1vw);
+      width: $measure;
       padding: 3vw;
+    }
+    .click-area {
+      width: $measure;
+      height: $measure;
+      position: absolute;
     }
     .close-teaser {
       height: 40px;
@@ -161,13 +167,12 @@
             ". C . . . . D .";
           margin-bottom: vert-heights(xl);
         }
+        $measure: calc(
+          3 * 166px + -14px
+        ); // make it 1vw narrower than 3 columns and compensate for the padding
         .teaser-small {
-          width: calc(
-            3 * 166px + -14px
-          ); // make it 1vw narrower than 3 columns and compensate for the padding
-          height: calc(
-            3 * 166px + -14px
-          ); // make it 1vw narrower than 3 columns and compensate for the padding
+          width: $measure;
+          height: $measure;
         }
         .paddington {
           padding: 43px;
@@ -175,12 +180,16 @@
         .teaser-small-modal {
           width: calc(6 * 166px);
           img {
-            height: calc(3 * 166px + -14px);
+            height: $measure;
           }
         }
         .teaser-small-modal-info {
-          width: calc(3 * 166px + 14px);
+          width: $measure;
           padding: 43px;
+        }
+        .click-area {
+          width: $measure;
+          height: $measure;
         }
         .close-teaser {
           height: 50px;
