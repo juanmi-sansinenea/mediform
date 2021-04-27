@@ -688,6 +688,11 @@ body {
   color: #50565b;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .visible {
   visibility: visible;
 }
