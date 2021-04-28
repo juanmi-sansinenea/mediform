@@ -382,7 +382,7 @@ table {
     grid-area: D;
   }
   .teasers {
-    margin-bottom: 90px;
+    margin-bottom: 6vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -413,7 +413,7 @@ table {
     width: 45px;
   }
   .reconstructive {
-    margin-bottom: 22px;
+    margin-bottom: 2vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -422,7 +422,7 @@ table {
             justify-content: flex-start;
   }
   .aesthetic {
-    margin-bottom: 22px;
+    margin-bottom: 2vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -446,13 +446,6 @@ table {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  h2 {
-    font-size: 3vw;
-    margin-bottom: 22px;
-  }
-  small {
-    font-size: 1.38vw;
-  }
   .teasers {
     display: -ms-grid;
     display: grid;
@@ -461,7 +454,6 @@ table {
     -ms-grid-rows: auto;
         grid-template-rows: auto;
         grid-template-areas: ". . A . . . . B . ." ". . C . . . . D . .";
-    margin-bottom: 120px;
   }
   .teaser-small {
     width: calc(3 * 11.5vw + -1vw);
@@ -505,22 +497,6 @@ table {
   .arrow-right {
     width: 60px;
   }
-  .reconstructive {
-    margin-bottom: 30px;
-  }
-  .aesthetic {
-    margin-bottom: 30px;
-  }
-  h2 {
-    font-size: 3vw;
-    margin-bottom: 30px;
-  }
-  small {
-    font-size: 1.38vw;
-  }
-  .teasers {
-    margin-bottom: 160px;
-  }
   .close-teaser {
     height: 50px;
   }
@@ -534,10 +510,10 @@ table {
     width: 90px;
   }
   .reconstructive {
-    margin-bottom: 45px;
+    margin-bottom: 28px;
   }
   .aesthetic {
-    margin-bottom: 45px;
+    margin-bottom: 28px;
   }
   .teasers {
     display: -ms-grid;

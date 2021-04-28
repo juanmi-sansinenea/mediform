@@ -51,7 +51,7 @@
     grid-area: D;
   }
   .teasers {
-    margin-bottom: vert-heights(sm);
+    margin-bottom: 6vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,12 +75,12 @@
     }
 
     .reconstructive {
-      margin-bottom: vert-heights-quarter(md);
+      margin-bottom: 2vw;
       display: flex;
       justify-content: flex-start;
     }
     .aesthetic {
-      margin-bottom: vert-heights-quarter(md);
+      margin-bottom: 2vw;
       display: flex;
       justify-content: flex-end;
     }
@@ -92,13 +92,6 @@
       display: flex;
       justify-content: flex-end;
     }
-    h2 {
-      font-size: font-sizes-md(h2);
-      margin-bottom: vert-heights-quarter(md);
-    }
-    small {
-      font-size: font-sizes-md(small);
-    }
     .teasers {
       display: grid;
       grid-template-columns: 4vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 4vw;
@@ -106,12 +99,11 @@
       grid-template-areas:
         ". . A . . . . B . ."
         ". . C . . . . D . .";
-      margin-bottom: vert-heights(md);
     }
-    $measure: calc(3 * 11.5vw + -1vw);
+    $measure: calc(3 * 11.5vw + -1vw); // make it 1vw narrower
     .teaser-small {
-      width: $measure; // make it 1vw narrower
-      height: $measure; // make it 1vw narrower
+      width: $measure; 
+      height: $measure; 
     }
     .paddington {
       padding: 3vw;
@@ -146,22 +138,6 @@
       .arrow-right {
         width: vert-heights-half(lg);
       }
-      .reconstructive {
-        margin-bottom: vert-heights-quarter(lg);
-      }
-      .aesthetic {
-        margin-bottom: vert-heights-quarter(lg);
-      }
-      h2 {
-        font-size: font-sizes-lg(h2);
-        margin-bottom: vert-heights-quarter(lg);
-      }
-      small {
-        font-size: font-sizes-lg(small);
-      }
-      .teasers {
-        margin-bottom: vert-heights(lg);
-      }
       .close-teaser {
         height: 50px;
         img {
@@ -174,10 +150,10 @@
           width: vert-heights-half(xl);
         }
         .reconstructive {
-          margin-bottom: vert-heights-quarter(xl);
+          margin-bottom: 28px;
         }
         .aesthetic {
-          margin-bottom: vert-heights-quarter(xl);
+          margin-bottom: 28px;
         }
         .teasers {
           display: grid;
@@ -191,7 +167,8 @@
         }
         $measure: calc(
           3 * 166px + -14px
-        ); // make it 1vw narrower than 3 columns and compensate for the padding
+        );
+
         .teaser-small {
           width: $measure;
           height: $measure;
