@@ -1,0 +1,40 @@
+//MOBILE (sm) --------------------------------------------------------------------------
+@media (min-width: map-get($media-widths, sm)) {
+  .testimonial {
+      display: flex;
+    .arrow {
+        width: 24vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 3vw;
+        }
+    }
+    
+    small {
+        display: block;
+        margin-bottom: 6vw;
+    }
+    img {
+        display: block;
+        width: calc(76vw / 2);
+        margin-bottom: 6vw;
+    }
+    h3 {
+        display: block;
+        width: 76vw;
+        margin-bottom: 6vw;
+    }
+  }
+
+  //TABLET (MD) --------------------------------------------------------------------------
+  @media (min-width: map-get($media-widths, md)) {
+    //DESKTOP (LG) --------------------------------------------------------------------------
+    @media (min-width: map-get($media-widths, lg)) {
+      //HD (XL) --------------------------------------------------------------------------
+      @media (min-width: map-get($media-widths, xl)) {
+      }
+    }
+  }
+}

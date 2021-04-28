@@ -481,6 +481,9 @@ table {
   .teaser-small-modal img {
     height: calc(3 * 11.5vw + -1vw);
   }
+  .teaser-small-modal h3 {
+    text-decoration: underline;
+  }
   .teaser-small-modal-info {
     background-color: white;
     width: calc(3 * 11.5vw + -1vw);
@@ -651,6 +654,43 @@ table {
   }
 }
 
+@media (min-width: 0px) {
+  .testimonial {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .testimonial .arrow {
+    width: 24vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .testimonial .arrow img {
+    width: 3vw;
+  }
+  .testimonial small {
+    display: block;
+    margin-bottom: 6vw;
+  }
+  .testimonial img {
+    display: block;
+    width: calc(76vw / 2);
+    margin-bottom: 6vw;
+  }
+  .testimonial h3 {
+    display: block;
+    width: 76vw;
+    margin-bottom: 6vw;
+  }
+}
+
 @font-face {
   font-family: "TT-Norms-Light";
   src: url(../fonts/TT-Norms-Light.woff2) format("woff2"), url(../fonts/TT-Norms-Light.woff) format("woff");
@@ -726,7 +766,6 @@ a {
     font-family: "TT-Norms-Light";
     font-size: 24px;
     line-height: 1.2;
-    text-decoration: underline;
   }
   p {
     font-size: 20px;
@@ -760,7 +799,6 @@ a {
   h3 {
     font-size: 2.14vw;
     line-height: 1.2;
-    text-decoration: underline;
   }
   p {
     font-size: 1.71vw;

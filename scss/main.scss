@@ -3,6 +3,8 @@
 @import "./topnav";
 @import "./teasers-small";
 @import "./_header-big.scss";
+@import "./testimonial.scss";
+
 @font-face {
   font-family: "TT-Norms-Light";
   src: url(../fonts/TT-Norms-Light.woff2) format("woff2"),
@@ -71,7 +73,6 @@ a {
     font-family: "TT-Norms-Light";
     font-size: font-sizes-sm(h3);
     line-height: line-heights(h3);
-    text-decoration: underline;
   }
   p {
     font-size: font-sizes-sm(p);
@@ -104,7 +105,6 @@ a {
     h3 {
       font-size: font-sizes-md(h3);
       line-height: line-heights(h3);
-      text-decoration: underline;
     }
     p {
       font-size: font-sizes-md(p);
