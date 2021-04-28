@@ -382,7 +382,6 @@ table {
     grid-area: D;
   }
   .teasers {
-    margin-bottom: 6vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -393,6 +392,7 @@ table {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-bottom: 90px;
   }
   .teaser-small {
     width: calc(100vw + -12vw);
@@ -411,6 +411,9 @@ table {
 @media (min-width: 0px) and (min-width: 801px) {
   .arrow-right {
     width: 45px;
+  }
+  .teaser-small {
+    margin-bottom: 0;
   }
   .reconstructive {
     margin-bottom: 2vw;
@@ -462,6 +465,9 @@ table {
   .paddington {
     padding: 3vw;
   }
+  .teasers {
+    margin-bottom: 120px;
+  }
   .teaser-small-modal {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -502,6 +508,9 @@ table {
   }
   .close-teaser img {
     height: 25px;
+  }
+  .teasers {
+    margin-bottom: 160px;
   }
 }
 
