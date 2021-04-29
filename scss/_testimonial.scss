@@ -29,8 +29,9 @@
   //TABLET (MD) --------------------------------------------------------------------------
   @media (min-width: map-get($media-widths, md)) {
     .testimonial {
+        display: flex;
+        justify-content: space-between;
       .arrow {
-        width: 24vw;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -55,6 +56,24 @@
     @media (min-width: map-get($media-widths, lg)) {
       //HD (XL) --------------------------------------------------------------------------
       @media (min-width: map-get($media-widths, xl)) {
+        .testimonial {
+          .arrow {
+            img {
+              width: 21px;
+            }
+          }
+          small {
+            margin-bottom: 21px;
+          }
+          .carousel {
+            width: calc(166px * 6);
+            img {
+              width: calc(166px* 1.5);
+              margin-right: 21px;
+            }
+          }
+        }
+          
       }
     }
   }

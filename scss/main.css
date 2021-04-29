@@ -692,8 +692,15 @@ table {
 }
 
 @media (min-width: 0px) and (min-width: 801px) {
+  .testimonial {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   .testimonial .arrow {
-    width: 24vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -722,6 +729,22 @@ table {
   .testimonial .carousel img {
     width: calc(11.5vw * 1.5);
     margin-right: 2vw;
+  }
+}
+
+@media (min-width: 0px) and (min-width: 801px) and (min-width: 1025px) and (min-width: 1441px) {
+  .testimonial .arrow img {
+    width: 21px;
+  }
+  .testimonial small {
+    margin-bottom: 21px;
+  }
+  .testimonial .carousel {
+    width: calc(166px * 6);
+  }
+  .testimonial .carousel img {
+    width: calc(166px* 1.5);
+    margin-right: 21px;
   }
 }
 
