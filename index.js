@@ -48,7 +48,7 @@ for (let i = 0; i < 3; i++) {
   });
 }
 
-class teaserSmall extends HTMLElement {
+class TeaserSmall extends HTMLElement {
   constructor() {
     super();
     this.clickArea = this.querySelector(".click-area");
@@ -57,12 +57,12 @@ class teaserSmall extends HTMLElement {
     this.closeX = this.querySelector(".close-teaser");
     //
     this.clickArea.addEventListener("mouseover", () => {
-        this.arrow.classList.add("anim-arrow-in");
-        this.arrow.classList.remove("anim-arrow-out");
+      this.arrow.classList.add("anim-arrow-in");
+      this.arrow.classList.remove("anim-arrow-out");
     });
     this.clickArea.addEventListener("mouseout", () => {
-        this.arrow.classList.add("anim-arrow-out");
-        this.arrow.classList.remove("anim-arrow-in");
+      this.arrow.classList.add("anim-arrow-out");
+      this.arrow.classList.remove("anim-arrow-in");
     });
     this.clickArea.addEventListener("click", () => {
       this.style.zIndex = 1;
@@ -93,4 +93,30 @@ class teaserSmall extends HTMLElement {
     /*called when the element is disconnected from the page*/
   }
 }
-customElements.define("teaser-small", teaserSmall);
+customElements.define("teaser-small", TeaserSmall);
+
+class TestimonialSlider extends HTMLElement {
+  constructor() {
+    super();
+    this.slides = this.querySelectorAll(".slide");
+    this.prev = this.querySelector(".prev");
+    this.next = this.querySelector(".next");
+    this.showActiveSlide = () => {
+      console.log("Asli ", this.activeSlide);
+      for (let i = 0; i < this.slides.length; i++) {
+        this.slides[i].style.display = "none";
+      }
+      this.slides[this.activeSlide].style.display = "";
+    };
+    this.next.addEventListener("click", () => {
+      this.activeSlide++;
+      this.showActiveSlide();
+    });
+  }
+
+  connectedCallback() {
+    this.activeSlide = 0;
+    this.showActiveSlide();
+  }
+}
+customElements.define("testimonial-slider", TestimonialSlider);

@@ -717,7 +717,7 @@ table {
   .testimonial small {
     margin-bottom: 2vw;
   }
-  .testimonial .carousel {
+  .testimonial .slide {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -726,7 +726,7 @@ table {
             align-items: center;
     width: calc(11.5vw * 6);
   }
-  .testimonial .carousel img {
+  .testimonial .slide img {
     width: calc(11.5vw * 1.5);
     margin-right: 2vw;
   }
@@ -739,10 +739,10 @@ table {
   .testimonial small {
     margin-bottom: 21px;
   }
-  .testimonial .carousel {
+  .testimonial .slide {
     width: calc(166px * 6);
   }
-  .testimonial .carousel img {
+  .testimonial .slide img {
     width: calc(166px* 1.5);
     margin-right: 21px;
   }
