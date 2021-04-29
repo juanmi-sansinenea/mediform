@@ -691,6 +691,40 @@ table {
   }
 }
 
+@media (min-width: 0px) and (min-width: 801px) {
+  .testimonial .arrow {
+    width: 24vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .testimonial .arrow img {
+    width: 1.5vw;
+  }
+  .testimonial small {
+    margin-bottom: 2vw;
+  }
+  .testimonial .carousel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: calc(11.5vw * 6);
+  }
+  .testimonial .carousel img {
+    width: calc(11.5vw * 1.5);
+    margin-right: 2vw;
+  }
+}
+
 @font-face {
   font-family: "TT-Norms-Light";
   src: url(../fonts/TT-Norms-Light.woff2) format("woff2"), url(../fonts/TT-Norms-Light.woff) format("woff");
