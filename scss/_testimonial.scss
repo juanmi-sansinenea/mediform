@@ -1,37 +1,76 @@
+@keyframes slide-in-next {
+  0% {
+    opacity: 0;
+    margin-left: 50vw;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+@keyframes slide-in-prev {
+  0% {
+    opacity: 0;
+    margin-left: -50vw;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
 //MOBILE (sm) --------------------------------------------------------------------------
 @media (min-width: map-get($media-widths, sm)) {
   .testimonial {
-    display: flex;
-    .arrow {
-      width: 24vw;
-      height: 100vw;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      img {
-        width: 3vw;
-      }
-    }
     small {
-      display: block;
-      margin-bottom: 6vw;
-    }
-    img {
-      display: block;
-      width: calc(76vw / 2);
-      margin-bottom: 6vw;
-    }
-    h3 {
       display: block;
       width: 76vw;
       margin-bottom: 6vw;
+      margin-left: 12vw;
+    }
+
+    .module {
+      display: flex;
+      justify-content: space-between;
+      .arrow {
+        width: 12vw;
+        height: calc(76vw / 2);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        img {
+          width: 3vw;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .testimonial-content {
+      position: absolute;
+      width: 76vw;
+      margin-left: 12vw;
+      img {
+        display: block;
+        width: calc(76vw / 2);
+        margin-bottom: 6vw;
+      }
+      h3 {
+        display: block;
+        width: 76vw;
+        margin-bottom: 6vw;
+        height: calc(76vw / 2);
+      }
+    }
+    .clip {
+      clip-path: inset(0px 0px 0px 0px);
     }
   }
   //TABLET (MD) --------------------------------------------------------------------------
   @media (min-width: map-get($media-widths, md)) {
     .testimonial {
-        display: flex;
-        justify-content: space-between;
+      small {
+        margin-bottom: 2vw;
+      }
       .arrow {
         height: auto;
         display: flex;
@@ -41,16 +80,20 @@
           width: 1.5vw;
         }
       }
-      small {
-        margin-bottom: 2vw;
-      }
-      .slide {
-        display: flex;
-        align-items: center;
-        width: calc(11.5vw * 6);
-        img {
-          width: calc(11.5vw * 1.5);
-          margin-right: 2vw;
+      .testimonial-content {
+        width: 88vw;
+        .slide {
+          display: flex;
+          align-items: center;
+          width: calc(11.5vw * 6);
+          img {
+            width: calc(11.5vw * 1.5);
+            margin-right: 2vw;
+          }
+          h3 {
+            display: inline;
+            width: auto;
+          }
         }
       }
     }
@@ -70,12 +113,11 @@
           .slide {
             width: calc(166px * 6);
             img {
-              width: calc(166px* 1.5);
+              width: calc(166px * 1.5);
               margin-right: 21px;
             }
           }
         }
-          
       }
     }
   }

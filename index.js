@@ -101,23 +101,30 @@ class TestimonialSlider extends HTMLElement {
     this.slides = this.querySelectorAll(".slide");
     this.prev = this.querySelector(".prev");
     this.next = this.querySelector(".next");
-    this.showActiveSlide = () => {
+
+    this.showActiveSlide = (to) => {
       for (let i = 0; i < this.slides.length; i++) {
         this.slides[i].style.display = "none";
       }
       this.slides[this.activeSlide].style.display = "";
+      this.slides[
+        this.activeSlide
+      ].style.animation = `slide-in-${to} ease 0.5s`;
+      this.slides[this.activeSlide].addEventListener("animationend", () => {
+        console.log("animation ended");
+      });
     };
     this.prev.addEventListener("click", () => {
       this.activeSlide > 0
         ? this.activeSlide--
         : (this.activeSlide = this.slides.length - 1);
-      this.showActiveSlide();
+      this.showActiveSlide("prev");
     });
     this.next.addEventListener("click", () => {
       this.activeSlide < this.slides.length - 1
         ? this.activeSlide++
         : (this.activeSlide = 0);
-      this.showActiveSlide();
+      this.showActiveSlide("next");
     });
   }
 
