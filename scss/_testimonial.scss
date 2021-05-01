@@ -49,6 +49,7 @@
       position: absolute;
       width: 76vw;
       margin-left: 12vw;
+
       img {
         display: block;
         width: calc(76vw / 2);
@@ -69,19 +70,24 @@
   @media (min-width: map-get($media-widths, md)) {
     .testimonial {
       small {
+        margin-left: calc(4vw + 11.5vw);
         margin-bottom: 2vw;
       }
-      .arrow {
-        height: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        img {
-          width: 1.5vw;
+      .module {
+        .arrow {
+          height: 0;//calc(11.5vw * 1.5);
+          width: calc(4vw + 11.5vw);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 1.5vw;
+          }
         }
       }
       .testimonial-content {
-        width: 88vw;
+        width: calc(11.5vw * 6);
+        margin-left: calc(4vw + 11.5vw);
         .slide {
           display: flex;
           align-items: center;
