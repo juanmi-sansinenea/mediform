@@ -75,7 +75,7 @@
       }
       .module {
         .arrow {
-          height: 0;//calc(11.5vw * 1.5);
+          height: calc(11.5vw * 1.5);
           width: calc(4vw + 11.5vw);
           display: flex;
           align-items: center;
@@ -97,8 +97,10 @@
             margin-right: 2vw;
           }
           h3 {
-            display: inline;
+            display: flex;
+            align-items: center;
             width: auto;
+            height: calc(11.5vw * 1.5);
           }
         }
       }

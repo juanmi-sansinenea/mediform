@@ -758,7 +758,7 @@ table {
     margin-bottom: 2vw;
   }
   .testimonial .module .arrow {
-    height: 0;
+    height: calc(11.5vw * 1.5);
     width: calc(4vw + 11.5vw);
     display: -webkit-box;
     display: -ms-flexbox;
@@ -791,8 +791,14 @@ table {
     margin-right: 2vw;
   }
   .testimonial .testimonial-content .slide h3 {
-    display: inline;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: auto;
+    height: calc(11.5vw * 1.5);
   }
 }
 
