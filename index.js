@@ -158,6 +158,7 @@ class TeaserBigSlider extends HTMLElement {
         this.slides[i].style.display = "none";
       }
       this.slides[this.activeSlide].style.display = "";
+      this.slides[this.activeSlide].style.animation = "fade-in ease 0.75s"
 
     }
   }
