@@ -1,0 +1,19 @@
+//MOBILE (sm) --------------------------------------------------------------------------
+@media (min-width: map-get($media-widths, sm)) {
+  footer {
+    width: 100%;
+    height: 50px;
+    background-color: colors(medisnow);
+
+  }
+
+  //TABLET (md) --------------------------------------------------------------------------
+  @media (min-width: map-get($media-widths, md)) {
+    //DESKTOP (lg) --------------------------------------------------------------------------
+    @media (min-width: map-get($media-widths, lg)) {
+      //HD (xl) --------------------------------------------------------------------------
+      @media (min-width: map-get($media-widths, xl)) {
+      }
+    }
+  }
+}

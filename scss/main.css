@@ -1002,6 +1002,7 @@ table {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-bottom: 90px;
   }
   .news-module .news {
     width: calc(100vw - 12vw);
@@ -1030,6 +1031,7 @@ table {
     -ms-grid-rows: auto;
         grid-template-rows: auto;
         grid-template-areas: "A . . . B . " "C . . . D . ";
+    margin-bottom: 120px;
   }
   .news-module .news {
     width: calc(11.5vw * 2 + 10.5vw);
@@ -1067,10 +1069,13 @@ table {
 }
 
 @media (min-width: 0px) and (min-width: 801px) and (min-width: 1025px) {
-  .news-img {
+  .news-module {
+    margin-bottom: 160px;
+  }
+  .news-module .news-img {
     margin-bottom: 30px;
   }
-  .arrow-right {
+  .news-module .arrow-right {
     padding-top: 30px;
     padding-bottom: 30px;
   }
@@ -1080,6 +1085,7 @@ table {
   .news-module {
     -ms-grid-columns: 166px 166px 152px 28px 152px 166px 166px;
         grid-template-columns: 166px 166px 152px 28px 152px 166px 166px;
+    margin-bottom: 180px;
   }
   .news-module .news {
     width: calc(166px * 2 + 152px);
@@ -1092,6 +1098,14 @@ table {
   .news-module .news .arrow-right {
     padding-top: 45px;
     padding-bottom: 45px;
+  }
+}
+
+@media (min-width: 0px) {
+  footer {
+    width: 100%;
+    height: 50px;
+    background-color: #e9eae5;
   }
 }
 
