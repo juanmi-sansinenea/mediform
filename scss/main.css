@@ -916,6 +916,9 @@ table {
     width: calc(11.5vw * 4);
     height: calc(11.5vw * 4);
   }
+  .teaser-big .slider .selector {
+    height: 45px;
+  }
 }
 
 @media (min-width: 0px) and (min-width: 801px) and (min-width: 1025px) {
@@ -930,6 +933,10 @@ table {
   }
   .teaser-big .teaser-big-text .arrow-right {
     margin-bottom: 30px;
+  }
+  .teaser-big .slider .selector {
+    width: 66%;
+    height: 60px;
   }
 }
 
@@ -976,6 +983,9 @@ table {
   .teaser-big .slider .slider-content img {
     width: calc(166px * 4);
     height: calc(166px * 4);
+  }
+  .teaser-big .slider .selector {
+    height: 90px;
   }
 }
 
