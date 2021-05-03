@@ -1011,6 +1011,11 @@ table {
     height: calc(100vw - 12vw);
     margin-bottom: 22px;
   }
+  .news-module .news .arrow-right {
+    display: block;
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
 }
 
 @font-face {

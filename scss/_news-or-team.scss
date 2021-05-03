@@ -12,6 +12,11 @@
         height: calc(100vw - 12vw);
         margin-bottom: vert-heights-quarter(sm);
       }
+      .arrow-right {
+          display: block;
+          padding-top: vert-heights-quarter(sm);
+          padding-bottom: vert-heights-quarter(sm);
+      }
     }
   }
 
