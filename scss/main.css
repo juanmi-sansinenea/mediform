@@ -912,6 +912,10 @@ table {
     width: calc(11.5vw * 4);
     height: calc(11.5vw * 4);
   }
+  .teaser-big .slider .slider-content img {
+    width: calc(11.5vw * 4);
+    height: calc(11.5vw * 4);
+  }
 }
 
 @media (min-width: 0px) and (min-width: 801px) and (min-width: 1025px) {

@@ -78,6 +78,15 @@
         width: calc(11.5vw * 4);
         height: calc(11.5vw * 4);
       }
+      .slider {
+        .slider-content{
+          img {
+            width: calc(11.5vw * 4);
+            height: calc(11.5vw * 4);
+          }
+        }
+      }
+      
     }
     //DESKTOP (lg) --------------------------------------------------------------------------
     @media (min-width: map-get($media-widths, lg)) {

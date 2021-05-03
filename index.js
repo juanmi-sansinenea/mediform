@@ -48,6 +48,11 @@ for (let i = 0; i < 3; i++) {
   });
 }
 
+
+
+
+
+
 class TeaserSmall extends HTMLElement {
   constructor() {
     super();
@@ -95,6 +100,10 @@ class TeaserSmall extends HTMLElement {
 }
 customElements.define("teaser-small", TeaserSmall);
 
+
+
+
+
 class TestimonialSlider extends HTMLElement {
   constructor() {
     super();
@@ -127,13 +136,14 @@ class TestimonialSlider extends HTMLElement {
       this.showActiveSlide("next");
     });
   }
-
   connectedCallback() {
     this.activeSlide = 0;
     this.showActiveSlide();
   }
 }
 customElements.define("testimonial-slider", TestimonialSlider);
+
+
 
 
 
