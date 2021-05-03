@@ -699,11 +699,40 @@ table {
 }
 
 @media (min-width: 0px) {
-  .testimonial small {
+  .testimonial-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 2vw;
+  }
+  .testimonial-header small {
+    width: 76vw;
+  }
+  .testimonial {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .testimonial .testimonial-content {
+    position: absolute;
+    width: 76vw;
+  }
+  .testimonial .testimonial-content img {
+    display: block;
+    width: calc(76vw / 2);
+    margin-bottom: 6vw;
+  }
+  .testimonial .testimonial-content h3 {
     display: block;
     width: 76vw;
     margin-bottom: 6vw;
-    margin-left: 12vw;
+    height: calc(76vw / 2);
   }
   .testimonial .module {
     display: -webkit-box;
@@ -712,6 +741,8 @@ table {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    position: absolute;
+    width: 100vw;
   }
   .testimonial .module .arrow {
     width: 12vw;
@@ -730,22 +761,6 @@ table {
     width: 3vw;
     cursor: pointer;
   }
-  .testimonial .testimonial-content {
-    position: absolute;
-    width: 76vw;
-    margin-left: 12vw;
-  }
-  .testimonial .testimonial-content img {
-    display: block;
-    width: calc(76vw / 2);
-    margin-bottom: 6vw;
-  }
-  .testimonial .testimonial-content h3 {
-    display: block;
-    width: 76vw;
-    margin-bottom: 6vw;
-    height: calc(76vw / 2);
-  }
   .testimonial .clip {
     -webkit-clip-path: inset(0px 0px 0px 0px);
             clip-path: inset(0px 0px 0px 0px);
@@ -753,29 +768,11 @@ table {
 }
 
 @media (min-width: 0px) and (min-width: 801px) {
-  .testimonial small {
-    margin-left: calc(4vw + 11.5vw);
-    margin-bottom: 2vw;
-  }
-  .testimonial .module .arrow {
-    height: calc(11.5vw * 1.5);
-    width: calc(4vw + 11.5vw);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .testimonial .module .arrow img {
-    width: 1.5vw;
+  .testimonial-header small {
+    width: calc(11.5vw * 6);
   }
   .testimonial .testimonial-content {
     width: calc(11.5vw * 6);
-    margin-left: calc(4vw + 11.5vw);
   }
   .testimonial .testimonial-content .slide {
     display: -webkit-box;
@@ -800,21 +797,45 @@ table {
     width: auto;
     height: calc(11.5vw * 1.5);
   }
+  .testimonial .module .arrow {
+    height: calc(11.5vw * 1.5);
+    width: calc(4vw + 11.5vw);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .testimonial .module .arrow img {
+    width: 1.5vw;
+  }
 }
 
 @media (min-width: 0px) and (min-width: 801px) and (min-width: 1025px) and (min-width: 1441px) {
-  .testimonial .arrow img {
-    width: 21px;
-  }
-  .testimonial small {
+  .testimonial-header {
     margin-bottom: 21px;
   }
-  .testimonial .slide {
+  .testimonial-header small {
     width: calc(166px * 6);
   }
-  .testimonial .slide img {
+  .testimonial .testimonial-content {
+    width: calc(166px * 6);
+  }
+  .testimonial .testimonial-content .slide {
+    width: calc(166px * 6);
+  }
+  .testimonial .testimonial-content .slide img {
     width: calc(166px * 1.5);
-    margin-right: 21px;
+  }
+  .testimonial .testimonial-content .slide h3 {
+    height: calc(166px * 1.5);
+  }
+  .testimonial .module .arrow img {
+    width: 21px;
   }
 }
 

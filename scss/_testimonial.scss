@@ -21,34 +21,21 @@
 
 //MOBILE (sm) --------------------------------------------------------------------------
 @media (min-width: map-get($media-widths, sm)) {
-  .testimonial {
+  .testimonial-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2vw;
     small {
-      display: block;
       width: 76vw;
-      margin-bottom: 6vw;
-      margin-left: 12vw;
     }
+  }
 
-    .module {
-      display: flex;
-      justify-content: space-between;
-      .arrow {
-        width: 12vw;
-        height: calc(76vw / 2);
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        img {
-          width: 3vw;
-          cursor: pointer;
-        }
-      }
-    }
-
+  .testimonial {
+    display: flex;
+    justify-content: center;
     .testimonial-content {
       position: absolute;
       width: 76vw;
-      margin-left: 12vw;
 
       img {
         display: block;
@@ -62,32 +49,39 @@
         height: calc(76vw / 2);
       }
     }
+
+    .module {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      width: 100vw;
+      .arrow {
+        width: 12vw;
+        height: calc(76vw / 2);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        img {
+          width: 3vw;
+          cursor: pointer;
+        }
+      }
+    }
+
     .clip {
       clip-path: inset(0px 0px 0px 0px);
     }
   }
   //TABLET (MD) --------------------------------------------------------------------------
   @media (min-width: map-get($media-widths, md)) {
-    .testimonial {
+    .testimonial-header {
       small {
-        margin-left: calc(4vw + 11.5vw);
-        margin-bottom: 2vw;
+        width: calc(11.5vw * 6);
       }
-      .module {
-        .arrow {
-          height: calc(11.5vw * 1.5);
-          width: calc(4vw + 11.5vw);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          img {
-            width: 1.5vw;
-          }
-        }
-      }
+    }
+    .testimonial {
       .testimonial-content {
         width: calc(11.5vw * 6);
-        margin-left: calc(4vw + 11.5vw);
         .slide {
           display: flex;
           align-items: center;
@@ -104,25 +98,47 @@
           }
         }
       }
+      .module {
+        .arrow {
+          height: calc(11.5vw * 1.5);
+          width: calc(4vw + 11.5vw);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 1.5vw;
+          }
+        }
+      }
     }
     //DESKTOP (LG) --------------------------------------------------------------------------
     @media (min-width: map-get($media-widths, lg)) {
       //HD (XL) --------------------------------------------------------------------------
       @media (min-width: map-get($media-widths, xl)) {
+        .testimonial-header {
+          margin-bottom: 21px;
+          small {
+            width: calc(166px * 6);
+          }
+        }
         .testimonial {
-          .arrow {
-            img {
-              width: 21px;
+          .testimonial-content {
+            width: calc(166px * 6);
+            .slide {
+              width: calc(166px * 6);
+              img {
+                width: calc(166px * 1.5);
+              }
+              h3{
+                height: calc(166px * 1.5);
+              }
             }
           }
-          small {
-            margin-bottom: 21px;
-          }
-          .slide {
-            width: calc(166px * 6);
-            img {
-              width: calc(166px * 1.5);
-              margin-right: 21px;
+          .module {
+            .arrow {
+              img {
+                width: 21px;
+              }
             }
           }
         }
