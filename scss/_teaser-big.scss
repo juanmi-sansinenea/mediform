@@ -134,6 +134,14 @@
             width: calc(166px * 4);
             height: calc(166px * 4);
           }
+          .slider {
+            .slider-content{
+              img {
+                width: calc(166px * 4);
+                height: calc(166px * 4);
+              }
+            }
+          }
         }
       }
     }
