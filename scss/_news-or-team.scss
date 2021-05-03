@@ -13,19 +13,73 @@
         margin-bottom: vert-heights-quarter(sm);
       }
       .arrow-right {
-          display: block;
-          padding-top: vert-heights-quarter(sm);
-          padding-bottom: vert-heights-quarter(sm);
+        display: block;
+        padding-top: vert-heights-quarter(sm);
+        padding-bottom: vert-heights-quarter(sm);
       }
     }
   }
 
   //TABLET (md) --------------------------------------------------------------------------
   @media (min-width: map-get($media-widths, md)) {
+    .news-module {
+      display: grid;
+      grid-template-columns: 4vw 11.5vw 11.5vw 11.5vw 10.5vw 2vw 10.5vw 11.5vw 11.5vw 11.5vw 11.5vw 4vw;
+      grid-template-rows: auto;
+      grid-template-areas:
+        ". . A . . . B . . ."
+        ". . C . . . D . . .";
+      .news {
+        $measure: calc(11.5vw * 2 + 10.5vw);
+        width: $measure;
+        .news-img {
+          width: $measure;
+          height: $measure;
+          margin-bottom: vert-heights-quarter(md);
+        }
+        .arrow-right {
+          display: block;
+          padding-top: vert-heights-quarter(md);
+          padding-bottom: vert-heights-quarter(md);
+        }
+      }
+      .A {
+        grid-area: A;
+      }
+      .B {
+        grid-area: B;
+      }
+      .C {
+        grid-area: C;
+      }
+      .D {
+        grid-area: D;
+      }
+    }
     //DESKTOP (lg) --------------------------------------------------------------------------
     @media (min-width: map-get($media-widths, lg)) {
       //HD (xl) --------------------------------------------------------------------------
       @media (min-width: map-get($media-widths, xl)) {
+        .news-module {
+            grid-template-columns: 4vw 11.5vw 11.5vw 11.5vw 10.5vw 2vw 10.5vw 11.5vw 11.5vw 11.5vw 11.5vw 4vw;
+            grid-template-rows: auto;
+            grid-template-areas:
+              ". . A . . . B . . ."
+              ". . C . . . D . . .";
+            .news {
+              $measure: calc(11.5vw * 2 + 10.5vw);
+              width: $measure;
+              .news-img {
+                width: $measure;
+                height: $measure;
+                margin-bottom: vert-heights-quarter(md);
+              }
+              .arrow-right {
+                display: block;
+                padding-top: vert-heights-quarter(md);
+                padding-bottom: vert-heights-quarter(md);
+              }
+            }
       }
     }
   }
