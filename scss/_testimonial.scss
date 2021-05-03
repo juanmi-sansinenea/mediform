@@ -33,6 +33,7 @@
   .testimonial {
     display: flex;
     justify-content: center;
+    margin-bottom: vert-heights-half(sm);
     .testimonial-content {
       //position: absolute;
       width: 76vw;
@@ -80,6 +81,7 @@
       }
     }
     .testimonial {
+      margin-bottom: vert-heights-half(md);
       .testimonial-content {
         width: calc(11.5vw * 6);
         .slide {
@@ -113,6 +115,9 @@
     }
     //DESKTOP (LG) --------------------------------------------------------------------------
     @media (min-width: map-get($media-widths, lg)) {
+      .testimonial {
+        margin-bottom: vert-heights-half(lg);
+      }
       //HD (XL) --------------------------------------------------------------------------
       @media (min-width: map-get($media-widths, xl)) {
         .testimonial-header {
@@ -122,6 +127,7 @@
           }
         }
         .testimonial {
+          margin-bottom: vert-heights-half(xl);
           .testimonial-content {
             width: calc(166px * 6);
             .slide {
@@ -130,7 +136,7 @@
                 width: calc(166px * 1.5);
                 margin-right: 28px;
               }
-              h3{
+              h3 {
                 height: calc(166px * 1.5);
               }
             }
