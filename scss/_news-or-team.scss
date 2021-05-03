@@ -1,0 +1,27 @@
+//MOBILE (sm) --------------------------------------------------------------------------
+@media (min-width: map-get($media-widths, sm)) {
+  .news-module {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .news {
+      width: calc(100vw - 12vw);
+      .news-img {
+        width: calc(100vw - 12vw);
+        height: calc(100vw - 12vw);
+        margin-bottom: vert-heights-quarter(sm);
+      }
+    }
+  }
+
+  //TABLET (md) --------------------------------------------------------------------------
+  @media (min-width: map-get($media-widths, md)) {
+    //DESKTOP (lg) --------------------------------------------------------------------------
+    @media (min-width: map-get($media-widths, lg)) {
+      //HD (xl) --------------------------------------------------------------------------
+      @media (min-width: map-get($media-widths, xl)) {
+      }
+    }
+  }
+}

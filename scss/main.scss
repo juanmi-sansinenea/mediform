@@ -2,9 +2,10 @@
 @import "./variables";
 @import "./topnav";
 @import "./teasers-small";
-@import "./_header-big.scss";
-@import "./testimonial.scss";
-@import"./teaser-big.scss";
+@import "./header-big";
+@import "./testimonial";
+@import "./teaser-big";
+@import "./news-or-team";
 
 @font-face {
   font-family: "TT-Norms-Light";

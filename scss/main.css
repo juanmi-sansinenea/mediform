@@ -989,6 +989,30 @@ table {
   }
 }
 
+@media (min-width: 0px) {
+  .news-module {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .news-module .news {
+    width: calc(100vw - 12vw);
+  }
+  .news-module .news .news-img {
+    width: calc(100vw - 12vw);
+    height: calc(100vw - 12vw);
+    margin-bottom: 22px;
+  }
+}
+
 @font-face {
   font-family: "TT-Norms-Light";
   src: url(../fonts/TT-Norms-Light.woff2) format("woff2"), url(../fonts/TT-Norms-Light.woff) format("woff");
