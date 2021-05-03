@@ -154,7 +154,6 @@ class TeaserBigSlider extends HTMLElement {
       });
     }
     this.showActiveSlide = () => {
-      console.log('this.activeSlide :>> ', this.activeSlide);
       for (let i = 0; i < this.slides.length; i++) {
         this.slides[i].style.display = "none";
       }
@@ -165,6 +164,7 @@ class TeaserBigSlider extends HTMLElement {
   connectedCallback() {
     this.activeSlide = 0;
     this.showActiveSlide();
+    this.btns[this.activeSlide].style.height="3px";
   }
 }
 customElements.define("teaser-big-slider", TeaserBigSlider);
