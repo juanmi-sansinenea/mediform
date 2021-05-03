@@ -830,9 +830,17 @@ table {
   }
   .testimonial .testimonial-content .slide img {
     width: calc(166px * 1.5);
+    margin-right: 28px;
   }
   .testimonial .testimonial-content .slide h3 {
     height: calc(166px * 1.5);
+  }
+  .testimonial .module {
+    width: calc(166px * 8);
+  }
+  .testimonial .module .arrow {
+    height: calc(166px * 1.5);
+    width: calc(166px * 1);
   }
   .testimonial .module .arrow img {
     width: 21px;

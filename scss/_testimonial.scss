@@ -128,6 +128,7 @@
               width: calc(166px * 6);
               img {
                 width: calc(166px * 1.5);
+                margin-right: 28px;
               }
               h3{
                 height: calc(166px * 1.5);
@@ -135,7 +136,10 @@
             }
           }
           .module {
+            width: calc(166px * 8);
             .arrow {
+              height: calc(166px * 1.5);
+              width: calc(166px * 1);
               img {
                 width: 21px;
               }
