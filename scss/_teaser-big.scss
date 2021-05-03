@@ -1,0 +1,34 @@
+//MOBILE (sm) --------------------------------------------------------------------------
+@media (min-width: map-get($media-widths, sm)) {
+  .teaser-big-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .teaser-big-text {
+      width: calc(100vw + -12vw);
+      small {
+        display: block;
+        margin-bottom: vert-heights-quarter(sm);
+      }
+      h3 {
+        margin-bottom: vert-heights-quarter(sm);
+      }
+      .arrow-right {
+        margin-bottom: vert-heights-quarter(sm);
+      }
+    }
+    .teaser-big-img {
+      width: calc(100vw + -12vw);
+      height: calc(100vw + -12vw);
+    }
+  }
+  //TABLET (md) --------------------------------------------------------------------------
+  @media (min-width: map-get($media-widths, md)) {
+    //DESKTOP (lg) --------------------------------------------------------------------------
+    @media (min-width: map-get($media-widths, lg)) {
+      //HD (xl) --------------------------------------------------------------------------
+      @media (min-width: map-get($media-widths, xl)) {
+      }
+    }
+  }
+}

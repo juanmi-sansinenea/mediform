@@ -109,7 +109,7 @@ class TestimonialSlider extends HTMLElement {
       this.slides[this.activeSlide].style.display = "";
       this.slides[
         this.activeSlide
-      ].style.animation = `slide-in-${to} ease 0.5s`;
+      ].style.animation = `slide-in-${to} ease 0.75s`;
       this.slides[this.activeSlide].addEventListener("animationend", () => {
         console.log("animation ended");
       });
