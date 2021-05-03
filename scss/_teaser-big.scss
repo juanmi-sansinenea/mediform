@@ -31,6 +31,10 @@
         justify-content: center;
         align-items: flex-start;
         width: 100vw;
+        margin-bottom: vert-heights(md);
+        .right {
+            margin-left: 2vw;
+        }
         .teaser-big-text {
           width: calc(11.5vw * 4);
           

@@ -826,7 +826,7 @@ table {
 
 @media (min-width: 0px) and (min-width: 801px) and (min-width: 1025px) and (min-width: 1441px) {
   .testimonial-header {
-    margin-bottom: 21px;
+    margin-bottom: 90px;
   }
   .testimonial-header small {
     width: calc(166px * 6);
@@ -908,6 +908,10 @@ table {
         -ms-flex-align: start;
             align-items: flex-start;
     width: 100vw;
+    margin-bottom: 120px;
+  }
+  .teaser-big .right {
+    margin-left: 2vw;
   }
   .teaser-big .teaser-big-text {
     width: calc(11.5vw * 4);

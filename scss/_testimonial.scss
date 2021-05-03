@@ -121,7 +121,7 @@
       //HD (XL) --------------------------------------------------------------------------
       @media (min-width: map-get($media-widths, xl)) {
         .testimonial-header {
-          margin-bottom: 21px;
+          margin-bottom: vert-heights-half(xl);
           small {
             width: calc(166px * 6);
           }
