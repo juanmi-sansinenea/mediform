@@ -22,6 +22,29 @@
       width: calc(100vw + -12vw);
       height: calc(100vw + -12vw);
     }
+    .slider {
+      .slider-content{
+        img {
+          width: calc(100vw + -12vw);
+          height: calc(100vw + -12vw);
+        }
+      }
+      .selector{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: vert-heights-half(sm);
+        .btn {
+          cursor: pointer;
+          height: 1px;
+          width: 100%;
+          background-color: colors(steel);
+          margin: 5px;
+        }
+      }
+    }
   }
   //TABLET (md) --------------------------------------------------------------------------
   @media (min-width: map-get($media-widths, md)) {

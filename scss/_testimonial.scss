@@ -1,24 +1,3 @@
-@keyframes slide-in-next {
-  0% {
-    opacity: 0;
-    margin-left: 50vw;
-  }
-  100% {
-    opacity: 1;
-    margin-left: 0;
-  }
-}
-@keyframes slide-in-prev {
-  0% {
-    opacity: 0;
-    margin-left: -50vw;
-  }
-  100% {
-    opacity: 1;
-    margin-left: 0;
-  }
-}
-
 //MOBILE (sm) --------------------------------------------------------------------------
 @media (min-width: map-get($media-widths, sm)) {
   .testimonial-header {
@@ -67,10 +46,6 @@
           cursor: pointer;
         }
       }
-    }
-
-    .clip {
-      clip-path: inset(0px 0px 0px 0px);
     }
   }
   //TABLET (MD) --------------------------------------------------------------------------

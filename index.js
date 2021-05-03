@@ -134,3 +134,37 @@ class TestimonialSlider extends HTMLElement {
   }
 }
 customElements.define("testimonial-slider", TestimonialSlider);
+
+
+
+
+class TeaserBigSlider extends HTMLElement {
+  constructor() {
+    super();
+    this.slides = this.querySelectorAll(".slide");
+    this.btns = this.querySelectorAll(".btn");
+    for (let i = 0; i < this.btns.length; i++) {
+      this.btns[i].addEventListener("click", () => {
+        for (let j = 0; j < this.btns.length; j++) {
+          this.btns[j].style.height = "1px";
+        }
+        this.activeSlide = i;
+        this.btns[i].style.height = "3px";
+        this.showActiveSlide();
+      });
+    }
+    this.showActiveSlide = () => {
+      console.log('this.activeSlide :>> ', this.activeSlide);
+      for (let i = 0; i < this.slides.length; i++) {
+        this.slides[i].style.display = "none";
+      }
+      this.slides[this.activeSlide].style.display = "";
+
+    }
+  }
+  connectedCallback() {
+    this.activeSlide = 0;
+    this.showActiveSlide();
+  }
+}
+customElements.define("teaser-big-slider", TeaserBigSlider);
