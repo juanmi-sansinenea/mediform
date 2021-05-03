@@ -26,37 +26,84 @@
   //TABLET (md) --------------------------------------------------------------------------
   @media (min-width: map-get($media-widths, md)) {
     .teaser-big {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-        width: 100vw;
-        margin-bottom: vert-heights(md);
-        .right {
-            margin-left: 2vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100vw;
+      margin-bottom: vert-heights(md);
+      .left {
+        margin-right: 2vw;
+      }
+      .right {
+        margin-left: 2vw;
+      }
+      .teaser-big-text {
+        width: calc(11.5vw * 4);
+
+        small {
+          margin-bottom: vert-heights-quarter(md);
         }
-        .teaser-big-text {
-          width: calc(11.5vw * 4);
-          
-          small {
-            margin-bottom: vert-heights-quarter(md);
-          }
-          h3 {
-            margin-bottom: vert-heights-quarter(md);
-          }
-          .arrow-right {
-            margin-bottom: vert-heights-quarter(md);
-          }
+        h3 {
+          margin-bottom: vert-heights-quarter(md);
         }
-        .teaser-big-img {
-          width: calc(11.5vw * 4);
-          height: calc(11.5vw * 4);
+        .arrow-right {
+          margin-bottom: vert-heights-quarter(md);
         }
+      }
+      .teaser-big-img {
+        width: calc(11.5vw * 4);
+        height: calc(11.5vw * 4);
+      }
+    }
     //DESKTOP (lg) --------------------------------------------------------------------------
     @media (min-width: map-get($media-widths, lg)) {
-      //HD (xl) --------------------------------------------------------------------------
+      .teaser-big {
+        margin-bottom: vert-heights(lg);
+        .teaser-big-text {
+          small {
+            margin-bottom: vert-heights-quarter(lg);
+          }
+          h3 {
+            margin-bottom: vert-heights-quarter(lg);
+          }
+          .arrow-right {
+            margin-bottom: vert-heights-quarter(lg);
+          }
+        }
+      }
       @media (min-width: map-get($media-widths, xl)) {
+        .teaser-big {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: flex-start;
+          width: 100vw;
+          margin-bottom: vert-heights(xl);
+          .left {
+            margin-right: 28px;
+          }
+          .right {
+            margin-left: 28px;
+          }
+          .teaser-big-text {
+            width: calc(166px * 4);
+            small {
+              margin-bottom: vert-heights-quarter(xl);
+            }
+            h3 {
+              margin-bottom: vert-heights-quarter(xl);
+            }
+            .arrow-right {
+              margin-bottom: vert-heights-quarter(xl);
+            }
+          }
+          .teaser-big-img {
+            width: calc(166px * 4);
+            height: calc(166px * 4);
+          }
+        }
       }
     }
   }
-}}
+}
