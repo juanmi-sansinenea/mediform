@@ -5,6 +5,10 @@
     background-color: colors(medisnow);
     display: flex;
     justify-content: center;
+    .space {
+      display: block;
+      height: vert-heights-half(sm);
+    }
     .footer-content {
       width: calc(100vw - 12vw);
       .col {
@@ -14,16 +18,46 @@
           font-family: "TT-Norms-Light";
           margin-bottom: vert-heights-quarter(sm);
         }
+        ul {
+          li {
+          }
+        }
         .insta {
-            width: 1.2rem;
-            padding-top: 0.4rem 
+          width: 1.5rem;
+          padding-top: 0.4rem;
         }
       }
+      .logos {
+        display: flex;
+        margin-bottom: vert-heights-half(sm);
+        img {
+          width: 3rem;
+          margin-top: - vert-heights-quarter(sm);
+          margin-right: 1rem;
+        }
+      }
+    }
+    .copyright{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+        img{
+            width: 4rem;
+        }
+        span {
+            font-family: "TT-Norms-Light";
+            padding-top: 1rem;
+        }
+
+
     }
   }
 
   //TABLET (md) --------------------------------------------------------------------------
   @media (min-width: map-get($media-widths, md)) {
+      
     //DESKTOP (lg) --------------------------------------------------------------------------
     @media (min-width: map-get($media-widths, lg)) {
       //HD (xl) --------------------------------------------------------------------------
