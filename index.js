@@ -4,7 +4,7 @@ const closeX = document.querySelector(".close-x");
 const leistungen = document.querySelector(".leistungen");
 const subSubmenu = document.querySelectorAll(".sub-submenu");
 const submenuItem = document.querySelectorAll(".submenu-item");
-//const teaserSmall = document.querySelectorAll(".teaser-small");
+const scrollMe = document.querySelector(".scroll-me");
 
 function visibleSubMenu() {
   subMenu.classList.remove("invisible");
@@ -22,10 +22,16 @@ function toggleSubmenu() {
 function showSubSubmenu(which) {
   subSubmenu[which].classList.remove("display-none");
   subSubmenu[which].classList.add("display-grid");
+  if (window.matchMedia("(min-width: 1025px)").matches) {
+    scrollMe.style.height = "100vh"; //<--make sub-submenu cover the entire viewport and make it scrollable (only desktop and hd)
+  }
 }
 function hideSubSubmenu(which) {
   subSubmenu[which].classList.add("display-none");
   subSubmenu[which].classList.remove("display-grid");
+  if (window.matchMedia("(min-width: 1025px)").matches) {
+    scrollMe.style.height = "auto"; //<--make the sub-submenu collapse back (only desktop and hd)
+  }
 }
 
 function toggleBorder(evt) {
@@ -47,11 +53,6 @@ for (let i = 0; i < 3; i++) {
       : hideSubSubmenu(i);
   });
 }
-
-
-
-
-
 
 class TeaserSmall extends HTMLElement {
   constructor() {
@@ -100,10 +101,6 @@ class TeaserSmall extends HTMLElement {
 }
 customElements.define("teaser-small", TeaserSmall);
 
-
-
-
-
 class TestimonialSlider extends HTMLElement {
   constructor() {
     super();
@@ -143,11 +140,6 @@ class TestimonialSlider extends HTMLElement {
 }
 customElements.define("testimonial-slider", TestimonialSlider);
 
-
-
-
-
-
 class TeaserBigSlider extends HTMLElement {
   constructor() {
     super();
@@ -168,14 +160,13 @@ class TeaserBigSlider extends HTMLElement {
         this.slides[i].style.display = "none";
       }
       this.slides[this.activeSlide].style.display = "";
-      this.slides[this.activeSlide].style.animation = "fade-in ease 0.75s"
-
-    }
+      this.slides[this.activeSlide].style.animation = "fade-in ease 0.75s";
+    };
   }
   connectedCallback() {
     this.activeSlide = 0;
     this.showActiveSlide();
-    this.btns[this.activeSlide].style.height="3px";
+    this.btns[this.activeSlide].style.height = "3px";
   }
 }
 customElements.define("teaser-big-slider", TeaserBigSlider);

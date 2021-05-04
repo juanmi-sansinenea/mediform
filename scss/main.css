@@ -231,6 +231,9 @@ table {
   .sub-menu .sub-menu-top-space .close-x img {
     width: 25px;
   }
+  .sub-menu .scroll-me {
+    height: auto;
+  }
   .sub-menu .scroll-me ul li {
     padding: 1.5rem 0vw 1.5rem 0vw;
     margin: 0 4vw 0 4vw;

@@ -174,7 +174,7 @@
         font-size: font-sizes-lg(h3);
         z-index: 20;
         .scroll-me {
-          //height: auto;//<--- CONFLICTS WITH SCROLLING!
+          height: auto;//<--- CONFLICTS WITH SCROLLING!
           ul {
             li {
               padding: 1.5rem 0vw 1.5rem 0vw;
