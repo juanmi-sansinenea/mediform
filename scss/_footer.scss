@@ -5,59 +5,128 @@
     background-color: colors(medisnow);
     display: flex;
     justify-content: center;
-    .space {
-      display: block;
-      height: vert-heights-half(sm);
-    }
+
     .footer-content {
       width: calc(100vw - 12vw);
-      .col {
-        display: block;
-        margin-bottom: vert-heights-half(sm);
-        .col-header {
-          font-family: "TT-Norms-Light";
-          margin-bottom: vert-heights-quarter(sm);
-        }
-        ul {
-          li {
+      margin-top: vert-heights-half(sm);
+      .cols {
+        .col {
+          display: block;
+          margin-bottom: vert-heights-half(sm);
+          .col-header {
+            font-family: "TT-Norms-Light";
+            margin-bottom: vert-heights-quarter(sm);
+          }
+          ul {
+            li {
+              line-height: 2rem;
+            }
+          }
+          .insta {
+            width: 1.5rem;
+            padding-top: 0.4rem;
           }
         }
-        .insta {
-          width: 1.5rem;
-          padding-top: 0.4rem;
-        }
-      }
-      .logos {
-        display: flex;
-        margin-bottom: vert-heights-half(sm);
-        img {
-          width: 3rem;
-          margin-top: - vert-heights-quarter(sm);
-          margin-right: 1rem;
+        .logos {
+          display: flex;
+          margin-bottom: vert-heights-half(sm);
+          img {
+            width: 3rem;
+            height: 3rem;
+            margin-top: -vert-heights-quarter(sm);
+            margin-right: 1rem;
+          }
         }
       }
     }
-    .copyright{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 2rem;
-        img{
-            width: 4rem;
-        }
-        span {
-            font-family: "TT-Norms-Light";
-            padding-top: 1rem;
-        }
-
-
+    .copyright {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+      img {
+        width: 4rem;
+      }
+      small {
+        font-family: "TT-Norms-Light";
+        padding-top: 1rem;
+      }
     }
   }
 
   //TABLET (md) --------------------------------------------------------------------------
   @media (min-width: map-get($media-widths, md)) {
-      
+    footer {
+      .footer-content {
+        width: calc(100vw - 4vw * 2 - 11.5vw * 2);
+        margin-top: vert-heights-half(md);
+        .space {
+          height: vert-heights-half(md);
+        }
+        .cols {
+          display: grid;
+          justify-content: center;
+          grid-template-columns: 33.33% 33.33% 16.67% 16.67%;
+          grid-template-rows: auto;
+          grid-template-areas: "A B C D";
+
+          .A {
+            grid-area: A;
+          }
+          .B {
+            grid-area: B;
+          }
+          .C {
+            grid-area: C;
+          }
+          .D {
+            grid-area: D;
+          }
+          .col {
+            display: inline;
+            margin-bottom: vert-heights-half(sm);
+            .col-header {
+              margin-bottom: vert-heights-quarter(md);
+            }
+            ul {
+              li {
+                line-height: 1.5rem;
+              }
+            }
+            .insta {
+              width: 1.2rem;
+              padding-top: 0.4rem;
+            }
+          }
+          .logos {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-bottom: vert-heights-half(md);
+            img {
+              width: 3rem;
+              margin-top: -vert-heights-quarter(md);
+              margin-right: 1rem;
+            }
+          }
+        }
+      }
+      .copyright {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+        img {
+          width: 4rem;
+        }
+        small {
+          font-family: "TT-Norms-Light";
+          padding-top: 1rem;
+        }
+      }
+    }
     //DESKTOP (lg) --------------------------------------------------------------------------
     @media (min-width: map-get($media-widths, lg)) {
       //HD (xl) --------------------------------------------------------------------------
