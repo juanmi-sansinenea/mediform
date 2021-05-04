@@ -1173,9 +1173,6 @@ table {
     width: calc(100vw - 4vw * 2 - 11.5vw * 2);
     margin-top: 45px;
   }
-  footer .footer-content .space {
-    height: 45px;
-  }
   footer .footer-content .cols {
     display: -ms-grid;
     display: grid;
@@ -1240,28 +1237,56 @@ table {
     margin-top: -vert-heights-quarter(md);
     margin-right: 1rem;
   }
-  footer .copyright {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-bottom: 2rem;
+}
+
+@media (min-width: 0px) and (min-width: 801px) and (min-width: 1025px) {
+  footer .footer-content {
+    margin-top: 60px;
   }
-  footer .copyright img {
-    width: 4rem;
+  footer .footer-content .cols {
+    -ms-grid-columns: 33.33% 33.33% 16.67% 16.67%;
+        grid-template-columns: 33.33% 33.33% 16.67% 16.67%;
   }
-  footer .copyright small {
-    font-family: "TT-Norms-Light";
-    padding-top: 1rem;
+  footer .footer-content .cols .col {
+    margin-bottom: 60px;
+  }
+  footer .footer-content .cols .col .col-header {
+    margin-bottom: 30px;
+  }
+  footer .footer-content .cols .col ul li {
+    line-height: 1.5rem;
+  }
+  footer .footer-content .cols .col .insta {
+    width: 1.5rem;
+    padding-top: 0.4rem;
+  }
+  footer .footer-content .cols .logos {
+    margin-bottom: 60px;
+  }
+  footer .footer-content .cols .logos img {
+    margin-top: -vert-heights-quarter(lg);
+  }
+}
+
+@media (min-width: 0px) and (min-width: 801px) and (min-width: 1025px) and (min-width: 1441px) {
+  footer .footer-content {
+    margin-top: 90px;
+    width: calc(166px * 6);
+  }
+  footer .footer-content .cols .col {
+    margin-bottom: 90px;
+  }
+  footer .footer-content .cols .col .col-header {
+    margin-bottom: 45px;
+  }
+  footer .footer-content .cols .col ul li {
+    line-height: 1.5rem;
+  }
+  footer .footer-content .cols .logos {
+    margin-bottom: 90px;
+  }
+  footer .footer-content .cols .logos img {
+    margin-top: -vert-heights-quarter(xl);
   }
 }
 

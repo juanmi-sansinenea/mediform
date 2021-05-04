@@ -61,9 +61,7 @@
       .footer-content {
         width: calc(100vw - 4vw * 2 - 11.5vw * 2);
         margin-top: vert-heights-half(md);
-        .space {
-          height: vert-heights-half(md);
-        }
+
         .cols {
           display: grid;
           justify-content: center;
@@ -85,7 +83,7 @@
           }
           .col {
             display: inline;
-            margin-bottom: vert-heights-half(sm);
+            margin-bottom: vert-heights-half(md);
             .col-header {
               margin-bottom: vert-heights-quarter(md);
             }
@@ -112,25 +110,68 @@
           }
         }
       }
-      .copyright {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 2rem;
-        img {
-          width: 4rem;
-        }
-        small {
-          font-family: "TT-Norms-Light";
-          padding-top: 1rem;
-        }
-      }
     }
     //DESKTOP (lg) --------------------------------------------------------------------------
     @media (min-width: map-get($media-widths, lg)) {
+      footer {
+        .footer-content {
+          margin-top: vert-heights-half(lg);
+
+          .cols {
+            grid-template-columns: 33.33% 33.33% 16.67% 16.67%;
+            .col {
+              margin-bottom: vert-heights-half(lg);
+              .col-header {
+                margin-bottom: vert-heights-quarter(lg);
+              }
+              ul {
+                li {
+                  line-height: 1.5rem;
+                }
+              }
+              .insta {
+                width: 1.5rem;
+                padding-top: 0.4rem;
+              }
+            }
+            .logos {
+              margin-bottom: vert-heights-half(lg);
+              img {
+                margin-top: -vert-heights-quarter(lg);
+              }
+            }
+          }
+        }
+      }
+
       //HD (xl) --------------------------------------------------------------------------
       @media (min-width: map-get($media-widths, xl)) {
+        footer {
+          .footer-content {
+            margin-top: vert-heights-half(xl);
+            width: calc(166px * 6);
+            .cols {
+              
+              .col {
+                margin-bottom: vert-heights-half(xl);
+                .col-header {
+                  margin-bottom: vert-heights-quarter(xl);
+                }
+                ul {
+                  li {
+                    line-height: 1.5rem;
+                  }
+                }
+              }
+              .logos {
+                margin-bottom: vert-heights-half(xl);
+                img {
+                  margin-top: -vert-heights-quarter(xl);
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
