@@ -38,6 +38,36 @@
   .clip {
     clip-path: inset(0px 0px 0px 0px);
   }
+  .color-steel {
+    color: colors(steel);
+  }
+  .color-stone {
+    color: colors(stone);
+  }
+  .color-forest {
+    color: colors(forest);
+  }
+  .color-lila {
+    color: colors(lila);
+  }
+  .color-ocean {
+    color: colors(ocean);
+  }
+  .color-rain {
+    color: colors(rain);
+  }
+  .background-forest {
+    background-color: colors(forest-tint);
+  }
+  .background-lila {
+    background-color: colors(lila-tint);
+  }
+  .background-ocean {
+    background-color: colors(ocean-tint);
+  }
+  .background-rain {
+    background-color: colors(rain-tint);
+  }
   
   @keyframes slide-in-next {
     0% {

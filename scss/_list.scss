@@ -1,35 +1,83 @@
+.border-forest {
+  border-top: 1px solid colors(forest-tint);
+  border-bottom: 1px solid colors(forest-tint);
+}
+.border-lila {
+  border-top: 1px solid colors(lila-tint);
+  border-bottom: 1px solid colors(lila-tint);
+}
+.border-ocean {
+  border-top: 1px solid colors(ocean-tint);
+  border-bottom: 1px solid colors(ocean-tint);
+}
+.border-rain {
+  border-top: 1px solid colors(rain-tint);
+  border-bottom: 1px solid colors(rain-tint);
+}
+
 //MOBILE (sm) --------------------------------------------------------------------------
 @media (min-width: map-get($media-widths, sm)) {
-  h1 {
-    color: colors(forest);
-  }
   .list {
     display: flex;
     justify-content: center;
     h3 {
-      color: colors(forest);
-      border-top: 1px solid colors(forest-tint);
-      border-bottom: 1px solid colors(forest-tint);
-      padding-top: vert-heights-half(sm);
-      padding-bottom: vert-heights-half(sm);
       margin-bottom: vert-heights(sm);
-      
-      width: 88%;
-      ul {
-        list-style: outside;
-        margin-left: 8vw;
-        li {
-          padding-left: 4vw;
+      width: calc(100vw - 12vw);
+      .border {
+        padding-top: vert-heights-half(sm);
+        padding-bottom: vert-heights-half(sm);
+        ul {
+          list-style: outside;
+          list-style-image: url("../img/bullet.svg");
+          margin-left: 2rem;
+          li {
+            padding-left: 0.5rem;
+          }
         }
       }
     }
   }
   //TABLET (md) --------------------------------------------------------------------------
   @media (min-width: map-get($media-widths, md)) {
+    .list {
+      h3 {
+        margin-bottom: vert-heights(md);
+        width: calc(11.5vw * 6);
+        .border {
+          padding-top: vert-heights-quarter(md);
+          padding-bottom: vert-heights-quarter(md);
+          width: calc(11.5vw * 4);
+        }
+      }
+    }
+
     //DESKTOP (lg) --------------------------------------------------------------------------
     @media (min-width: map-get($media-widths, lg)) {
+      .list {
+        h3 {
+          margin-bottom: vert-heights(lg);
+          width: calc(11.5vw * 6);
+          .border {
+            padding-top: vert-heights-quarter(lg);
+            padding-bottom: vert-heights-quarter(lg);
+            width: calc(11.5vw * 4);
+          }
+        }
+      }
+
       //HD (xl) --------------------------------------------------------------------------
       @media (min-width: map-get($media-widths, xl)) {
+        .list {
+          h3 {
+            margin-bottom: vert-heights(xl);
+            width: calc(166px * 6);
+            .border {
+              padding-top: vert-heights-quarter(xl);
+              padding-bottom: vert-heights-quarter(xl);
+              width: calc(166px * 4);
+            }
+          }
+        }
       }
     }
   }

@@ -103,6 +103,46 @@ a {
           clip-path: inset(0px 0px 0px 0px);
 }
 
+.color-steel {
+  color: #50565b;
+}
+
+.color-stone {
+  color: #737b82;
+}
+
+.color-forest {
+  color: #636951;
+}
+
+.color-lila {
+  color: #5c3c78;
+}
+
+.color-ocean {
+  color: #1e505f;
+}
+
+.color-rain {
+  color: #3b4c5b;
+}
+
+.background-forest {
+  background-color: #d7dacd;
+}
+
+.background-lila {
+  background-color: #d6d1db;
+}
+
+.background-ocean {
+  background-color: #c7d9dd;
+}
+
+.background-rain {
+  background-color: #ccd3d6;
+}
+
 @-webkit-keyframes slide-in-next {
   0% {
     opacity: 0;

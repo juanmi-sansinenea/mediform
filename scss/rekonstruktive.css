@@ -103,6 +103,46 @@ a {
           clip-path: inset(0px 0px 0px 0px);
 }
 
+.color-steel {
+  color: #50565b;
+}
+
+.color-stone {
+  color: #737b82;
+}
+
+.color-forest {
+  color: #636951;
+}
+
+.color-lila {
+  color: #5c3c78;
+}
+
+.color-ocean {
+  color: #1e505f;
+}
+
+.color-rain {
+  color: #3b4c5b;
+}
+
+.background-forest {
+  background-color: #d7dacd;
+}
+
+.background-lila {
+  background-color: #d6d1db;
+}
+
+.background-ocean {
+  background-color: #c7d9dd;
+}
+
+.background-rain {
+  background-color: #ccd3d6;
+}
+
 @-webkit-keyframes slide-in-next {
   0% {
     opacity: 0;
@@ -912,10 +952,27 @@ a {
   }
 }
 
+.border-forest {
+  border-top: 1px solid #d7dacd;
+  border-bottom: 1px solid #d7dacd;
+}
+
+.border-lila {
+  border-top: 1px solid #d6d1db;
+  border-bottom: 1px solid #d6d1db;
+}
+
+.border-ocean {
+  border-top: 1px solid #c7d9dd;
+  border-bottom: 1px solid #c7d9dd;
+}
+
+.border-rain {
+  border-top: 1px solid #ccd3d6;
+  border-bottom: 1px solid #ccd3d6;
+}
+
 @media (min-width: 0px) {
-  h1 {
-    color: #636951;
-  }
   .list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -925,20 +982,56 @@ a {
             justify-content: center;
   }
   .list h3 {
-    color: #636951;
-    border-top: 1px solid #d7dacd;
-    border-bottom: 1px solid #d7dacd;
+    margin-bottom: 90px;
+    width: calc(100vw - 12vw);
+  }
+  .list h3 .border {
     padding-top: 45px;
     padding-bottom: 45px;
-    margin-bottom: 90px;
-    width: 88%;
   }
-  .list h3 ul {
+  .list h3 .border ul {
     list-style: outside;
-    margin-left: 8vw;
+    list-style-image: url("../img/bullet.svg");
+    margin-left: 2rem;
   }
-  .list h3 ul li {
-    padding-left: 4vw;
+  .list h3 .border ul li {
+    padding-left: 0.5rem;
+  }
+}
+
+@media (min-width: 0px) and (min-width: 801px) {
+  .list h3 {
+    margin-bottom: 120px;
+    width: calc(11.5vw * 6);
+  }
+  .list h3 .border {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    width: calc(11.5vw * 4);
+  }
+}
+
+@media (min-width: 0px) and (min-width: 801px) and (min-width: 1025px) {
+  .list h3 {
+    margin-bottom: 160px;
+    width: calc(11.5vw * 6);
+  }
+  .list h3 .border {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: calc(11.5vw * 4);
+  }
+}
+
+@media (min-width: 0px) and (min-width: 801px) and (min-width: 1025px) and (min-width: 1441px) {
+  .list h3 {
+    margin-bottom: 180px;
+    width: calc(166px * 6);
+  }
+  .list h3 .border {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    width: calc(166px * 4);
   }
 }
 
