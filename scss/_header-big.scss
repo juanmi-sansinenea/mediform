@@ -33,6 +33,9 @@
       height: vert-heights-half(md);
       margin-bottom: 0;
     }
+    .intro_p {
+      margin-left: -3rem;
+    }
     .intro {
       display: grid;
       grid-template-columns: 4vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 4vw;

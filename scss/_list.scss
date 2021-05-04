@@ -1,0 +1,36 @@
+//MOBILE (sm) --------------------------------------------------------------------------
+@media (min-width: map-get($media-widths, sm)) {
+  h1 {
+    color: colors(forest);
+  }
+  .list {
+    display: flex;
+    justify-content: center;
+    h3 {
+      color: colors(forest);
+      border-top: 1px solid colors(forest-tint);
+      border-bottom: 1px solid colors(forest-tint);
+      padding-top: vert-heights-half(sm);
+      padding-bottom: vert-heights-half(sm);
+      margin-bottom: vert-heights(sm);
+      
+      width: 88%;
+      ul {
+        list-style: outside;
+        margin-left: 8vw;
+        li {
+          padding-left: 4vw;
+        }
+      }
+    }
+  }
+  //TABLET (md) --------------------------------------------------------------------------
+  @media (min-width: map-get($media-widths, md)) {
+    //DESKTOP (lg) --------------------------------------------------------------------------
+    @media (min-width: map-get($media-widths, lg)) {
+      //HD (xl) --------------------------------------------------------------------------
+      @media (min-width: map-get($media-widths, xl)) {
+      }
+    }
+  }
+}
