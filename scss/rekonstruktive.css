@@ -756,6 +756,16 @@ a {
         justify-self: end;
     grid-area: D;
   }
+  .E {
+    -ms-grid-column-align: start;
+        justify-self: start;
+    grid-area: E;
+  }
+  .F {
+    -ms-grid-column-align: end;
+        justify-self: end;
+    grid-area: E;
+  }
   .teasers {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -788,10 +798,9 @@ a {
     width: 45px;
   }
   .teaser-small {
-    margin-bottom: 0;
+    margin-bottom: 2vw;
   }
   .A {
-    margin-bottom: 2vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -800,7 +809,6 @@ a {
             justify-content: flex-start;
   }
   .B {
-    margin-bottom: 2vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -824,6 +832,22 @@ a {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
+  .E {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .F {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
   .teasers {
     display: -ms-grid;
     display: grid;
@@ -831,7 +855,7 @@ a {
         grid-template-columns: 4vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 4vw;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
-        grid-template-areas: ". . A . . . . B . ." ". . C . . . . D . .";
+        grid-template-areas: ". . A . . . . B . ." ". . C . . . . D . ." ". . E . . . . F . .";
   }
   .teaser-small {
     width: calc(3 * 11.5vw + -1vw);
@@ -896,12 +920,6 @@ a {
   .arrow-right {
     width: 90px;
   }
-  .A {
-    margin-bottom: 28px;
-  }
-  .B {
-    margin-bottom: 28px;
-  }
   .teasers {
     display: -ms-grid;
     display: grid;
@@ -912,12 +930,13 @@ a {
         grid-template-columns: 166px 166px 166px 166px 166px 166px 166px 166px;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
-        grid-template-areas: ". A . . . . B ." ". C . . . . D .";
+        grid-template-areas: ". A . . . . B ." ". C . . . . D ." ". E . . . . F .";
     margin-bottom: 180px;
   }
   .teaser-small {
     width: calc( 3 * 166px + -14px);
     height: calc( 3 * 166px + -14px);
+    margin-bottom: 28px;
   }
   .paddington {
     padding: 43px;

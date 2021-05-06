@@ -42,6 +42,14 @@
     justify-self: end;
     grid-area: D;
   }
+  .E {
+    justify-self: start;
+    grid-area: E;
+  }
+  .F {
+    justify-self: end;
+    grid-area: E;
+  }
   .teasers {
     display: flex;
     flex-direction: column;
@@ -66,16 +74,14 @@
       width: vert-heights-half(md);
     }
     .teaser-small {
-      margin-bottom: 0;
+      margin-bottom: 2vw;
     }
 
     .A {
-      margin-bottom: 2vw;
       display: flex;
       justify-content: flex-start;
     }
     .B {
-      margin-bottom: 2vw;
       display: flex;
       justify-content: flex-end;
     }
@@ -87,13 +93,22 @@
       display: flex;
       justify-content: flex-end;
     }
+    .E {
+      display: flex;
+      justify-content: flex-start;
+    }
+    .F {
+      display: flex;
+      justify-content: flex-end;
+    }
     .teasers {
       display: grid;
       grid-template-columns: 4vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 4vw;
       grid-template-rows: auto;
       grid-template-areas:
         ". . A . . . . B . ."
-        ". . C . . . . D . .";
+        ". . C . . . . D . ."
+        ". . E . . . . F . .";
     }
     $measure: calc(3 * 11.5vw + -1vw); // make it 1vw narrower
     .teaser-small {
@@ -153,12 +168,7 @@
         .arrow-right {
           width: vert-heights-half(xl);
         }
-        .A {
-          margin-bottom: 28px;
-        }
-        .B {
-          margin-bottom: 28px;
-        }
+        
         .teasers {
           display: grid;
           justify-content: center;
@@ -166,7 +176,8 @@
           grid-template-rows: auto;
           grid-template-areas:
             ". A . . . . B ."
-            ". C . . . . D .";
+            ". C . . . . D ."
+            ". E . . . . F .";
           margin-bottom: vert-heights(xl);
         }
         $measure: calc(
@@ -176,6 +187,7 @@
         .teaser-small {
           width: $measure;
           height: $measure;
+          margin-bottom: 28px;
         }
         .paddington {
           padding: 43px;
