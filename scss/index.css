@@ -1531,7 +1531,8 @@ a {
     margin-bottom: 45px;
   }
   footer .footer-content .cols .logos img {
-    width: 3rem;
+    width: 4rem;
+    height: 4rem;
     margin-top: -vert-heights-quarter(md);
     margin-right: 1rem;
   }
