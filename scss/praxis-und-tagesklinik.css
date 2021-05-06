@@ -843,6 +843,31 @@ a {
   }
 }
 
+@media (min-width: 0px) and (min-width: 801px) and (min-width: 1025px) {
+  .body-copy-with-intro {
+    margin-bottom: 160px;
+  }
+  .body-copy-with-intro .container h2 {
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 0px) and (min-width: 801px) and (min-width: 1025px) and (min-width: 1441px) {
+  .body-copy-with-intro {
+    margin-bottom: 180px;
+  }
+  .body-copy-with-intro .container {
+    width: calc(166px * 6);
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 166px 166px 166px 166px 166px 166px;
+        grid-template-columns: 166px 166px 166px 166px 166px 166px;
+  }
+  .body-copy-with-intro .container h2 {
+    margin-bottom: 90px;
+  }
+}
+
 @media (min-width: 0px) {
   footer {
     width: 100%;
