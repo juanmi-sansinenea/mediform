@@ -1,238 +1,238 @@
 @font-face {
+  font-family: "TT-Norms-Light";
+  src: url(../fonts/TT-Norms-Light.woff2) format("woff2"),
+    url(../fonts/TT-Norms-Light.woff) format("woff");
+}
+@font-face {
+  font-family: "TT-Norms-Medium";
+  src: url(../fonts/TT-Norms-Medium.woff2) format("woff2"),
+    url(../fonts/TT-Norms-Medium.woff) format("woff");
+}
+body {
+  font-family: "TT-Norms-Medium";
+  margin: 0;
+  color: map-get($colors, steel);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.visible {
+  visibility: visible;
+}
+.invisible {
+  visibility: hidden;
+}
+.display-block {
+  display: block;
+}
+.display-none {
+  display: none;
+}
+.display-grid {
+  display: grid;
+}
+.border-bottom {
+  border-bottom: 1px solid white;
+}
+.clip {
+  clip-path: inset(0px 0px 0px 0px);
+}
+.color-steel {
+  color: colors(steel);
+}
+.color-stone {
+  color: colors(stone);
+}
+.color-forest {
+  color: colors(forest);
+}
+.color-lila {
+  color: colors(lila);
+}
+.color-ocean {
+  color: colors(ocean);
+}
+.color-rain {
+  color: colors(rain);
+}
+.background-forest {
+  background-color: colors(forest-tint);
+}
+.background-lila {
+  background-color: colors(lila-tint);
+}
+.background-ocean {
+  background-color: colors(ocean-tint);
+}
+.background-rain {
+  background-color: colors(rain-tint);
+}
+
+@keyframes slide-in-next {
+  0% {
+    opacity: 0;
+    margin-left: 50vw;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+@keyframes slide-in-prev {
+  0% {
+    opacity: 0;
+    margin-left: -50vw;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////
+//MOBILE (sm) --------------------------------------------------------------------------
+@media (min-width: map-get($media-widths, sm)) {
+  .space {
+    height: vert-heights(sm);
+    width: 100vw;
+  }
+  .space-half {
+    height: vert-heights-half(sm);
+    width: 100vw;
+  }
+  .space-quarter {
+    height: vert-heights-quarter(sm);
+    width: 100vw;
+  }
+  h1 {
     font-family: "TT-Norms-Light";
-    src: url(../fonts/TT-Norms-Light.woff2) format("woff2"),
-      url(../fonts/TT-Norms-Light.woff) format("woff");
-  }
-  @font-face {
-    font-family: "TT-Norms-Medium";
-    src: url(../fonts/TT-Norms-Medium.woff2) format("woff2"),
-      url(../fonts/TT-Norms-Medium.woff) format("woff");
-  }
-  body {
-    font-family: "TT-Norms-Medium";
-    margin: 0;
-    color: map-get($colors, steel);
-  }
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-  .visible {
-    visibility: visible;
-  }
-  .invisible {
-    visibility: hidden;
-  }
-  .display-block {
-    display: block;
-  }
-  .display-none {
-    display: none;
-  }
-  .display-grid {
-    display: grid;
-  }
-  .border-bottom {
-    border-bottom: 1px solid white;
-  }
-  .clip {
-    clip-path: inset(0px 0px 0px 0px);
-  }
-  .color-steel {
-    color: colors(steel);
-  }
-  .color-stone {
+    font-size: font-sizes-sm(h1);
+    line-height: line-heights(h1);
     color: colors(stone);
   }
-  .color-forest {
-    color: colors(forest);
+  h2 {
+    font-family: "TT-Norms-Light";
+    font-size: font-sizes-sm(h2);
+    line-height: line-heights(h2);
+    margin-bottom: vert-heights-quarter(sm);
   }
-  .color-lila {
-    color: colors(lila);
+  h3 {
+    font-family: "TT-Norms-Light";
+    font-size: font-sizes-sm(h3);
+    line-height: line-heights(h3);
   }
-  .color-ocean {
-    color: colors(ocean);
+  p {
+    font-size: font-sizes-sm(p);
+    line-height: line-heights(p);
+    padding-bottom: vert-heights(sm);
   }
-  .color-rain {
-    color: colors(rain);
+  small {
+    font-size: font-sizes-sm(small);
+    line-height: line-heights(small);
   }
-  .background-forest {
-    background-color: colors(forest-tint);
-  }
-  .background-lila {
-    background-color: colors(lila-tint);
-  }
-  .background-ocean {
-    background-color: colors(ocean-tint);
-  }
-  .background-rain {
-    background-color: colors(rain-tint);
-  }
-  
-  @keyframes slide-in-next {
-    0% {
-      opacity: 0;
-      margin-left: 50vw;
-    }
-    100% {
-      opacity: 1;
-      margin-left: 0;
-    }
-  }
-  @keyframes slide-in-prev {
-    0% {
-      opacity: 0;
-      margin-left: -50vw;
-    }
-    100% {
-      opacity: 1;
-      margin-left: 0;
-    }
-  }
-  
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  ////////////////////////////////////////////////////////////////////////////////////////
-  //MOBILE (sm) --------------------------------------------------------------------------
-  @media (min-width: map-get($media-widths, sm)) {
+  //TABLET (md) ------------------------------------------------------------------------
+  @media (min-width: map-get($media-widths, md)) {
     .space {
-      height: vert-heights(sm);
-      width: 100vw;
+      height: vert-heights(md);
     }
     .space-half {
-      height: vert-heights-half(sm);
-      width: 100vw;
+      height: vert-heights-half(md);
     }
     .space-quarter {
-      height: vert-heights-quarter(sm);
-      width: 100vw;
+      height: vert-heights-quarter(md);
     }
     h1 {
-      font-family: "TT-Norms-Light";
-      font-size: font-sizes-sm(h1);
+      font-size: font-sizes-md(h1);
       line-height: line-heights(h1);
-      color: colors(stone);
     }
     h2 {
-      font-family: "TT-Norms-Light";
-      font-size: font-sizes-sm(h2);
+      font-size: font-sizes-md(h2);
       line-height: line-heights(h2);
-      margin-bottom: vert-heights-quarter(sm);
     }
     h3 {
-      font-family: "TT-Norms-Light";
-      font-size: font-sizes-sm(h3);
+      font-size: font-sizes-md(h3);
       line-height: line-heights(h3);
     }
     p {
-      font-size: font-sizes-sm(p);
+      font-size: font-sizes-md(p);
       line-height: line-heights(p);
-      padding-bottom: vert-heights(sm);
+      padding-bottom: vert-heights(md);
     }
     small {
-      font-size: font-sizes-sm(small);
+      font-size: font-sizes-md(small);
       line-height: line-heights(small);
     }
-    //TABLET (md) ------------------------------------------------------------------------
-    @media (min-width: map-get($media-widths, md)) {
+    //DESKTOP (lg) ---------------------------------------------------------------------
+    @media (min-width: map-get($media-widths, lg)) {
       .space {
-        height: vert-heights(md);
+        height: vert-heights(lg);
       }
       .space-half {
-        height: vert-heights-half(md);
+        height: vert-heights-half(lg);
       }
       .space-quarter {
-        height: vert-heights-quarter(md);
+        height: vert-heights-quarter(lg);
       }
       h1 {
-        font-size: font-sizes-md(h1);
+        font-size: font-sizes-lg(h1);
         line-height: line-heights(h1);
       }
       h2 {
-        font-size: font-sizes-md(h2);
+        font-size: font-sizes-lg(h2);
         line-height: line-heights(h2);
       }
       h3 {
-        font-size: font-sizes-md(h3);
+        font-size: font-sizes-lg(h3);
         line-height: line-heights(h3);
       }
       p {
-        font-size: font-sizes-md(p);
+        font-size: font-sizes-lg(p);
         line-height: line-heights(p);
-        padding-bottom: vert-heights(md);
+        padding-bottom: vert-heights(lg);
       }
-      small {
-        font-size: font-sizes-md(small);
-        line-height: line-heights(small);
-      }
-      //DESKTOP (lg) ---------------------------------------------------------------------
-      @media (min-width: map-get($media-widths, lg)) {
+      //HD (xl) ------------------------------------------------------------------------
+      @media (min-width: map-get($media-widths, xl)) {
         .space {
-          height: vert-heights(lg);
+          height: vert-heights(xl);
+          width: 100vw;
         }
         .space-half {
-          height: vert-heights-half(lg);
+          height: vert-heights-half(xl);
         }
         .space-quarter {
-          height: vert-heights-quarter(lg);
+          height: vert-heights-quarter(xl);
         }
         h1 {
-          font-size: font-sizes-lg(h1);
+          font-size: font-sizes-xl(h1);
           line-height: line-heights(h1);
         }
         h2 {
-          font-size: font-sizes-lg(h2);
-          line-height: line-heights(h2);
+          font-size: font-sizes-xl(h2);
+          margin-bottom: vert-heights-quarter(xl);
         }
         h3 {
-          font-size: font-sizes-lg(h3);
+          font-size: font-sizes-xl(h3);
           line-height: line-heights(h3);
         }
         p {
-          font-size: font-sizes-lg(p);
+          font-size: font-sizes-xl(p);
           line-height: line-heights(p);
-          padding-bottom: vert-heights(lg);
+          padding-bottom: vert-heights(xl);
         }
-        //HD (xl) ------------------------------------------------------------------------
-        @media (min-width: map-get($media-widths, xl)) {
-          .space {
-            height: vert-heights(xl);
-            width: 100vw;
-          }
-          .space-half {
-            height: vert-heights-half(xl);
-          }
-          .space-quarter {
-            height: vert-heights-quarter(xl);
-          }
-          h1 {
-            font-size: font-sizes-xl(h1);
-            line-height: line-heights(h1);
-          }
-          h2 {
-            font-size: font-sizes-xl(h2);
-            margin-bottom: vert-heights-quarter(xl);
-          }
-          h3 {
-            font-size: font-sizes-xl(h3);
-            line-height: line-heights(h3);
-          }
-          p {
-            font-size: font-sizes-xl(p);
-            line-height: line-heights(p);
-            padding-bottom: vert-heights(xl);
-          }
-          small {
-            font-size: font-sizes-xl(small);
-          }
+        small {
+          font-size: font-sizes-xl(small);
         }
       }
     }
   }
+}

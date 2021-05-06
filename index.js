@@ -140,6 +140,9 @@ class TestimonialSlider extends HTMLElement {
 }
 customElements.define("testimonial-slider", TestimonialSlider);
 
+
+
+// The below class applies to both the Teaser Big Slider and the Slider Big modules
 class TeaserBigSlider extends HTMLElement {
   constructor() {
     super();
