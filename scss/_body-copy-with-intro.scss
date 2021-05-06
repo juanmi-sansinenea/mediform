@@ -1,0 +1,45 @@
+//MOBILE (sm) --------------------------------------------------------------------------
+@media (min-width: map-get($media-widths, sm)) {
+    .body-copy-with-intro{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        margin-bottom: vert-heights(sm);
+        .container {
+            width: calc(100vw - 12vw);
+            h2{
+                margin-bottom: vert-heights-half(sm)
+            }
+        }
+    }
+    //TABLET (md) --------------------------------------------------------------------------
+    @media (min-width: map-get($media-widths, md)) {
+        .body-copy-with-intro{
+            margin-bottom: vert-heights(md);
+            .container {
+                width: calc(100vw - 11.5vw - 11.15vw - 8vw);
+                display: grid;
+                grid-template-columns: 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw 11.5vw;
+                grid-template-rows: auto;
+                grid-template-areas:
+                "A A A A A ."
+                ". . B B B B";
+
+                h2{
+                    margin-bottom: vert-heights-half(sm);
+                    grid-area: A;
+                }
+                small {
+                    grid-area: B;
+                }
+            }
+        }
+      //DESKTOP (lg) --------------------------------------------------------------------------
+      @media (min-width: map-get($media-widths, lg)) {
+        //HD (xl) --------------------------------------------------------------------------
+        @media (min-width: map-get($media-widths, xl)) {
+        }
+      }
+    }
+  }
+  
