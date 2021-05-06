@@ -736,30 +736,22 @@ a {
   .arrow-right {
     width: 45px;
   }
-  .reconstructive {
-    background-color: #d7dacd;
-    color: #636951;
+  .A {
     -ms-grid-column-align: start;
         justify-self: start;
     grid-area: A;
   }
-  .aesthetic {
-    background-color: #d6d1db;
-    color: #5c3c78;
+  .B {
     -ms-grid-column-align: end;
         justify-self: end;
     grid-area: B;
   }
-  .general {
-    background-color: #c7d9dd;
-    color: #1e505f;
+  .C {
     -ms-grid-column-align: start;
         justify-self: start;
     grid-area: C;
   }
-  .hand {
-    background-color: #ccd3d6;
-    color: #3b4c5b;
+  .D {
     -ms-grid-column-align: end;
         justify-self: end;
     grid-area: D;
@@ -798,7 +790,7 @@ a {
   .teaser-small {
     margin-bottom: 0;
   }
-  .reconstructive {
+  .A {
     margin-bottom: 2vw;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -807,7 +799,7 @@ a {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-  .aesthetic {
+  .B {
     margin-bottom: 2vw;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -816,7 +808,7 @@ a {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  .general {
+  .C {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -824,7 +816,7 @@ a {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-  .hand {
+  .D {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -904,10 +896,10 @@ a {
   .arrow-right {
     width: 90px;
   }
-  .reconstructive {
+  .A {
     margin-bottom: 28px;
   }
-  .aesthetic {
+  .B {
     margin-bottom: 28px;
   }
   .teasers {

@@ -26,27 +26,19 @@
   .arrow-right {
     width: vert-heights-half(sm);
   }
-  .reconstructive {
-    background-color: colors(forest-tint);
-    color: map-get($colors, forest);
+  .A {
     justify-self: start;
     grid-area: A;
   }
-  .aesthetic {
-    background-color: colors(lila-tint);
-    color: map-get($colors, lila);
+  .B {
     justify-self: end;
     grid-area: B;
   }
-  .general {
-    background-color: colors(ocean-tint);
-    color: map-get($colors, ocean);
+  .C {
     justify-self: start;
     grid-area: C;
   }
-  .hand {
-    background-color: colors(rain-tint);
-    color: map-get($colors, rain);
+  .D {
     justify-self: end;
     grid-area: D;
   }
@@ -77,21 +69,21 @@
       margin-bottom: 0;
     }
 
-    .reconstructive {
+    .A {
       margin-bottom: 2vw;
       display: flex;
       justify-content: flex-start;
     }
-    .aesthetic {
+    .B {
       margin-bottom: 2vw;
       display: flex;
       justify-content: flex-end;
     }
-    .general {
+    .C {
       display: flex;
       justify-content: flex-start;
     }
-    .hand {
+    .D {
       display: flex;
       justify-content: flex-end;
     }
@@ -161,10 +153,10 @@
         .arrow-right {
           width: vert-heights-half(xl);
         }
-        .reconstructive {
+        .A {
           margin-bottom: 28px;
         }
-        .aesthetic {
+        .B {
           margin-bottom: 28px;
         }
         .teasers {
