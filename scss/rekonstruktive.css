@@ -1128,27 +1128,27 @@ a {
         grid-template-columns: 33.33% 33.33% 16.67% 16.67%;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
-        grid-template-areas: "A B C D";
+        grid-template-areas: "FA FB FC FD";
   }
-  footer .footer-content .cols .A {
+  footer .footer-content .cols .FA {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
-    grid-area: A;
+    grid-area: FA;
   }
-  footer .footer-content .cols .B {
+  footer .footer-content .cols .FB {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
-    grid-area: B;
+    grid-area: FB;
   }
-  footer .footer-content .cols .C {
+  footer .footer-content .cols .FC {
     -ms-grid-row: 1;
     -ms-grid-column: 3;
-    grid-area: C;
+    grid-area: FC;
   }
-  footer .footer-content .cols .D {
+  footer .footer-content .cols .FD {
     -ms-grid-row: 1;
     -ms-grid-column: 4;
-    grid-area: D;
+    grid-area: FD;
   }
   footer .footer-content .cols .col {
     display: inline;

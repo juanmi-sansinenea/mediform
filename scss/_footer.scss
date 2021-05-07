@@ -67,19 +67,19 @@
           justify-content: center;
           grid-template-columns: 33.33% 33.33% 16.67% 16.67%;
           grid-template-rows: auto;
-          grid-template-areas: "A B C D";
+          grid-template-areas: "FA FB FC FD";
 
-          .A {
-            grid-area: A;
+          .FA {
+            grid-area: FA;
           }
-          .B {
-            grid-area: B;
+          .FB {
+            grid-area: FB;
           }
-          .C {
-            grid-area: C;
+          .FC {
+            grid-area: FC;
           }
-          .D {
-            grid-area: D;
+          .FD {
+            grid-area: FD;
           }
           .col {
             display: inline;
