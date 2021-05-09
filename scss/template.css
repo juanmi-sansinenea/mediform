@@ -413,20 +413,21 @@ a {
     padding: 1.5rem 0 1.5rem 0;
     margin: 0 6vw 0 6vw;
   }
-  .sub-menu .scroll-me .sub-submenu {
+  .sub-menu .scroll-me ul .sub-submenu {
     font-family: "TT-Norms-Medium";
     font-size: 18px;
     margin-left: 6vw;
+    width: calc(100vw - 12vw);
   }
-  .sub-menu .scroll-me .sub-submenu .sub-submenu-more {
+  .sub-menu .scroll-me ul .sub-submenu .sub-submenu-more {
     padding: 0.75rem 0 3rem 0;
     cursor: pointer;
   }
-  .sub-menu .scroll-me .sub-submenu .sub-submenu-title {
+  .sub-menu .scroll-me ul .sub-submenu .sub-submenu-title {
     font-family: "TT-Norms-Light";
     padding: 0.75rem 0 0.75rem 0;
   }
-  .sub-menu .scroll-me .sub-submenu ul li {
+  .sub-menu .scroll-me ul .sub-submenu ul li {
     padding: 0.75rem 0 0.75rem 0;
     border-bottom: none;
     margin-left: 0;
@@ -510,55 +511,23 @@ a {
     font-size: 2.14vw;
     z-index: 20;
   }
-  .sub-menu .sub-menu-top-space {
+  .sub-menu .scroll-me .sub-menu-top-space {
     height: 30px;
   }
-  .sub-menu .sub-menu-top-space .close-x {
+  .sub-menu .scroll-me .sub-menu-top-space .close-x {
     margin-top: 4vw;
     margin-right: 4vw;
   }
-  .sub-menu .sub-menu-top-space .close-x img {
+  .sub-menu .scroll-me .sub-menu-top-space .close-x img {
     width: 25px;
-  }
-  .sub-menu .scroll-me {
-    height: auto;
   }
   .sub-menu .scroll-me ul li {
     padding: 1.5rem 0vw 1.5rem 0vw;
     margin: 0 4vw 0 4vw;
   }
-  .sub-menu .scroll-me ul .sub-submenu-more {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: more;
-  }
-  .sub-menu .scroll-me ul .sub-submenu-1 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: col1;
-  }
-  .sub-menu .scroll-me ul .sub-submenu-2 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-area: col2;
-  }
-  .sub-menu .scroll-me ul .sub-submenu-3 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 3;
-    grid-area: col3;
-  }
-  .sub-menu .scroll-me ul .sub-submenu-4 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 4;
-    grid-area: col4;
-  }
-  .sub-menu .scroll-me ul .sub-submenu-5 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 5;
-    grid-area: col5;
-  }
   .sub-menu .scroll-me ul .sub-submenu {
     margin-left: 4vw;
+    width: calc(100vw - 8vw);
     font-size: 1.38vw;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -568,6 +537,36 @@ a {
     -ms-grid-rows: auto;
         grid-template-rows: auto;
         grid-template-areas: "more . . . . " "col1 col2 col3 col4 col5";
+  }
+  .sub-menu .scroll-me ul .sub-submenu .sub-submenu-more {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: more;
+  }
+  .sub-menu .scroll-me ul .sub-submenu .sub-submenu-1 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: col1;
+  }
+  .sub-menu .scroll-me ul .sub-submenu .sub-submenu-2 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: col2;
+  }
+  .sub-menu .scroll-me ul .sub-submenu .sub-submenu-3 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: col3;
+  }
+  .sub-menu .scroll-me ul .sub-submenu .sub-submenu-4 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 4;
+    grid-area: col4;
+  }
+  .sub-menu .scroll-me ul .sub-submenu .sub-submenu-5 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 5;
+    grid-area: col5;
   }
   .content {
     top: 160px;
@@ -582,12 +581,12 @@ a {
   nav #menu-left ul .leistungen .nupsie {
     height: 10px;
   }
-  .sub-menu .sub-menu-top-space {
-    height: 45px;
-  }
   .sub-menu .scroll-me {
     top: 180px;
     font-size: 30px;
+  }
+  .sub-menu .scroll-me .sub-menu-top-space {
+    height: 45px;
   }
   .sub-menu .scroll-me ul .sub-submenu {
     font-size: 20px;
