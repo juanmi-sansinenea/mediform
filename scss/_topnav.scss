@@ -66,12 +66,13 @@
           li {
             cursor: pointer;
             padding: 1.5rem 0 1.5rem 0;
-            margin: 0 6vw 0 6vw;
+            margin: 0 6vw 0 12vw;
           }
           .sub-submenu {
             font-family: "TT-Norms-Medium";
             font-size: font-sizes-sm(small);
             margin-left: 6vw;
+            padding-bottom: vert-heights-quarter(sm);
             width: calc(100vw - 12vw);
             .sub-submenu-more {
               padding: 0.75rem 0 3rem 0;
@@ -118,6 +119,15 @@
         .close-x {
           img {
             width: 30px;
+          }
+        }
+      }
+      .scroll-me {
+        .main-menu {
+          .submenu {
+            .sub-submenu {
+              padding-bottom: vert-heights-quarter(md);
+            }
           }
         }
       }
@@ -196,6 +206,7 @@
               }
               .sub-submenu {
                 margin-left: 4vw;
+                padding-bottom: vert-heights-quarter(lg);
                 width: calc(100vw - 8vw);
                 font-size: font-sizes-lg(small);
                 //display: grid;
@@ -258,6 +269,7 @@
               .submenu {
                 .sub-submenu {
                   font-size: font-sizes-xl(small);
+                  padding-bottom: vert-heights-quarter(xl);
                 }
               }
             }
