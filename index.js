@@ -1,23 +1,26 @@
-const subMenu = document.querySelector(".sub-menu");
+const modalMenu = document.querySelector(".modal-menu");
 const burger = document.querySelector(".burger");
 const closeX = document.querySelector(".close-x");
 const leistungen = document.querySelector(".leistungen");
 const subSubmenu = document.querySelectorAll(".sub-submenu");
 const submenuItem = document.querySelectorAll(".submenu-item");
 const scrollMe = document.querySelector(".scroll-me");
+const submenuTrigger = document.querySelector(".submenu-trigger");
+const subMenu = document.querySelector(".submenu");
+const mainMenuItems = document.querySelectorAll(".main-menu-item");
 
-function visibleSubMenu() {
-  subMenu.classList.remove("invisible");
-  subMenu.classList.add("visible");
+function visibleModalMenu() {
+  modalMenu.classList.remove("invisible");
+  modalMenu.classList.add("visible");
 }
-function inVisibleSubMenu() {
-  subMenu.classList.add("invisible");
-  subMenu.classList.remove("visible");
+function inVisibleModalMenu() {
+  modalMenu.classList.add("invisible");
+  modalMenu.classList.remove("visible");
 }
-function toggleSubmenu() {
-  subMenu.classList.contains("invisible") === true
-    ? visibleSubMenu()
-    : inVisibleSubMenu();
+function toggleModalMenu() {
+  modalMenu.classList.contains("invisible") === true
+    ? visibleModalMenu()
+    : inVisibleModalMenu();
 }
 function showSubSubmenu(which) {
   subSubmenu[which].classList.remove("display-none");
@@ -40,9 +43,47 @@ function toggleBorder(evt) {
     : evt.target.classList.add("border-bottom");
 }
 
-burger.addEventListener("click", visibleSubMenu);
-closeX.addEventListener("click", inVisibleSubMenu);
-leistungen.addEventListener("click", toggleSubmenu);
+handleMenuVisibilities = () => {
+  if (window.innerWidth < 1025) {
+    hideSubMenu();
+    showMainMenuItems();
+  } else {
+    showSubMenu();
+    hideMainMenuItems();
+  }
+};
+
+window.addEventListener("load", handleMenuVisibilities);
+window.addEventListener("resize", handleMenuVisibilities);
+
+function toggleSubMenu() {
+  subMenu.classList.contains("display-none") ? showSubMenu() : hideSubMenu();
+}
+showSubMenu = () => {
+  subMenu.classList.add("display-block");
+  subMenu.classList.remove("display-none");
+};
+hideSubMenu = () => {
+  subMenu.classList.add("display-none");
+  subMenu.classList.remove("display-block");
+};
+showMainMenuItems = () => {
+  for (i = 0; i < mainMenuItems.length; i++) {
+    mainMenuItems[i].classList.remove("display-none");
+    mainMenuItems[i].classList.add("display-block");
+  }
+};
+hideMainMenuItems = () => {
+  for (i = 0; i < mainMenuItems.length; i++) {
+    mainMenuItems[i].classList.remove("display-block");
+    mainMenuItems[i].classList.add("display-none");
+  }
+};
+
+burger.addEventListener("click", visibleModalMenu);
+closeX.addEventListener("click", inVisibleModalMenu);
+leistungen.addEventListener("click", toggleModalMenu);
+submenuTrigger.addEventListener("click", toggleSubMenu);
 
 // expand / collapse sub-submenus and remove border when expanded
 for (let i = 0; i < 3; i++) {
@@ -139,8 +180,6 @@ class TestimonialSlider extends HTMLElement {
   }
 }
 customElements.define("testimonial-slider", TestimonialSlider);
-
-
 
 // The below class applies to both the Teaser Big Slider and the Slider Big modules
 class TeaserBigSlider extends HTMLElement {

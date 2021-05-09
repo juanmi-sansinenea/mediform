@@ -31,8 +31,9 @@
       }
     }
   }
-  .sub-menu {
-    .sub-menu-top-space {
+
+  .modal-menu {
+    .modal-menu-top-space {
       height: vert-heights(sm);
       align-items: center;
       display: flex;
@@ -54,31 +55,38 @@
       background-color: colors(medisnow);
       font-family: "TT-Norms-Light";
       font-size: font-sizes-sm(h3);
-      ul {
+
+      .main-menu {
         li {
           cursor: pointer;
           padding: 1.5rem 0 1.5rem 0;
-          //border-bottom: 1px solid white;
           margin: 0 6vw 0 6vw;
         }
-        .sub-submenu {
-          font-family: "TT-Norms-Medium";
-          font-size: font-sizes-sm(small);
-          margin-left: 6vw;
-          width: calc(100vw - 12vw);
-          .sub-submenu-more {
-            padding: 0.75rem 0 3rem 0;
+        .submenu {
+          li {
             cursor: pointer;
+            padding: 1.5rem 0 1.5rem 0;
+            margin: 0 6vw 0 6vw;
           }
-          .sub-submenu-title {
-            font-family: "TT-Norms-Light";
-            padding: 0.75rem 0 0.75rem 0;
-          }
-          ul {
-            li {
+          .sub-submenu {
+            font-family: "TT-Norms-Medium";
+            font-size: font-sizes-sm(small);
+            margin-left: 6vw;
+            width: calc(100vw - 12vw);
+            .sub-submenu-more {
+              padding: 0.75rem 0 3rem 0;
+              cursor: pointer;
+            }
+            .sub-submenu-title {
+              font-family: "TT-Norms-Light";
               padding: 0.75rem 0 0.75rem 0;
-              border-bottom: none;
-              margin-left: 0;
+            }
+            ul {
+              li {
+                padding: 0.75rem 0 0.75rem 0;
+                border-bottom: none;
+                margin-left: 0;
+              }
             }
           }
         }
@@ -103,9 +111,9 @@
         }
       }
     }
-    .sub-menu {
+    .modal-menu {
       font-size: font-sizes-md(h3);
-      .sub-menu-top-space {
+      .modal-menu-top-space {
         height: vert-heights(md);
         .close-x {
           img {
@@ -158,14 +166,14 @@
           display: none;
         }
       }
-      .sub-menu {
+      .modal-menu {
         height: auto;
         position: fixed;
         top: vert-heights(lg);
         font-size: font-sizes-lg(h3);
         z-index: 20;
         .scroll-me {
-          .sub-menu-top-space {
+          .modal-menu-top-space {
             height: vert-heights-quarter(lg);
             .close-x {
               margin-top: 4vw;
@@ -175,23 +183,28 @@
               }
             }
           }
-          ul {
+          .main-menu {
             //height: auto; //<--- CONFLICTS WITH SCROLLING!
             li {
               padding: 1.5rem 0vw 1.5rem 0vw;
               margin: 0 4vw 0 4vw;
             }
-            .sub-submenu {
-              margin-left: 4vw;
-              width: calc(100vw - 8vw);
-              font-size: font-sizes-lg(small);
-              //display: grid;
-              justify-content: center;
-              grid-template-columns: 20% 20% 20% 20% 20%;
-              grid-template-rows: auto;
-              grid-template-areas:
-                "more . . . . "
-                "col1 col2 col3 col4 col5";
+            .submenu {
+              li {
+                padding: 1.5rem 0vw 1.5rem 0vw;
+                margin: 0 4vw 0 4vw;
+              }
+              .sub-submenu {
+                margin-left: 4vw;
+                width: calc(100vw - 8vw);
+                font-size: font-sizes-lg(small);
+                //display: grid;
+                justify-content: center;
+                grid-template-columns: 20% 20% 20% 20% 20%;
+                grid-template-rows: auto;
+                grid-template-areas:
+                  "more . . . . "
+                  "col1 col2 col3 col4 col5";
                 .sub-submenu-more {
                   grid-area: more;
                 }
@@ -210,6 +223,7 @@
                 .sub-submenu-5 {
                   grid-area: col5;
                 }
+              }
             }
           }
         }
@@ -233,16 +247,18 @@
             }
           }
         }
-        .sub-menu {
+        .modal-menu {
           .scroll-me {
             top: vert-heights(xl);
             font-size: font-sizes-xl(h3);
-            .sub-menu-top-space {
+            .modal-menu-top-space {
               height: vert-heights-quarter(xl);
             }
-            ul {
-              .sub-submenu {
-                font-size: font-sizes-xl(small);
+            .main-menu {
+              .submenu {
+                .sub-submenu {
+                  font-size: font-sizes-xl(small);
+                }
               }
             }
           }
