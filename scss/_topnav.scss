@@ -63,10 +63,10 @@
           margin: 0 6vw 0 6vw;
         }
         .submenu-trigger {
-          .expand {
+          .expand-submenu {
             height: 1rem;
           }
-          .expanded {
+          .expanded-submenu {
             height: 1rem;
           }
         }
@@ -75,6 +75,12 @@
             cursor: pointer;
             padding: 1.5rem 0 1.5rem 0;
             margin: 0 6vw 0 12vw;
+            .expand-sub-sub {
+              height: 1rem;
+            }
+            .expanded-sub-sub {
+              height: 1rem;
+            }
           }
           .sub-submenu {
             font-family: "TT-Norms-Medium";

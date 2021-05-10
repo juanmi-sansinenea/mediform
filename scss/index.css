@@ -417,16 +417,22 @@ a {
     padding: 1.5rem 0 1.5rem 0;
     margin: 0 6vw 0 6vw;
   }
-  .modal-menu .scroll-me .main-menu .submenu-trigger .expand {
+  .modal-menu .scroll-me .main-menu .submenu-trigger .expand-submenu {
     height: 1rem;
   }
-  .modal-menu .scroll-me .main-menu .submenu-trigger .expanded {
+  .modal-menu .scroll-me .main-menu .submenu-trigger .expanded-submenu {
     height: 1rem;
   }
   .modal-menu .scroll-me .main-menu .submenu li {
     cursor: pointer;
     padding: 1.5rem 0 1.5rem 0;
     margin: 0 6vw 0 12vw;
+  }
+  .modal-menu .scroll-me .main-menu .submenu li .expand-sub-sub {
+    height: 1rem;
+  }
+  .modal-menu .scroll-me .main-menu .submenu li .expanded-sub-sub {
+    height: 1rem;
   }
   .modal-menu .scroll-me .main-menu .submenu .sub-submenu {
     font-family: "TT-Norms-Medium";

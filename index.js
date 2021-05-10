@@ -8,8 +8,10 @@ const scrollMe = document.querySelector(".scroll-me");
 const submenuTrigger = document.querySelector(".submenu-trigger");
 const subMenu = document.querySelector(".submenu");
 const mainMenuItems = document.querySelectorAll(".main-menu-item");
-const expandSymbol = document.querySelector(".expand");
-const expandedSymbol = document.querySelector(".expanded");
+const expandSubmenu = document.querySelector(".expand-submenu");
+const expandedSubmenu = document.querySelector(".expanded-submenu");
+const expandSubSub = document.querySelectorAll(".expand-sub-sub");
+const expandedSubSub = document.querySelectorAll(".expanded-sub-sub");
 
 function visibleModalMenu() {
   modalMenu.classList.remove("invisible");
@@ -30,6 +32,7 @@ function showSubSubmenu(which) {
   if (window.matchMedia("(min-width: 1025px)").matches) {
     scrollMe.style.height = "100vh"; //<--make sub-submenu cover the entire viewport and make it scrollable (only desktop and hd)
   }
+  suggestExpandedSubSub(which);
 }
 function hideSubSubmenu(which) {
   subSubmenu[which].classList.add("display-none");
@@ -37,6 +40,7 @@ function hideSubSubmenu(which) {
   if (window.matchMedia("(min-width: 1025px)").matches) {
     scrollMe.style.height = "auto"; //<--make the sub-submenu collapse back (only desktop and hd)
   }
+  suggestExpandingSubSub(which);
 }
 
 function toggleBorder(evt) {
@@ -46,13 +50,15 @@ function toggleBorder(evt) {
 }
 
 handleMenuVisibilities = () => {
-  console.log("hhh")
   if (window.innerWidth < 1025) {
     showMainMenuItems();
     hideSubMenu();
   } else {
     hideMainMenuItems();
     showSubMenu();
+  }
+  for (i = 0; i < expandSubSub.length; i++) {
+    suggestExpandingSubSub(i);
   }
 };
 
@@ -65,12 +71,12 @@ function toggleSubMenu() {
 showSubMenu = () => {
   subMenu.classList.add("display-block");
   subMenu.classList.remove("display-none");
-  suggestExpanded();
+  suggestExpandedSubmenu();
 };
 hideSubMenu = () => {
   subMenu.classList.add("display-none");
   subMenu.classList.remove("display-block");
-  suggestExpanding();
+  suggestExpandingSubmenu();
 };
 showMainMenuItems = () => {
   for (i = 0; i < mainMenuItems.length; i++) {
@@ -84,15 +90,22 @@ hideMainMenuItems = () => {
     mainMenuItems[i].classList.add("display-none");
   }
 };
-suggestExpanding = () => {
-  expandSymbol.style.display = "inline";
-  expandedSymbol.style.display = "none"; 
-}
-;
-suggestExpanded = () => {
-  expandSymbol.style.display = "none";
-  expandedSymbol.style.display = "inline"; 
-}
+suggestExpandingSubmenu = () => {
+  expandSubmenu.style.display = "inline";
+  expandedSubmenu.style.display = "none";
+};
+suggestExpandedSubmenu = () => {
+  expandSubmenu.style.display = "none";
+  expandedSubmenu.style.display = "inline";
+};
+suggestExpandingSubSub = (which) => {
+  expandSubSub[which].style.display = "inline";
+  expandedSubSub[which].style.display = "none";
+};
+suggestExpandedSubSub = (which) => {
+  expandSubSub[which].style.display = "none";
+  expandedSubSub[which].style.display = "inline";
+};
 
 burger.addEventListener("click", visibleModalMenu);
 closeX.addEventListener("click", inVisibleModalMenu);
@@ -108,6 +121,11 @@ for (let i = 0; i < 3; i++) {
       : hideSubSubmenu(i);
   });
 }
+
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
 
 class TeaserSmall extends HTMLElement {
   constructor() {
