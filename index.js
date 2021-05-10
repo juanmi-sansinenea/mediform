@@ -8,6 +8,8 @@ const scrollMe = document.querySelector(".scroll-me");
 const submenuTrigger = document.querySelector(".submenu-trigger");
 const subMenu = document.querySelector(".submenu");
 const mainMenuItems = document.querySelectorAll(".main-menu-item");
+const expandSymbol = document.querySelector(".expand");
+const expandedSymbol = document.querySelector(".expanded");
 
 function visibleModalMenu() {
   modalMenu.classList.remove("invisible");
@@ -44,12 +46,13 @@ function toggleBorder(evt) {
 }
 
 handleMenuVisibilities = () => {
+  console.log("hhh")
   if (window.innerWidth < 1025) {
-    hideSubMenu();
     showMainMenuItems();
+    hideSubMenu();
   } else {
-    showSubMenu();
     hideMainMenuItems();
+    showSubMenu();
   }
 };
 
@@ -62,10 +65,12 @@ function toggleSubMenu() {
 showSubMenu = () => {
   subMenu.classList.add("display-block");
   subMenu.classList.remove("display-none");
+  suggestExpanded();
 };
 hideSubMenu = () => {
   subMenu.classList.add("display-none");
   subMenu.classList.remove("display-block");
+  suggestExpanding();
 };
 showMainMenuItems = () => {
   for (i = 0; i < mainMenuItems.length; i++) {
@@ -79,6 +84,15 @@ hideMainMenuItems = () => {
     mainMenuItems[i].classList.add("display-none");
   }
 };
+suggestExpanding = () => {
+  expandSymbol.style.display = "inline";
+  expandedSymbol.style.display = "none"; 
+}
+;
+suggestExpanded = () => {
+  expandSymbol.style.display = "none";
+  expandedSymbol.style.display = "inline"; 
+}
 
 burger.addEventListener("click", visibleModalMenu);
 closeX.addEventListener("click", inVisibleModalMenu);
