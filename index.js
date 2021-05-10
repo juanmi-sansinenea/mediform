@@ -26,6 +26,7 @@ function toggleModalMenu() {
     ? visibleModalMenu()
     : inVisibleModalMenu();
 }
+
 function showSubSubmenu(which) {
   subSubmenu[which].classList.remove("display-none");
   subSubmenu[which].classList.add("display-grid");
@@ -53,9 +54,11 @@ handleMenuVisibilities = () => {
   if (window.innerWidth < 1025) {
     showMainMenuItems();
     hideSubMenu();
+    scrollMe.style.height = "100vh";
   } else {
     hideMainMenuItems();
     showSubMenu();
+    scrollMe.style.height = "auto";
   }
   for (i = 0; i < expandSubSub.length; i++) {
     suggestExpandingSubSub(i);
