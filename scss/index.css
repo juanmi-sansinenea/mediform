@@ -1236,6 +1236,7 @@ a {
   }
   .teaser-big .teaser-big-text {
     width: calc(11.5vw * 4 - 2vw);
+    padding-right: 2vw;
   }
   .teaser-big .teaser-big-text small {
     margin-bottom: 22px;
@@ -1303,6 +1304,7 @@ a {
   }
   .teaser-big .teaser-big-text {
     width: calc(166px * 4 - 28px);
+    padding-right: 28px;
   }
   .teaser-big .teaser-big-text small {
     margin-bottom: 45px;

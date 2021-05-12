@@ -64,6 +64,7 @@
       }
       .teaser-big-text {
         width: calc(11.5vw * 4 - 2vw);
+        padding-right: 2vw;
 
         small {
           margin-bottom: vert-heights-quarter(md);
@@ -132,6 +133,7 @@
           }
           .teaser-big-text {
             width: calc(166px * 4 - 28px);
+            padding-right: 28px;
             small {
               margin-bottom: vert-heights-quarter(xl);
             }
