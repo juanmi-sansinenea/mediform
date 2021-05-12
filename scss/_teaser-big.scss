@@ -55,14 +55,15 @@
       align-items: flex-start;
       width: 100vw;
       margin-bottom: vert-heights(md);
-      .left {
-        margin-right: 2vw;
-      }
       .right {
-        margin-left: 2vw;
+        small,
+        h3,
+        .arrow-right {
+          margin-left: 2vw;
+        }
       }
       .teaser-big-text {
-        width: calc(11.5vw * 4);
+        width: calc(11.5vw * 4 - 2vw);
 
         small {
           margin-bottom: vert-heights-quarter(md);
@@ -122,14 +123,15 @@
           align-items: flex-start;
           width: 100vw;
           margin-bottom: vert-heights(xl);
-          .left {
-            margin-right: 28px;
-          }
           .right {
-            margin-left: 28px;
+            small,
+            h3,
+            .arrow-right {
+              margin-left: 28px;
+            }
           }
           .teaser-big-text {
-            width: calc(166px * 4);
+            width: calc(166px * 4 - 28px);
             small {
               margin-bottom: vert-heights-quarter(xl);
             }

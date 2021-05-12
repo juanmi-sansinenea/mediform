@@ -1072,14 +1072,13 @@ a {
     width: 100vw;
     margin-bottom: 120px;
   }
-  .teaser-big .left {
-    margin-right: 2vw;
-  }
-  .teaser-big .right {
+  .teaser-big .right small,
+  .teaser-big .right h3,
+  .teaser-big .right .arrow-right {
     margin-left: 2vw;
   }
   .teaser-big .teaser-big-text {
-    width: calc(11.5vw * 4);
+    width: calc(11.5vw * 4 - 2vw);
   }
   .teaser-big .teaser-big-text small {
     margin-bottom: 22px;
@@ -1140,14 +1139,13 @@ a {
     width: 100vw;
     margin-bottom: 180px;
   }
-  .teaser-big .left {
-    margin-right: 28px;
-  }
-  .teaser-big .right {
+  .teaser-big .right small,
+  .teaser-big .right h3,
+  .teaser-big .right .arrow-right {
     margin-left: 28px;
   }
   .teaser-big .teaser-big-text {
-    width: calc(166px * 4);
+    width: calc(166px * 4 - 28px);
   }
   .teaser-big .teaser-big-text small {
     margin-bottom: 45px;
