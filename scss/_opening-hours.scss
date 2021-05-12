@@ -1,0 +1,44 @@
+//MOBILE (sm) --------------------------------------------------------------------------
+@media (min-width: map-get($media-widths, sm)) {
+  .space {
+    width: 100%;
+    height: vert-heights(sm);
+  }
+  .opening-hours {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    small {
+      width: calc(100vw - 12vw);
+    }
+  }
+  //TABLET (md) --------------------------------------------------------------------------
+  @media (min-width: map-get($media-widths, md)) {
+    .space {
+        width: 100%;
+        height: vert-heights(md);
+      }
+      .opening-hours {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        small {
+          width: calc(100vw - 8vw - 2*11.5vw);
+        }
+      }
+    //DESKTOP (lg) --------------------------------------------------------------------------
+    @media (min-width: map-get($media-widths, lg)) {
+      //HD (xl) --------------------------------------------------------------------------
+      @media (min-width: map-get($media-widths, xl)) {
+        .opening-hours {
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            small {
+              width: calc(166px * 6);
+            }
+          }
+      }
+    }
+  }
+}
