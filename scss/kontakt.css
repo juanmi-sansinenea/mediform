@@ -209,6 +209,52 @@ a {
   }
 }
 
+@-webkit-keyframes arrow-in {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: 2vw;
+  }
+}
+
+@keyframes arrow-in {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: 2vw;
+  }
+}
+
+.anim-arrow-out {
+  -webkit-animation: arrow-out 0.5s ease;
+          animation: arrow-out 0.5s ease;
+}
+
+@-webkit-keyframes arrow-out {
+  from {
+    margin-left: 2vw;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+@keyframes arrow-out {
+  from {
+    margin-left: 2vw;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+.anim-arrow-in {
+  -webkit-animation: arrow-in 0.5s ease forwards;
+          animation: arrow-in 0.5s ease forwards;
+}
+
 @media (min-width: 0px) {
   .space {
     height: 90px;
@@ -713,52 +759,6 @@ a {
     position: absolute;
     left: calc(55vw);
     z-index: -10;
-  }
-}
-
-.anim-arrow-in {
-  -webkit-animation: arrow-in 0.5s ease forwards;
-          animation: arrow-in 0.5s ease forwards;
-}
-
-@-webkit-keyframes arrow-in {
-  from {
-    margin-left: 0;
-  }
-  to {
-    margin-left: 2vw;
-  }
-}
-
-@keyframes arrow-in {
-  from {
-    margin-left: 0;
-  }
-  to {
-    margin-left: 2vw;
-  }
-}
-
-.anim-arrow-out {
-  -webkit-animation: arrow-out 0.5s ease;
-          animation: arrow-out 0.5s ease;
-}
-
-@-webkit-keyframes arrow-out {
-  from {
-    margin-left: 2vw;
-  }
-  to {
-    margin-left: 0;
-  }
-}
-
-@keyframes arrow-out {
-  from {
-    margin-left: 2vw;
-  }
-  to {
-    margin-left: 0;
   }
 }
 

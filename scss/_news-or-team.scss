@@ -15,6 +15,7 @@
       }
       .arrow-right {
         display: block;
+        width: vert-heights-half(sm);
         padding-top: vert-heights-quarter(sm);
         padding-bottom: vert-heights-quarter(sm);
       }
@@ -30,7 +31,9 @@
       grid-template-rows: auto;
       grid-template-areas:
         "A . . . B . "
-        "C . . . D . ";
+        "C . . . D . "
+        "E . . . F . "
+        "G . . . H . ";
       margin-bottom: vert-heights(md);
       .news {
         $measure: calc(11.5vw * 2 + 10.5vw);
@@ -42,6 +45,7 @@
         }
         .arrow-right {
           display: block;
+          width: vert-heights-half(md);
           padding-top: vert-heights-quarter(md);
           padding-bottom: vert-heights-quarter(md);
         }
@@ -58,6 +62,18 @@
       .news-D {
         grid-area: D;
       }
+      .news-E {
+        grid-area: E;
+      }
+      .news-F {
+        grid-area: F;
+      }
+      .news-G {
+        grid-area: G;
+      }
+      .news-H {
+        grid-area: H;
+      }
     }
     //DESKTOP (lg) --------------------------------------------------------------------------
     @media (min-width: map-get($media-widths, lg)) {
@@ -67,6 +83,7 @@
           margin-bottom: vert-heights-quarter(lg);
         }
         .arrow-right {
+          width: vert-heights-half(lg);
           padding-top: vert-heights-quarter(lg);
           padding-bottom: vert-heights-quarter(lg);
         }
@@ -85,6 +102,7 @@
               margin-bottom: vert-heights-quarter(xl);
             }
             .arrow-right {
+              width: vert-heights-half(xl);
               padding-top: vert-heights-quarter(xl);
               padding-bottom: vert-heights-quarter(xl);
             }

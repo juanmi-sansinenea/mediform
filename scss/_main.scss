@@ -102,6 +102,31 @@ a {
   }
 }
 
+@keyframes arrow-in {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: 2vw;
+  }
+}
+.anim-arrow-out {
+  animation: arrow-out 0.5s ease;
+}
+@keyframes arrow-out {
+  from {
+    margin-left: 2vw;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+
+.anim-arrow-in {
+  animation: arrow-in 0.5s ease forwards;
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////
 //MOBILE (sm) --------------------------------------------------------------------------
 @media (min-width: map-get($media-widths, sm)) {
