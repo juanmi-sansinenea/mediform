@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 69 34" style="enable-background:new 0 0 69 34;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);fill:none;stroke:#636951;stroke-miterlimit:10;}
+	.st1{clip-path:url(#SVGID_4_);fill:none;stroke:#636951;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#636951;}
+</style>
+<g>
+	<g>
+		<defs>
+			<rect id="SVGID_1_" x="-682.9" y="-3248.8" width="1440" height="6535"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<line class="st0" x1="-415.9" y1="-1877.9" x2="-348" y2="-1877.9"/>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_3_" x="-682.9" y="-3248.8" width="1440" height="6535"/>
+		</defs>
+		<clipPath id="SVGID_4_">
+			<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+		</clipPath>
+		<polyline class="st1" points="-364.5,-1861.8 -348.2,-1878.2 -364.5,-1894.6 		"/>
+	</g>
+</g>
+<g id="Mdiform-Web-Design">
+	<g id="HD-Start" transform="translate(-267.000000, -1353.000000)">
+		<g id="Teaser-Small" transform="translate(217.000000, 1013.000000)">
+			
+				<g id="Arrow" transform="translate(83.935091, 357.604501) rotate(-90.000000) translate(-83.935091, -357.604501) translate(67.539592, 323.669410)">
+				<line id="Line" class="st2" x1="17.2" y1="68.9" x2="17.2" y2="1"/>
+				<polyline id="Path-2" class="st2" points="33.4,17.5 17,1.2 0.6,17.5 				"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 69 34" style="enable-background:new 0 0 69 34;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);fill:none;stroke:#636951;stroke-miterlimit:10;}
+	.st1{clip-path:url(#SVGID_4_);fill:none;stroke:#636951;stroke-miterlimit:10;}
+	.st2{clip-path:url(#SVGID_6_);fill:none;stroke:#5C3C78;stroke-miterlimit:10;}
+	.st3{clip-path:url(#SVGID_8_);fill:none;stroke:#5C3C78;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#1E505F;}
+</style>
+<g>
+	<g>
+		<defs>
+			<rect id="SVGID_1_" x="-682.9" y="-3248.8" width="1440" height="6535"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<line class="st0" x1="-415.9" y1="-1877.9" x2="-348" y2="-1877.9"/>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_3_" x="-682.9" y="-3248.8" width="1440" height="6535"/>
+		</defs>
+		<clipPath id="SVGID_4_">
+			<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+		</clipPath>
+		<polyline class="st1" points="-364.5,-1861.8 -348.2,-1878.2 -364.5,-1894.6 		"/>
+	</g>
+</g>
+<g>
+	<g>
+		<defs>
+			<rect id="SVGID_5_" x="-687.8" y="-3251.5" width="1440" height="6535"/>
+		</defs>
+		<clipPath id="SVGID_6_">
+			<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+		</clipPath>
+		<line class="st2" x1="106.2" y1="-1880.7" x2="174.1" y2="-1880.7"/>
+	</g>
+	<g>
+		<defs>
+			<rect id="SVGID_7_" x="-687.8" y="-3251.5" width="1440" height="6535"/>
+		</defs>
+		<clipPath id="SVGID_8_">
+			<use xlink:href="#SVGID_7_"  style="overflow:visible;"/>
+		</clipPath>
+		<polyline class="st3" points="157.6,-1864.5 173.9,-1880.9 157.6,-1897.3 		"/>
+	</g>
+</g>
+<g id="Mdiform-Web-Design">
+	<g id="HD-Start" transform="translate(-267.000000, -1831.000000)">
+		<g id="Teaser-Small" transform="translate(217.000000, 1541.000000)">
+			
+				<g id="Arrow" transform="translate(84.000000, 307.500000) rotate(-90.000000) translate(-84.000000, -307.500000) translate(67.500000, 273.500000)">
+				<line id="Line" class="st4" x1="17.2" y1="68.6" x2="17.2" y2="0.8"/>
+				<polyline id="Path-2" class="st4" points="33.4,17.2 17,1 0.6,17.2 				"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
