@@ -251,12 +251,24 @@ class TeaserBigSlider extends HTMLElement {
       this.slides[i].addEventListener(
         "touchmove",
         (evt) => {
-          console.log("MovedX = ", evt.targetTouches[0].clientX);
-          this.slides[i].style.marginLeft = `${evt.targetTouches[0].clientX - this.startX}px`;
+          this.difference = evt.targetTouches[0].clientX - this.startX;
+          this.slides[i].style.marginLeft = `${this.difference}px`;
         },
         true
       );
-     
+      this.slides[i].addEventListener(
+        "touchend",
+        () => {
+          console.log(this.difference);
+          if (this.difference > 100) {
+            this.activeSlide++;
+            this.showActiveSlide();
+          } else {
+            this.slides[i].style.marginLeft = `${0}px`;
+          }
+        },
+        true
+      );
     }
     this.showActiveSlide = () => {
       for (let i = 0; i < this.slides.length; i++) {
