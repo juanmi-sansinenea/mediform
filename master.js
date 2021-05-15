@@ -241,6 +241,22 @@ class TeaserBigSlider extends HTMLElement {
         this.btns[i].style.height = "3px";
         this.showActiveSlide();
       });
+      this.slides[i].addEventListener(
+        "touchstart",
+        (evt) => {
+          this.startX = evt.targetTouches[0].clientX;
+        },
+        true
+      );
+      this.slides[i].addEventListener(
+        "touchmove",
+        (evt) => {
+          console.log("MovedX = ", evt.targetTouches[0].clientX);
+          this.slides[i].style.marginLeft = `${evt.targetTouches[0].clientX - this.startX}px`;
+        },
+        true
+      );
+     
     }
     this.showActiveSlide = () => {
       for (let i = 0; i < this.slides.length; i++) {
@@ -257,6 +273,3 @@ class TeaserBigSlider extends HTMLElement {
   }
 }
 customElements.define("teaser-big-slider", TeaserBigSlider);
-
-
-

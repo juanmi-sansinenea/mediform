@@ -1032,6 +1032,10 @@ a {
     width: calc(100vw + -12vw);
     height: calc(100vw + -12vw);
   }
+  .teaser-big .slider .slider-content {
+    width: calc(100vw + -12vw);
+    height: calc(100vw + -12vw);
+  }
   .teaser-big .slider .slider-content img {
     width: calc(100vw + -12vw);
     height: calc(100vw + -12vw);
@@ -1099,6 +1103,10 @@ a {
     margin-bottom: 22px;
   }
   .teaser-big .teaser-big-img {
+    width: calc(11.5vw * 4);
+    height: calc(11.5vw * 4);
+  }
+  .teaser-big .slider .slider-content {
     width: calc(11.5vw * 4);
     height: calc(11.5vw * 4);
   }
