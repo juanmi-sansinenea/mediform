@@ -68,6 +68,14 @@ body {
   color: #50565b;
 }
 
+body ::-moz-selection {
+  background-color: #e9eae5;
+}
+
+body ::selection {
+  background-color: #e9eae5;
+}
+
 a {
   color: inherit;
   text-decoration: none;
