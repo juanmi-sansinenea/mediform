@@ -234,7 +234,6 @@ class TeaserBigSlider extends HTMLElement {
     this.btns = this.querySelectorAll(".btn");
 
     this.updateSelector = (which) => {
-      console.log(which);
       for (let j = 0; j < this.btns.length; j++) {
         this.btns[j].style.height = "1px";
       }
@@ -243,7 +242,6 @@ class TeaserBigSlider extends HTMLElement {
 
     for (let i = 0; i < this.btns.length; i++) {
       this.btns[i].addEventListener("click", (evt) => {
-        console.log(evt);
         this.updateSelector(evt.target);
         this.activeSlide = i;
         this.showActiveSlide(i);
