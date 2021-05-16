@@ -157,11 +157,11 @@
     @mixin menu-hover {
       text-decoration: none;
       display: inline-block;
-      padding: 0px 0px 10px 0px; 
+      padding: 0px 0px 10px 0px;
       position: relative;
       //transition: color 0.3s ease 0s;
       //&:hover {
-        //color: #000;
+      //color: #000;
       //}
       &::after {
         bottom: 0;
@@ -195,7 +195,6 @@
               cursor: pointer;
               @include menu-hover;
               margin-right: 2rem;
-              
             }
             .leistungen {
               .nupsie {
@@ -213,9 +212,6 @@
               display: block;
               @include menu-hover;
               margin-left: 2rem;
-              
-              
-              
             }
           }
         }

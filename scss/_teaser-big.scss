@@ -49,10 +49,11 @@
         .btn:after {
           content: "";
           position: absolute;
-          top:-15px; bottom:-15px; 
-          left:0; right:-0;
+          top: -15px;
+          bottom: -15px;
+          left: 0;
+          right: -0;
         }
-
       }
     }
   }
@@ -162,6 +163,8 @@
           }
           .slider {
             .slider-content {
+              width: calc(166px * 4);
+              height: calc(166px * 4);
               img {
                 width: calc(166px * 4);
                 height: calc(166px * 4);

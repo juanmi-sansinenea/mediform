@@ -1227,6 +1227,10 @@ a {
     width: calc(166px * 4);
     height: calc(166px * 4);
   }
+  .teaser-big .slider .slider-content {
+    width: calc(166px * 4);
+    height: calc(166px * 4);
+  }
   .teaser-big .slider .slider-content img {
     width: calc(166px * 4);
     height: calc(166px * 4);
