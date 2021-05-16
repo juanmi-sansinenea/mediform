@@ -1225,8 +1225,8 @@ a {
   .teaser-big .slider .selector .btn:after {
     content: "";
     position: absolute;
-    top: -10px;
-    bottom: -10px;
+    top: -15px;
+    bottom: -15px;
     left: 0;
     right: -0;
   }

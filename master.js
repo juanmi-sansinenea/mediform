@@ -232,15 +232,23 @@ class TeaserBigSlider extends HTMLElement {
     super();
     this.slides = this.querySelectorAll(".slide");
     this.btns = this.querySelectorAll(".btn");
+
+    this.updateSelector = (which) => {
+      console.log(which);
+      for (let j = 0; j < this.btns.length; j++) {
+        this.btns[j].style.height = "1px";
+      }
+      which.style.height = "3px";
+    };
+
     for (let i = 0; i < this.btns.length; i++) {
-      this.btns[i].addEventListener("click", () => {
-        for (let j = 0; j < this.btns.length; j++) {
-          this.btns[j].style.height = "1px";
-        }
+      this.btns[i].addEventListener("click", (evt) => {
+        console.log(evt);
+        this.updateSelector(evt.target);
         this.activeSlide = i;
-        this.btns[i].style.height = "3px";
-        this.showActiveSlide();
+        this.showActiveSlide(i);
       });
+
       this.slides[i].addEventListener(
         "touchstart",
         (evt) => {
@@ -259,10 +267,13 @@ class TeaserBigSlider extends HTMLElement {
       this.slides[i].addEventListener(
         "touchend",
         () => {
-          console.log(this.difference);
+          this.resetXPosition(this.activeSlide); /////////////<<<<<<<<<----- needs definition
           if (this.difference > 100) {
-            this.activeSlide++;
-            this.showActiveSlide();
+            this.updateActiveSlide(-1);
+            this.updateSelector(this.btns[this.activeSlide]);
+          } else if (this.difference < -100) {
+            this.updateActiveSlide(+1);
+            this.updateSelector(this.btns[this.activeSlide]);
           } else {
             this.slides[i].style.marginLeft = `${0}px`;
           }
@@ -270,6 +281,22 @@ class TeaserBigSlider extends HTMLElement {
         true
       );
     }
+    this.resetXPosition = (which) => {
+      this.slides[which].style.marginLeft = 0;
+    }
+    this.updateActiveSlide = (add) => {
+      if (add === -1) {
+        this.activeSlide > 0
+          ? this.activeSlide--
+          : (this.activeSlide = this.slides.length - 1);
+      }
+      if (add === +1) {
+        this.activeSlide < this.slides.length - 1
+          ? this.activeSlide++
+          : (this.activeSlide = 0);
+      }
+      this.showActiveSlide();
+    };
     this.showActiveSlide = () => {
       for (let i = 0; i < this.slides.length; i++) {
         this.slides[i].style.display = "none";
