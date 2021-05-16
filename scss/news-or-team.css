@@ -562,7 +562,27 @@ a {
   }
   nav #menu-left ul li {
     cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px 0px 10px 0px;
+    position: relative;
     margin-right: 2rem;
+  }
+  nav #menu-left ul li::after {
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0%;
+    position: absolute;
+    -webkit-transition: background 0.3s linear 0s, width 0.3s ease 0s;
+    transition: background 0.3s linear 0s, width 0.3s ease 0s;
+    width: 0;
+  }
+  nav #menu-left ul li:hover::after {
+    width: 100%;
+    left: 0;
+    background: #50565b;
   }
   nav #menu-left ul .leistungen .nupsie {
     height: 8px;
@@ -578,7 +598,27 @@ a {
   }
   nav #menu-right ul li {
     display: block;
-    padding-left: 2rem;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px 0px 10px 0px;
+    position: relative;
+    margin-left: 2rem;
+  }
+  nav #menu-right ul li::after {
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0%;
+    position: absolute;
+    -webkit-transition: background 0.3s linear 0s, width 0.3s ease 0s;
+    transition: background 0.3s linear 0s, width 0.3s ease 0s;
+    width: 0;
+  }
+  nav #menu-right ul li:hover::after {
+    width: 100%;
+    left: 0;
+    background: #50565b;
   }
   nav .burger {
     display: none;
