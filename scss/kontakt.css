@@ -89,6 +89,10 @@ a {
   visibility: hidden;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 .display-block {
   display: block;
 }
@@ -261,6 +265,72 @@ a {
 .anim-arrow-in {
   -webkit-animation: arrow-in 0.5s ease forwards;
           animation: arrow-in 0.5s ease forwards;
+}
+
+@-webkit-keyframes roll-up {
+  0% {
+    opacity: 0;
+    margin-top: 12vw;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@keyframes roll-up {
+  0% {
+    opacity: 0;
+    margin-top: 12vw;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@-webkit-keyframes roll-left {
+  0% {
+    opacity: 0;
+    margin-left: -12vw;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+@keyframes roll-left {
+  0% {
+    opacity: 0;
+    margin-left: -12vw;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+@-webkit-keyframes roll-right {
+  0% {
+    opacity: 0;
+    margin-right: -12vw;
+  }
+  100% {
+    opacity: 1;
+    margin-right: 0;
+  }
+}
+
+@keyframes roll-right {
+  0% {
+    opacity: 0;
+    margin-right: -12vw;
+  }
+  100% {
+    opacity: 1;
+    margin-right: 0;
+  }
 }
 
 @media (min-width: 0px) {

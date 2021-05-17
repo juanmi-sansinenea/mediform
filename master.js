@@ -1,4 +1,41 @@
 //////////////////////////////////////////////////////////////////////////////////////
+/////////////   FADE IN ELEMENTS ON SCROLL    ////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+(function () {
+  var elements;
+  var windowHeight;
+
+  function init() {
+    elements = document.querySelectorAll(".hidden");
+    windowHeight = window.innerHeight;
+  }
+
+  function checkPosition() {
+    for (var i = 0; i < elements.length; i++) {
+      var element = elements[i];
+      var positionFromTop = elements[i].getBoundingClientRect().top;
+
+      if (positionFromTop - windowHeight <= 0) {
+        if (element.classList.contains("will-roll-left")) {
+          element.style.animation = "1s roll-left ease";
+        } else if (element.classList.contains("will-roll-right")) {
+          element.style.animation = "1s roll-right ease";
+        } else {
+          element.style.animation = "1s roll-up ease";
+        }
+        element.classList.remove("hidden");
+      }
+    }
+  }
+
+  window.addEventListener("scroll", checkPosition);
+  window.addEventListener("resize", init);
+
+  init();
+  checkPosition();
+})();
+
+//////////////////////////////////////////////////////////////////////////////////////
 /////////////   TOP NAV    ///////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
 const modalMenu = document.querySelector(".modal-menu");
@@ -281,7 +318,7 @@ class TeaserBigSlider extends HTMLElement {
     }
     this.resetXPosition = (which) => {
       this.slides[which].style.marginLeft = 0;
-    }
+    };
     this.updateActiveSlide = (add) => {
       if (add === -1) {
         this.activeSlide > 0
