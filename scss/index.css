@@ -334,37 +334,37 @@ a {
 }
 
 .roll-up {
-  -webkit-animation: 1s roll-up ease;
-          animation: 1s roll-up ease;
+  -webkit-animation: 1s roll-up ease-out;
+          animation: 1s roll-up ease-out;
 }
 
 .roll-up-delay {
-  -webkit-animation: 1s roll-up ease 0.25s;
-          animation: 1s roll-up ease 0.25s;
+  -webkit-animation: 1s roll-up ease-out 0.25s;
+          animation: 1s roll-up ease-out 0.25s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
 
 .roll-left {
-  -webkit-animation: 1s roll-left ease;
-          animation: 1s roll-left ease;
+  -webkit-animation: 1s roll-left ease-out;
+          animation: 1s roll-left ease-out;
 }
 
 .roll-left-delay {
-  -webkit-animation: 1s roll-left ease 0.25s;
-          animation: 1s roll-left ease 0.25s;
+  -webkit-animation: 1s roll-left ease-out 0.25s;
+          animation: 1s roll-left ease-out 0.25s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
 
 .roll-right {
-  -webkit-animation: 1s roll-right ease;
-          animation: 1s roll-right ease;
+  -webkit-animation: 1s roll-right ease-out;
+          animation: 1s roll-right ease-out;
 }
 
 .roll-right-delay {
-  -webkit-animation: 1s roll-right ease 0.25s;
-          animation: 1s roll-right ease 0.25s;
+  -webkit-animation: 1s roll-right ease-out 0.25s;
+          animation: 1s roll-right ease-out 0.25s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }

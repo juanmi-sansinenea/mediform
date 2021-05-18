@@ -344,7 +344,6 @@
             background-lila
             hidden
             will-roll-right
-            delay
           "
         >
           <div class="click-area"></div>
@@ -383,7 +382,14 @@
         </teaser-small>
 
         <teaser-small
-          class="teaser-small C color-ocean background-ocean hidden will-roll-left"
+          class="
+            teaser-small
+            C
+            color-ocean
+            background-ocean
+            hidden
+            will-roll-left
+          "
         >
           <div class="click-area"></div>
           <div class="teaser-small-modal">
@@ -419,7 +425,16 @@
           </div>
         </teaser-small>
 
-        <teaser-small class="teaser-small D color-rain background-rain hidden will-roll-right delay">
+        <teaser-small
+          class="
+            teaser-small
+            D
+            color-rain
+            background-rain
+            hidden
+            will-roll-right
+          "
+        >
           <div class="click-area"></div>
           <div class="teaser-small-modal">
             <div class="teaser-small-modal-info">
@@ -520,15 +535,18 @@
           </h3>
           <img
             src="./img/arrow-right-rain.svg"
-            class="arrow-right hidden"
+            class="arrow-right hidden will-roll-left delay"
             alt="arrow-pointing-right"
           />
         </div>
-        <div class="teaser-big-img hidden delay" style="background-color: #6d6d6d"></div>
+        <div
+          class="teaser-big-img hidden delay"
+          style="background-color: #6d6d6d"
+        ></div>
       </div>
 
       <div class="teaser-big">
-        <teaser-big-slider class="slider">
+        <teaser-big-slider class="slider hidden">
           <div class="slider-content clip">
             <div class="slide">
               <img src="./img/slide-1.jpg" alt="slide-1" />
@@ -546,7 +564,7 @@
               <img src="./img/slide-5.jpg" alt="slide-5" />
             </div>
           </div>
-          <div class="selector">
+          <div class="selector hidden will-roll-left delay">
             <div class="btn"></div>
             <div class="btn"></div>
             <div class="btn"></div>
@@ -555,15 +573,15 @@
           </div>
         </teaser-big-slider>
 
-        <div class="teaser-big-text right">
-          <small>Unsere Klinik</small>
-          <h3>
+        <div class="teaser-big-text right delay">
+          <small class="hidden">Unsere Klinik</small>
+          <h3 class="hidden">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor.
           </h3>
           <img
             src="./img/arrow-right-rain.svg"
-            class="arrow-right"
+            class="arrow-right hidden will-roll-right delay"
             alt="arrow-pointing-right"
           />
         </div>
@@ -571,7 +589,7 @@
 
       <!-- /////////////////  NEWS MODULE  ///////////////////////////////// -->
       <div class="news-module">
-        <div class="news news-A">
+        <div class="news news-A hidden">
           <div class="news-img" style="background-color: #6d6d6d"></div>
           <small class="date">22.6.2021</small><br />
           <small class="news-headline"
@@ -585,7 +603,7 @@
           />
         </div>
 
-        <div class="news news-B">
+        <div class="news news-B hidden">
           <div class="news-img" style="background-color: #6d6d6d"></div>
           <small class="date">22.6.2021</small><br />
           <small class="news-headline"
@@ -599,7 +617,7 @@
           />
         </div>
 
-        <div class="news news-C">
+        <div class="news news-C hidden">
           <div class="news-img" style="background-color: #6d6d6d"></div>
           <small class="date">22.6.2021</small><br />
           <small class="news-headline"
@@ -613,7 +631,7 @@
           />
         </div>
 
-        <div class="news news-D">
+        <div class="news news-D hidden">
           <div class="news-img" style="background-color: #6d6d6d"></div>
           <small class="date">22.6.2021</small><br />
           <small class="news-headline"

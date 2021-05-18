@@ -163,7 +163,7 @@ a {
     margin-right: 0;
   }
 }
-$bezier: ease;
+$bezier: ease-out;
 $delay: 0.25s;
 .roll-up {
   animation: 1s roll-up $bezier;
