@@ -4,6 +4,7 @@
 function animateOnScroll() {
   var elements;
   var windowHeight;
+  var mainWrapper = document.querySelector(".mainwrapper");
 
   function init() {
     elements = document.querySelectorAll(".hidden");
@@ -14,6 +15,7 @@ function animateOnScroll() {
     for (var i = 0; i < elements.length; i++) {
       var element = elements[i];
       var positionFromTop = elements[i].getBoundingClientRect().top;
+
       if (positionFromTop - windowHeight <= 0) {
         element.classList.remove("hidden");
         if (
@@ -39,7 +41,7 @@ function animateOnScroll() {
     }
   }
 
-  window.addEventListener("scroll", checkPosition);
+  mainWrapper.addEventListener("scroll", checkPosition);
   window.addEventListener("resize", init);
 
   init();

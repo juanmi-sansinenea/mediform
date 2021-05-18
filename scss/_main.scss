@@ -9,6 +9,8 @@
     url(../fonts/TT-Norms-Medium.woff) format("woff");
 }
 
+html,
+
 body {
   font-family: "TT-Norms-Medium";
   margin: 0;
@@ -190,6 +192,15 @@ $delay: 0.25s;
 ////////////////////////////////////////////////////////////////////////////////////////
 //MOBILE (sm) --------------------------------------------------------------------------
 @media (min-width: map-get($media-widths, sm)) {
+  body {
+    position: fixed;
+    overflow: hidden;
+    .mainwrapper {
+      width: 100vw;
+      height: 100vh;
+      overflow-y: scroll;
+    }
+  }
   .space {
     height: vert-heights(sm);
     width: 100vw;
