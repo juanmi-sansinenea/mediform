@@ -1,7 +1,7 @@
 //////////////////////////////////////////////////////////////////////////////////////
-/////////////   FADE IN ELEMENTS ON SCROLL    ////////////////////////////////////////
+/////////////   ROLL IN ELEMENTS ON SCROLL    ////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
-(function () {
+function animateOnScroll() {
   var elements;
   var windowHeight;
 
@@ -14,15 +14,19 @@
     for (var i = 0; i < elements.length; i++) {
       var element = elements[i];
       var positionFromTop = elements[i].getBoundingClientRect().top;
-
       if (positionFromTop - windowHeight <= 0) {
-        
         element.classList.remove("hidden");
-        if (element.classList.contains("will-roll-left") && element.classList.contains("delay")) {
+        if (
+          element.classList.contains("will-roll-left") &&
+          element.classList.contains("delay")
+        ) {
           element.classList.add("roll-left-delay");
         } else if (element.classList.contains("will-roll-left")) {
           element.classList.add("roll-left");
-        } else if (element.classList.contains("will-roll-right") && element.classList.contains("delay")) {
+        } else if (
+          element.classList.contains("will-roll-right") &&
+          element.classList.contains("delay")
+        ) {
           element.classList.add("roll-right-delay");
         } else if (element.classList.contains("will-roll-right")) {
           element.classList.add("roll-right");
@@ -40,7 +44,14 @@
 
   init();
   checkPosition();
-})();
+}
+function dontAnimateOnScroll() {
+  elements = document.querySelectorAll(".hidden");
+  for (var i = 0; i < elements.length; i++) {
+    var element = elements[i];
+    element.classList.remove("hidden");
+  }
+}
 
 //////////////////////////////////////////////////////////////////////////////////////
 /////////////   TOP NAV    ///////////////////////////////////////////////////////////
@@ -102,10 +113,12 @@ handleMenuVisibilities = () => {
     showMainMenuItems();
     hideSubMenu();
     scrollMe.style.height = "100vh";
+    dontAnimateOnScroll();
   } else {
     hideMainMenuItems();
     showSubMenu();
     scrollMe.style.height = "auto";
+    animateOnScroll();
   }
   for (i = 0; i < expandSubSub.length; i++) {
     suggestExpandingSubSub(i);
