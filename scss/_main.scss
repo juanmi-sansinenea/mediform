@@ -13,7 +13,7 @@ body {
   font-family: "TT-Norms-Medium";
   margin: 0;
   color: map-get($colors, steel);
-  ::selection{
+  ::selection {
     background-color: colors(medisnow);
   }
 }
@@ -153,7 +153,7 @@ a {
     margin-left: 0;
   }
 }
-@keyframes roll-right{
+@keyframes roll-right {
   0% {
     opacity: 0;
     margin-right: -12vw;
@@ -163,7 +163,29 @@ a {
     margin-right: 0;
   }
 }
-
+$bezier: ease;
+$delay: 0.25s;
+.roll-up {
+  animation: 1s roll-up $bezier;
+}
+.roll-up-delay {
+  animation: 1s roll-up $bezier $delay;
+  animation-fill-mode: backwards;
+}
+.roll-left {
+  animation: 1s roll-left $bezier;
+}
+.roll-left-delay {
+  animation: 1s roll-left $bezier $delay;
+  animation-fill-mode: backwards;
+}
+.roll-right {
+  animation: 1s roll-right $bezier;
+}
+.roll-right-delay {
+  animation: 1s roll-right $bezier $delay;
+  animation-fill-mode: backwards;
+}
 
 ////////////////////////////////////////////////////////////////////////////////////////
 //MOBILE (sm) --------------------------------------------------------------------------

@@ -16,14 +16,21 @@
       var positionFromTop = elements[i].getBoundingClientRect().top;
 
       if (positionFromTop - windowHeight <= 0) {
-        if (element.classList.contains("will-roll-left")) {
-          element.style.animation = "1s roll-left ease";
-        } else if (element.classList.contains("will-roll-right")) {
-          element.style.animation = "1s roll-right ease";
-        } else {
-          element.style.animation = "1s roll-up ease";
-        }
+        
         element.classList.remove("hidden");
+        if (element.classList.contains("will-roll-left") && element.classList.contains("delay")) {
+          element.classList.add("roll-left-delay");
+        } else if (element.classList.contains("will-roll-left")) {
+          element.classList.add("roll-left");
+        } else if (element.classList.contains("will-roll-right") && element.classList.contains("delay")) {
+          element.classList.add("roll-right-delay");
+        } else if (element.classList.contains("will-roll-right")) {
+          element.classList.add("roll-right");
+        } else if (element.classList.contains("delay")) {
+          element.classList.add("roll-up-delay");
+        } else {
+          element.classList.add("roll-up");
+        }
       }
     }
   }
