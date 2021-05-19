@@ -188,7 +188,7 @@ $delay: 0.25s;
   animation-fill-mode: backwards;
 }
 
-@keyframes menu-collapse {
+@keyframes nav-collapse {
   0% {
     margin-top: 0;
   }
@@ -196,11 +196,11 @@ $delay: 0.25s;
     margin-top: - vert-heights(lg);
   }
 }
-.menu-collapse {
-  animation: 1s menu-collapse ease;
+.nav-collapse {
+  animation: 1s nav-collapse ease-out;
   animation-fill-mode: forwards;
 }
-@keyframes menu-expand {
+@keyframes nav-expand {
   0% {
     margin-top: - vert-heights(lg);;
   }
@@ -208,8 +208,8 @@ $delay: 0.25s;
     margin-top: 0;
   }
 }
-.menu-expand {
-  animation: 0.25s menu-expand ease;
+.nav-expand {
+  animation: 0.25s nav-expand ease;
   animation-fill-mode: forwards;
 }
 

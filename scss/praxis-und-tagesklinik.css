@@ -372,7 +372,7 @@ a {
           animation-fill-mode: backwards;
 }
 
-@-webkit-keyframes menu-collapse {
+@-webkit-keyframes nav-collapse {
   0% {
     margin-top: 0;
   }
@@ -381,7 +381,7 @@ a {
   }
 }
 
-@keyframes menu-collapse {
+@keyframes nav-collapse {
   0% {
     margin-top: 0;
   }
@@ -390,14 +390,14 @@ a {
   }
 }
 
-.menu-collapse {
-  -webkit-animation: 1s menu-collapse ease;
-          animation: 1s menu-collapse ease;
+.nav-collapse {
+  -webkit-animation: 1s nav-collapse ease-out;
+          animation: 1s nav-collapse ease-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes menu-expand {
+@-webkit-keyframes nav-expand {
   0% {
     margin-top: -160px;
   }
@@ -406,7 +406,7 @@ a {
   }
 }
 
-@keyframes menu-expand {
+@keyframes nav-expand {
   0% {
     margin-top: -160px;
   }
@@ -415,9 +415,9 @@ a {
   }
 }
 
-.menu-expand {
-  -webkit-animation: 0.25s menu-expand ease;
-          animation: 0.25s menu-expand ease;
+.nav-expand {
+  -webkit-animation: 0.25s nav-expand ease;
+          animation: 0.25s nav-expand ease;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }

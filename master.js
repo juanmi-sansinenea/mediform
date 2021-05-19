@@ -49,11 +49,11 @@ function animateOnScroll() {
       content.getBoundingClientRect().top < nav.getBoundingClientRect().height
     ) {
       if (content.getBoundingClientRect().top > scrollPos) {
-        nav.classList.remove("menu-collapse");
-        nav.classList.add("menu-expand");
+        nav.classList.remove("nav-collapse");
+        nav.classList.add("nav-expand");
       } else {
-        nav.classList.add("menu-collapse");
-        nav.classList.remove("menu-expand");
+        nav.classList.add("nav-collapse");
+        nav.classList.remove("nav-expand");
       }
       scrollPos = content.getBoundingClientRect().top;
     }
