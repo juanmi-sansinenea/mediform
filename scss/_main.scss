@@ -10,7 +10,6 @@
 }
 
 html,
-
 body {
   font-family: "TT-Norms-Medium";
   margin: 0;
@@ -189,13 +188,39 @@ $delay: 0.25s;
   animation-fill-mode: backwards;
 }
 
+@keyframes menu-collapse {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: - vert-heights(lg);
+  }
+}
+.menu-collapse {
+  animation: 1s menu-collapse ease;
+  animation-fill-mode: forwards;
+}
+@keyframes menu-expand {
+  0% {
+    margin-top: - vert-heights(lg);;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+.menu-expand {
+  animation: 0.25s menu-expand ease;
+  animation-fill-mode: forwards;
+}
+
+
 ////////////////////////////////////////////////////////////////////////////////////////
 //MOBILE (sm) --------------------------------------------------------------------------
 @media (min-width: map-get($media-widths, sm)) {
   body {
     position: fixed;
     overflow: hidden;
-    .mainwrapper {
+    .main-wrapper {
       width: 100vw;
       height: 100vh;
       overflow-y: scroll;

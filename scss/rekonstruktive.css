@@ -372,12 +372,62 @@ a {
           animation-fill-mode: backwards;
 }
 
+@-webkit-keyframes menu-collapse {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: -160px;
+  }
+}
+
+@keyframes menu-collapse {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: -160px;
+  }
+}
+
+.menu-collapse {
+  -webkit-animation: 1s menu-collapse ease;
+          animation: 1s menu-collapse ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes menu-expand {
+  0% {
+    margin-top: -160px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+@keyframes menu-expand {
+  0% {
+    margin-top: -160px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+.menu-expand {
+  -webkit-animation: 0.25s menu-expand ease;
+          animation: 0.25s menu-expand ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 @media (min-width: 0px) {
   body {
     position: fixed;
     overflow: hidden;
   }
-  body .mainwrapper {
+  body .main-wrapper {
     width: 100vw;
     height: 100vh;
     overflow-y: scroll;

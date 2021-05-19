@@ -4,7 +4,7 @@
 function animateOnScroll() {
   var elements;
   var windowHeight;
-  var mainWrapper = document.querySelector(".mainwrapper");
+  var mainWrapper = document.querySelector(".main-wrapper");
 
   function init() {
     elements = document.querySelectorAll(".hidden");
@@ -41,12 +41,33 @@ function animateOnScroll() {
     }
   }
 
+  const nav = document.querySelector(".nav");
+  const content = document.querySelector(".content");
+  let scrollPos = 0;
+  function checkContentPosition() {
+    if (
+      content.getBoundingClientRect().top < nav.getBoundingClientRect().height
+    ) {
+      if (content.getBoundingClientRect().top > scrollPos) {
+        nav.classList.remove("menu-collapse");
+        nav.classList.add("menu-expand");
+      } else {
+        nav.classList.add("menu-collapse");
+        nav.classList.remove("menu-expand");
+      }
+      scrollPos = content.getBoundingClientRect().top;
+    }
+  }
+
   mainWrapper.addEventListener("scroll", checkPosition);
+  mainWrapper.addEventListener("scroll", checkContentPosition);
+
   window.addEventListener("resize", init);
 
   init();
   checkPosition();
 }
+
 function dontAnimateOnScroll() {
   elements = document.querySelectorAll(".hidden");
   for (var i = 0; i < elements.length; i++) {
@@ -54,6 +75,20 @@ function dontAnimateOnScroll() {
     element.classList.remove("hidden");
   }
 }
+//////////////////////////////////////////////////////////////////////////////////////
+/////////////   COLLAPSE MENU ON SCROLL    ////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+// const nav = document.querySelector(".nav");
+// const mainWrapper = document.querySelector(".main-wrapper");
+
+// mainWrapper.addEventListener("scroll", function () {
+//   if (mainWrapper.getBoundingClientRect().top < nav.offsetHeight) {
+//     nav.classList.add("menu-collapse");
+//   } else {
+//     console.log("ara nop");
+//     nav.classList.remove("menu-collapse");
+//   }
+// });
 
 //////////////////////////////////////////////////////////////////////////////////////
 /////////////   TOP NAV    ///////////////////////////////////////////////////////////
