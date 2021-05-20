@@ -27,12 +27,21 @@
         justify-content: center;
         height: vert-heights-half(sm);
         .btn {
+          position: relative;
           cursor: pointer;
           height: 1px;
           width: 100%;
           background-color: colors(steel);
           margin: 5px;
-        }
+        }  
+        .btn:after {
+          content: "";
+          position: absolute;
+          top: -15px;
+          bottom: -15px;
+          left: 0;
+          right: -0;
+        } 
       }
     }
   }

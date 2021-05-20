@@ -1032,11 +1032,20 @@ a {
     height: 45px;
   }
   .teaser-big .slider .selector .btn {
+    position: relative;
     cursor: pointer;
     height: 1px;
     width: 100%;
     background-color: #50565b;
     margin: 5px;
+  }
+  .teaser-big .slider .selector .btn:after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    bottom: -15px;
+    left: 0;
+    right: -0;
   }
 }
 
