@@ -37,7 +37,14 @@
     width: calc(100vw + -12vw);
     height: calc(100vw + -12vw);
     margin-bottom: 6vw;
-    cursor: pointer;
+    .click-area {
+      cursor: pointer;
+    }
+    .close-teaser {
+      :hover{
+        cursor: pointer;
+      }
+    }
   }
   .teaser-small-modal {
     display: none;

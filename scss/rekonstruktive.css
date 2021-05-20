@@ -1029,6 +1029,11 @@ a {
     width: calc(100vw + -12vw);
     height: calc(100vw + -12vw);
     margin-bottom: 6vw;
+  }
+  .teaser-small .click-area {
+    cursor: pointer;
+  }
+  .teaser-small .close-teaser :hover {
     cursor: pointer;
   }
   .teaser-small-modal {
