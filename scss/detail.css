@@ -891,6 +891,12 @@ a {
 }
 
 @media (min-width: 0px) {
+  body {
+    background-color: aquamarine;
+  }
+}
+
+@media (min-width: 0px) {
   footer {
     width: 100%;
     background-color: #e9eae5;
@@ -1079,4 +1085,4 @@ a {
     margin-top: -vert-heights-quarter(xl);
   }
 }
-/*# sourceMappingURL=news-or-team-detail.css.map */
+/*# sourceMappingURL=detail.css.map */
