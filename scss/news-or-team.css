@@ -567,10 +567,6 @@ a {
   }
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
 @media (min-width: 0px) {
   nav {
     -webkit-box-pack: justify;
@@ -609,6 +605,9 @@ a:hover {
   nav .burger img {
     width: 25px;
   }
+  .modal-menu a:hover {
+    text-decoration: underline;
+  }
   .modal-menu .modal-menu-top-space {
     height: 90px;
     -webkit-box-align: center;
@@ -643,6 +642,9 @@ a:hover {
     cursor: pointer;
     padding: 1.5rem 0 1.5rem 0;
     margin: 0 6vw 0 6vw;
+  }
+  .modal-menu .scroll-me .main-menu li:hover {
+    text-decoration: underline;
   }
   .modal-menu .scroll-me .main-menu .submenu-trigger .expand-submenu {
     height: 1rem;
