@@ -891,8 +891,99 @@ a {
 }
 
 @media (min-width: 0px) {
-  body {
-    background-color: aquamarine;
+  section {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section .container {
+    width: calc(100vw - 12vw);
+  }
+  section .container .arrow-left {
+    width: 45px;
+    margin-bottom: 22px;
+  }
+  section .detail-img-container .detail-img {
+    width: calc(100vw - 12vw);
+    height: calc(100vw - 12vw);
+    margin-bottom: 45px;
+  }
+  section .text-container {
+    width: calc(100vw - 12vw);
+    margin-bottom: 90px;
+  }
+}
+
+@media (min-width: 0px) and (min-width: 801px) {
+  section .container {
+    width: calc(11.5vw * 6);
+  }
+  section .container .arrow-left {
+    width: 45px;
+    margin-bottom: 22px;
+  }
+  section .container h2 {
+    margin-bottom: 22px;
+  }
+  section .detail-img-container .detail-img {
+    width: calc(11.5vw * 6);
+    height: calc(11.5vw * 6 / (16 / 9));
+    margin-bottom: 45px;
+  }
+  section .text-container {
+    width: calc(11.5vw * 6);
+    margin-bottom: 120px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 11.5vw 57.5vw;
+        grid-template-columns: 11.5vw 57.5vw;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: ". body-copy";
+  }
+  section .text-container small {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: body-copy;
+  }
+}
+
+@media (min-width: 0px) and (min-width: 801px) and (min-width: 1025px) {
+  section .container .arrow-left {
+    width: 60px;
+    margin-bottom: 30px;
+  }
+  section .container h2 {
+    margin-bottom: 30px;
+  }
+  section .detail-img-container .detail-img {
+    margin-bottom: 60px;
+  }
+  section .text-container {
+    margin-bottom: 160px;
+  }
+}
+
+@media (min-width: 0px) and (min-width: 801px) and (min-width: 1025px) and (min-width: 1441px) {
+  section .container {
+    width: calc(166px * 6);
+  }
+  section .detail-img-container .detail-img {
+    width: calc(166px * 6);
+    height: calc(166px * 6 / (16 / 9));
+  }
+  section .text-container {
+    width: calc(166px * 6);
+    -ms-grid-columns: 166px 830px;
+        grid-template-columns: 166px 830px;
   }
 }
 
