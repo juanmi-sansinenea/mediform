@@ -1107,6 +1107,10 @@ a {
     width: calc(3 * 11.5vw + -1vw);
     height: calc(3 * 11.5vw + -1vw);
   }
+  .teaser-small a:hover {
+    text-decoration: underline;
+    background-color: #e9eae5;
+  }
   .paddington {
     padding: 3vw;
   }
@@ -1133,6 +1137,10 @@ a {
     background-color: white;
     width: calc(3 * 11.5vw + -1vw);
     padding: 3vw;
+  }
+  .teaser-small-modal-info small a:hover {
+    text-decoration: underline;
+    background-color: #e9eae5;
   }
   .click-area {
     width: calc(3 * 11.5vw + -1vw);
@@ -1180,8 +1188,8 @@ a {
     margin-bottom: 180px;
   }
   .teaser-small {
-    width: calc( 3 * 166px + -14px);
-    height: calc( 3 * 166px + -14px);
+    width: calc(3 * 166px + -14px);
+    height: calc(3 * 166px + -14px);
     margin-bottom: 28px;
   }
   .paddington {
@@ -1191,21 +1199,27 @@ a {
     width: calc(6 * 166px);
   }
   .teaser-small-modal img {
-    height: calc( 3 * 166px + -14px);
+    height: calc(3 * 166px + -14px);
   }
   .teaser-small-modal-info {
-    width: calc( 3 * 166px + -14px);
+    width: calc(3 * 166px + -14px);
     padding: 43px;
   }
   .click-area {
-    width: calc( 3 * 166px + -14px);
-    height: calc( 3 * 166px + -14px);
+    width: calc(3 * 166px + -14px);
+    height: calc(3 * 166px + -14px);
   }
   .close-teaser {
     height: 50px;
   }
   .close-teaser img {
     height: 25px;
+  }
+}
+
+@media (min-width: 0px) {
+  .teaser-small-modal-info h3 {
+    text-decoration: none;
   }
 }
 

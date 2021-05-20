@@ -89,8 +89,12 @@
     }
     $measure: calc(3 * 11.5vw + -1vw); // make it 1vw narrower
     .teaser-small {
-      width: $measure; 
-      height: $measure; 
+      width: $measure;
+      height: $measure;
+      a:hover {
+        text-decoration: underline;
+        background-color: colors(medisnow);
+      }
     }
     .paddington {
       padding: 3vw;
@@ -114,6 +118,12 @@
       background-color: white;
       width: $measure;
       padding: 3vw;
+      small {
+        a:hover {
+          text-decoration: underline;
+          background-color: colors(medisnow);
+        }
+      }
     }
     .click-area {
       width: $measure;
@@ -145,7 +155,7 @@
         .arrow-right {
           width: vert-heights-half(xl);
         }
-        
+
         .teasers {
           display: grid;
           justify-content: center;
@@ -157,9 +167,7 @@
             ". E . . . . F .";
           margin-bottom: vert-heights(xl);
         }
-        $measure: calc(
-          3 * 166px + -14px
-        );
+        $measure: calc(3 * 166px + -14px);
 
         .teaser-small {
           width: $measure;
