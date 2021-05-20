@@ -60,8 +60,10 @@ function animateOnScroll() {
     }
   }
 
-  mainWrapper.addEventListener("scroll", checkPosition);
-  mainWrapper.addEventListener("scroll", checkContentPosition);
+  mainWrapper.addEventListener("scroll", () => {
+    checkPosition();
+    checkContentPosition();
+  });
 
   window.addEventListener("resize", init);
 
