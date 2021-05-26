@@ -102,6 +102,27 @@ a {
   }
 }
 
+@keyframes slide-out-next {
+  0% {
+    opacity: 1;
+    //margin-left: 0vw;
+  }
+  100% {
+    opacity: 0;
+    margin-left: -200vw;
+  }
+}
+@keyframes slide-out-prev {
+  0% {
+    opacity: 1;
+    //margin-left: 0vw;
+  }
+  100% {
+    opacity: 0;
+    margin-left: 100vw;
+  }
+}
+
 @keyframes fade-in {
   0% {
     opacity: 0;

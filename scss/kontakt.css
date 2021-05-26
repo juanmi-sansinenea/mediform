@@ -206,6 +206,46 @@ a {
   }
 }
 
+@-webkit-keyframes slide-out-next {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    margin-left: -200vw;
+  }
+}
+
+@keyframes slide-out-next {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    margin-left: -200vw;
+  }
+}
+
+@-webkit-keyframes slide-out-prev {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    margin-left: 100vw;
+  }
+}
+
+@keyframes slide-out-prev {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    margin-left: 100vw;
+  }
+}
+
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0;

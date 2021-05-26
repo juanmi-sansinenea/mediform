@@ -309,87 +309,118 @@ customElements.define("testimonial-slider", TestimonialSlider);
 /////////////   TEASER-BIG & SLIDER-BIG   ////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
 
-// The below class applies to both the Teaser Big Slider and the Slider Big modules
-class TeaserBigSlider extends HTMLElement {
+// The below classes applies to both the Teaser Big Slider and the Slider Big modules
+
+
+activeSlide = 0;
+sliderBig = document.querySelector(".slider-big")
+slides = sliderBig.querySelectorAll(".slide");
+btns = sliderBig.querySelectorAll(".btn");
+
+
+class SlideBig extends HTMLElement {
   constructor() {
     super();
-    this.slides = this.querySelectorAll(".slide");
-    this.btns = this.querySelectorAll(".btn");
 
+    for (let i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", (evt) => {
+        this.updateSelector(evt.target);
+        activeSlide = i;
+        this.showActiveSlide(i);
+      });
+    }
     this.updateSelector = (which) => {
-      for (let j = 0; j < this.btns.length; j++) {
-        this.btns[j].style.height = "1px";
+      for (let j = 0; j < btns.length; j++) {
+        btns[j].style.height = "1px";
       }
       which.style.height = "3px";
     };
 
-    for (let i = 0; i < this.btns.length; i++) {
-      this.btns[i].addEventListener("click", (evt) => {
-        this.updateSelector(evt.target);
-        this.activeSlide = i;
-        this.showActiveSlide(i);
-      });
+    this.addEventListener(
+      "touchstart",
+      (evt) => {
+        this.startX = evt.targetTouches[0].clientX;
+      },
+      true
+    );
+    this.addEventListener(
+      "touchmove",
+      (evt) => {
+        this.difference = evt.targetTouches[0].clientX - this.startX;
+        this.style.marginLeft = `${this.difference}px`;
+      },
+      true
+    );
+    this.addEventListener(
+      "touchend",
+      () => {
+        console.log(this.difference);
+        if (this.difference >= 100) {
+          this.difference = 0;
+          this.slideOut("prev");
+        }
+        if (this.difference > 0 && this.difference < 100) {
+          this.style.marginLeft = `${0}px`;
+        }
+        if (this.difference < 0 && this.difference > -100) {
+          this.style.marginLeft = `${0}px`;
+        }
+        if (this.difference <= -100) {
+          this.difference = 0;
+          this.slideOut("next");
+        }
+      },
+      true
+    );
+    this.slideOut = (to) => {
+      console.log("to " + to);
+      if (to === "prev") {
+        this.add = -1;
+      }
+      if (to === "next") {
+        this.add = 1;
+      }
+      this.style.animation = `slide-out-${to} ease 0.5s`;
 
-      this.slides[i].addEventListener(
-        "touchstart",
-        (evt) => {
-          this.startX = evt.targetTouches[0].clientX;
-        },
-        true
+      this.addEventListener("animationend", this.doIt);
+    };
+    this.doIt = () => {
+      this.resetXPosition();
+      this.updateActiveSlide(this.add);
+      this.updateSelector(btns[activeSlide]);
+      this.showActiveSlide();
+      this.removeEventListener(
+        "animationend",
+        this.doIt
       );
-      this.slides[i].addEventListener(
-        "touchmove",
-        (evt) => {
-          this.difference = evt.targetTouches[0].clientX - this.startX;
-          this.slides[i].style.marginLeft = `${this.difference}px`;
-        },
-        true
-      );
-      this.slides[i].addEventListener(
-        "touchend",
-        () => {
-          this.resetXPosition(this.activeSlide); /////////////<<<<<<<<<----- needs definition
-          if (this.difference > 100) {
-            this.updateActiveSlide(-1);
-            this.updateSelector(this.btns[this.activeSlide]);
-          } else if (this.difference < -100) {
-            this.updateActiveSlide(+1);
-            this.updateSelector(this.btns[this.activeSlide]);
-          } else {
-            this.slides[i].style.marginLeft = `${0}px`;
-          }
-        },
-        true
-      );
-    }
-    this.resetXPosition = (which) => {
-      this.slides[which].style.marginLeft = 0;
+    };
+    this.resetXPosition = () => {
+      this.style.marginLeft = 0;
     };
     this.updateActiveSlide = (add) => {
       if (add === -1) {
-        this.activeSlide > 0
-          ? this.activeSlide--
-          : (this.activeSlide = this.slides.length - 1);
+        activeSlide > 0
+          ? activeSlide--
+          : (activeSlide = slides.length - 1);
       }
       if (add === +1) {
-        this.activeSlide < this.slides.length - 1
-          ? this.activeSlide++
-          : (this.activeSlide = 0);
+        activeSlide < slides.length - 1
+          ? activeSlide++
+          : (activeSlide = 0);
       }
-      this.showActiveSlide();
     };
     this.showActiveSlide = () => {
-      for (let i = 0; i < this.slides.length; i++) {
-        this.slides[i].style.display = "none";
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
       }
-      this.slides[this.activeSlide].style.display = "";
-      this.slides[this.activeSlide].style.animation = "fade-in ease 0.75s";
+      
+      slides[activeSlide].style.display = "";
+      console.log(slides[activeSlide])
+      slides[activeSlide].style.animation = "fade-in ease 0.75s";
     };
   }
   connectedCallback() {
-    this.activeSlide = 0;
-    this.showActiveSlide();
-    this.btns[this.activeSlide].style.height = "3px";
+    btns[activeSlide].style.height = "3px";
   }
 }
-customElements.define("teaser-big-slider", TeaserBigSlider);
+customElements.define("slide-big", SlideBig);
