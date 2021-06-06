@@ -1407,6 +1407,9 @@ a {
   .teaser-big .teaser-big-text .arrow-right {
     margin-bottom: 30px;
   }
+  .teaser-big .slider .slide {
+    position: absolute;
+  }
   .teaser-big .slider .selector {
     width: 66%;
     height: 60px;

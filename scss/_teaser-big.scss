@@ -121,6 +121,9 @@
           }
         }
         .slider {
+          .slide {
+            position:absolute;
+          }
           .selector {
             width: 66%;
             height: vert-heights-half(lg);
