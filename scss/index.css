@@ -1484,14 +1484,14 @@ a {
             align-items: flex-start;
     top: 20px;
     left: 0px;
-    width: 100%;
+    width: auto !important;
     left: auto !important;
     margin-bottom: 90px;
   }
   .teaser-big .slider .swiper-pagination-bullet {
     margin: 5px;
     border-radius: 0;
-    width: 100%;
+    width: calc((100vw + -12vw)/5 + -10px);
     height: 1px;
     text-align: center;
     line-height: 30px;
