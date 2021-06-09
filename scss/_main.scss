@@ -17,6 +17,9 @@ body {
   ::selection {
     background-color: colors(medisnow);
   }
+  *:focus {
+    outline: none;
+}
 }
 a {
   color: inherit;
