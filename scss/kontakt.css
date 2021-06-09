@@ -1345,7 +1345,7 @@ a {
   }
   .teaser-big .slider .swiper-pagination-bullet:after {
     content: "";
-    padding: 20px 50px;
+    padding: 20px calc(((100vw + -12vw)/5 + -10px)/2);
   }
   .teaser-big .slider .swiper-pagination-bullet-active {
     color: #fff;
@@ -1407,6 +1407,9 @@ a {
   .teaser-big .slider .swiper-pagination-bullet {
     width: calc((11.5vw * 4)/5 + -10px);
   }
+  .teaser-big .slider .swiper-pagination-bullet:after {
+    padding: 20px calc(((11.5vw * 4)/5 + -10px)/2);
+  }
 }
 
 @media (min-width: 0px) and (min-width: 801px) and (min-width: 1025px) {
@@ -1427,6 +1430,9 @@ a {
   }
   .teaser-big .slider .swiper-pagination-bullet {
     width: calc((0.115 * 1025px * 4)/5 + -10px);
+  }
+  .teaser-big .slider .swiper-pagination-bullet:after {
+    padding: 20px calc(((0.115 * 1025px * 4)/5 + -10px)/2);
   }
 }
 

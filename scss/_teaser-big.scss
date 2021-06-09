@@ -61,7 +61,7 @@
       }
       .swiper-pagination-bullet:after {
         content: "";
-        padding: 20px 50px;
+        padding: 20px calc(((100vw + -12vw)/5 + -10px)/2);
       }
       
       .swiper-pagination-bullet-active {
@@ -120,6 +120,9 @@
         .swiper-pagination-bullet {
           width: calc((11.5vw * 4)/5 + -10px);
         }
+        .swiper-pagination-bullet:after {
+          padding: 20px calc(((11.5vw * 4)/5 + -10px)/2);
+        }
       }
     }
     //DESKTOP (lg) --------------------------------------------------------------------------
@@ -143,6 +146,9 @@
           }
           .swiper-pagination-bullet {
             width: calc((0.115 * 1025px * 4)/5 + -10px);
+          }
+          .swiper-pagination-bullet:after {
+            padding: 20px calc(((0.115 * 1025px * 4)/5 + -10px)/2);
           }
         }
       }
@@ -192,6 +198,7 @@
             .swiper-pagination {
               top: vert-heights-quarter(lg);
             }
+
           }
         }
       }
