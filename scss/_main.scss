@@ -19,7 +19,7 @@ body {
   }
   *:focus {
     outline: none;
-}
+  }
 }
 a {
   color: inherit;
@@ -217,7 +217,7 @@ $delay: 0.25s;
     margin-top: 0;
   }
   100% {
-    margin-top: - vert-heights(lg);
+    margin-top: -vert-heights(lg);
   }
 }
 .nav-collapse {
@@ -226,7 +226,7 @@ $delay: 0.25s;
 }
 @keyframes nav-expand {
   0% {
-    margin-top: - vert-heights(lg);;
+    margin-top: -vert-heights(lg);
   }
   100% {
     margin-top: 0;
@@ -236,7 +236,6 @@ $delay: 0.25s;
   animation: 0.25s nav-expand ease;
   animation-fill-mode: forwards;
 }
-
 
 ////////////////////////////////////////////////////////////////////////////////////////
 //MOBILE (sm) --------------------------------------------------------------------------

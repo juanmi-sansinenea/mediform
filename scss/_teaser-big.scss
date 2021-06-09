@@ -63,6 +63,10 @@
         content: "";
         padding: 20px calc(((100vw + -12vw)/5 + -10px)/2);
       }
+      .swiper-pagination-bullet:focus {
+        outline: none;
+        box-shadow: none;
+      }
       
       .swiper-pagination-bullet-active {
         color: #fff;

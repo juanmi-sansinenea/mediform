@@ -422,7 +422,7 @@ a {
     margin-top: 0;
   }
   100% {
-    margin-top: -160px;
+    margin-top: -vert-heights(lg);
   }
 }
 
@@ -431,7 +431,7 @@ a {
     margin-top: 0;
   }
   100% {
-    margin-top: -160px;
+    margin-top: -vert-heights(lg);
   }
 }
 
@@ -444,7 +444,7 @@ a {
 
 @-webkit-keyframes nav-expand {
   0% {
-    margin-top: -160px;
+    margin-top: -vert-heights(lg);
   }
   100% {
     margin-top: 0;
@@ -453,7 +453,7 @@ a {
 
 @keyframes nav-expand {
   0% {
-    margin-top: -160px;
+    margin-top: -vert-heights(lg);
   }
   100% {
     margin-top: 0;
