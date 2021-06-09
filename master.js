@@ -312,115 +312,144 @@ customElements.define("testimonial-slider", TestimonialSlider);
 // The below classes applies to both the Teaser Big Slider and the Slider Big modules
 
 
-activeSlide = 0;
-sliderBig = document.querySelector(".slider-big")
-slides = sliderBig.querySelectorAll(".slide");
-btns = sliderBig.querySelectorAll(".btn");
+// activeSlide = 0;
+// sliderBig = document.querySelector(".slider-big")
+// slides = sliderBig.querySelectorAll(".slide");
+// btns = sliderBig.querySelectorAll(".btn");
 
 
-class SlideBig extends HTMLElement {
-  constructor() {
-    super();
+// class SlideBig extends HTMLElement {
+//   constructor() {
+//     super();
 
-    for (let i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", (evt) => {
-        this.updateSelector(evt.target);
-        activeSlide = i;
-        this.showActiveSlide(i);
-      });
-    }
-    this.updateSelector = (which) => {
-      for (let j = 0; j < btns.length; j++) {
-        btns[j].style.height = "1px";
-      }
-      which.style.height = "3px";
-    };
+//     for (let i = 0; i < btns.length; i++) {
+//       btns[i].addEventListener("click", (evt) => {
+//         this.updateSelector(evt.target);
+//         activeSlide = i;
+//         this.showActiveSlide(i);
+//       });
+//     }
+//     this.updateSelector = (which) => {
+//       for (let j = 0; j < btns.length; j++) {
+//         btns[j].style.height = "1px";
+//       }
+//       which.style.height = "3px";
+//     };
 
-    this.addEventListener(
-      "touchstart",
-      (evt) => {
-        this.startX = evt.targetTouches[0].clientX;
-      },
-      true
-    );
-    this.addEventListener(
-      "touchmove",
-      (evt) => {
-        this.difference = evt.targetTouches[0].clientX - this.startX;
-        this.style.marginLeft = `${this.difference}px`;
-      },
-      true
-    );
-    this.addEventListener(
-      "touchend",
-      () => {
-        console.log(this.difference);
-        if (this.difference >= 100) {
-          this.difference = 0;
-          this.slideOut("prev");
-        }
-        if (this.difference > 0 && this.difference < 100) {
-          this.style.marginLeft = `${0}px`;
-        }
-        if (this.difference < 0 && this.difference > -100) {
-          this.style.marginLeft = `${0}px`;
-        }
-        if (this.difference <= -100) {
-          this.difference = 0;
-          this.slideOut("next");
-        }
-      },
-      true
-    );
-    this.slideOut = (to) => {
-      console.log("to " + to);
-      if (to === "prev") {
-        this.add = -1;
-      }
-      if (to === "next") {
-        this.add = 1;
-      }
-      this.style.animation = `slide-out-${to} ease 0.5s`;
+//     this.addEventListener(
+//       "touchstart",
+//       (evt) => {
+//         this.startX = evt.targetTouches[0].clientX;
+//       },
+//       true
+//     );
+//     this.addEventListener(
+//       "touchmove",
+//       (evt) => {
+//         this.difference = evt.targetTouches[0].clientX - this.startX;
+//         this.style.marginLeft = `${this.difference}px`;
+//       },
+//       true
+//     );
+//     this.addEventListener(
+//       "touchend",
+//       () => {
+//         console.log(this.difference);
+//         if (this.difference >= 100) {
+//           this.difference = 0;
+//           this.slideOut("prev");
+//         }
+//         if (this.difference > 0 && this.difference < 100) {
+//           this.style.marginLeft = `${0}px`;
+//         }
+//         if (this.difference < 0 && this.difference > -100) {
+//           this.style.marginLeft = `${0}px`;
+//         }
+//         if (this.difference <= -100) {
+//           this.difference = 0;
+//           this.slideOut("next");
+//         }
+//       },
+//       true
+//     );
+//     this.slideOut = (to) => {
+//       console.log("to " + to);
+//       if (to === "prev") {
+//         this.add = -1;
+//       }
+//       if (to === "next") {
+//         this.add = 1;
+//       }
+//       this.style.animation = `slide-out-${to} ease 0.5s`;
 
-      this.addEventListener("animationend", this.doIt);
-    };
-    this.doIt = () => {
-      this.resetXPosition();
-      this.updateActiveSlide(this.add);
-      this.updateSelector(btns[activeSlide]);
-      this.showActiveSlide();
-      this.removeEventListener(
-        "animationend",
-        this.doIt
-      );
-    };
-    this.resetXPosition = () => {
-      this.style.marginLeft = 0;
-    };
-    this.updateActiveSlide = (add) => {
-      if (add === -1) {
-        activeSlide > 0
-          ? activeSlide--
-          : (activeSlide = slides.length - 1);
-      }
-      if (add === +1) {
-        activeSlide < slides.length - 1
-          ? activeSlide++
-          : (activeSlide = 0);
-      }
-    };
-    this.showActiveSlide = () => {
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
+//       this.addEventListener("animationend", this.doIt);
+//     };
+//     this.doIt = () => {
+//       this.resetXPosition();
+//       this.updateActiveSlide(this.add);
+//       this.updateSelector(btns[activeSlide]);
+//       this.showActiveSlide();
+//       this.removeEventListener(
+//         "animationend",
+//         this.doIt
+//       );
+//     };
+//     this.resetXPosition = () => {
+//       this.style.marginLeft = 0;
+//     };
+//     this.updateActiveSlide = (add) => {
+//       if (add === -1) {
+//         activeSlide > 0
+//           ? activeSlide--
+//           : (activeSlide = slides.length - 1);
+//       }
+//       if (add === +1) {
+//         activeSlide < slides.length - 1
+//           ? activeSlide++
+//           : (activeSlide = 0);
+//       }
+//     };
+//     this.showActiveSlide = () => {
+//       for (let i = 0; i < slides.length; i++) {
+//         slides[i].style.display = "none";
+//       }
       
-      slides[activeSlide].style.display = "";
-      console.log(slides[activeSlide])
-      slides[activeSlide].style.animation = "fade-in ease 0.75s";
-    };
-  }
-  connectedCallback() {
-    btns[activeSlide].style.height = "3px";
-  }
-}
-customElements.define("slide-big", SlideBig);
+//       slides[activeSlide].style.display = "";
+//       console.log(slides[activeSlide])
+//       slides[activeSlide].style.animation = "fade-in ease 0.75s";
+//     };
+//   }
+//   connectedCallback() {
+//     btns[activeSlide].style.height = "3px";
+//   }
+// }
+// customElements.define("slide-big", SlideBig);
+
+//////////////////////////////////////////////////////////////////////////////////////
+/////////////   SWIPER  ////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+
+
+const swiper = new Swiper('.swiper-container', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: 'true',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  // scrollbar: {
+  //   el: '.swiper-scrollbar',
+  // },
+});

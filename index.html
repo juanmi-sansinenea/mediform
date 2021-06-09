@@ -3,9 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="./scss/index.css" />
     <link rel="shortcut icon" href="./mediform-symbol.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <title>Mediform</title>
   </head>
   <body>
@@ -360,10 +369,18 @@
                 <h3><a href="aesthetische.html">Ästhetische Chirurgiee</a></h3>
                 <br />
                 <small
-                  ><a href="#">Faltenbehandlung</a>, <a href="./aesthetische/gesicht.html">Gesichtsstraffung</a>, <a href="#">Augenlidstraffung</a>,
-                  <a href="#">Nasenkorrektur</a>, <a href="#">Kinnkorrekturen</a>, <a href="#">Ohrenkorrektur</a>, <a href="#">Lipofilling</a>,
-                  <a href="#">Haut</a>, <a href="#">Körper</a>, <a href="#">Brustvergrösserung</a>, <a href="#">Bruststraffung</a>,
-                  <a href="#">Brustkorrektur</a>, <a href="#">Brustverkleinerung</a>, <a href="#">Intimchirurgie</a></small
+                  ><a href="#">Faltenbehandlung</a>,
+                  <a href="./aesthetische/gesicht.html">Gesichtsstraffung</a>,
+                  <a href="#">Augenlidstraffung</a>,
+                  <a href="#">Nasenkorrektur</a>,
+                  <a href="#">Kinnkorrekturen</a>,
+                  <a href="#">Ohrenkorrektur</a>, <a href="#">Lipofilling</a>,
+                  <a href="#">Haut</a>, <a href="#">Körper</a>,
+                  <a href="#">Brustvergrösserung</a>,
+                  <a href="#">Bruststraffung</a>,
+                  <a href="#">Brustkorrektur</a>,
+                  <a href="#">Brustverkleinerung</a>,
+                  <a href="#">Intimchirurgie</a></small
                 >
               </div>
               <img
@@ -554,7 +571,7 @@
         </div>
 
         <div class="teaser-big">
-          <teaser-big-slider class="slider slider-big hidden">
+          <!-- <teaser-big-slider class="slider slider-big hidden">
             <div class="slider-content clip">
               <slide-big class="slide">
                 <img src="./img/slide-1.jpg" alt="slide-1" />
@@ -579,7 +596,42 @@
               <div class="btn"></div>
               <div class="btn"></div>
             </div>
-          </teaser-big-slider>
+          </teaser-big-slider> -->
+
+          <!-- Slider mainmost container -->
+          <div class="slider">
+            <!-- Slider main container -->
+            <div class="swiper-container">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <img src="./img/slide-1.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/slide-2.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/slide-3.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/slide-4.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/slide-5.jpg" alt="" />
+                </div>
+              </div>
+
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+
+              <!-- If we need scrollbar -->
+              <div class="swiper-scrollbar"></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
 
           <div class="teaser-big-text right delay">
             <small class="hidden">Unsere Klinik</small>

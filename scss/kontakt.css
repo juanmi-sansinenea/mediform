@@ -1298,46 +1298,59 @@ a {
     width: calc(100vw + -12vw);
     height: calc(100vw + -12vw);
   }
-  .teaser-big .slider .slider-content {
+  .teaser-big .slider .swiper-slide img {
+    width: calc(100vw + -12vw);
+  }
+  .teaser-big .slider .swiper-container {
     width: calc(100vw + -12vw);
     height: calc(100vw + -12vw);
   }
-  .teaser-big .slider .slider-content img {
-    width: calc(100vw + -12vw);
-    height: calc(100vw + -12vw);
-  }
-  .teaser-big .slider .selector {
-    width: 100%;
+  .teaser-big .slider .swiper-slide {
+    text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 45px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .teaser-big .slider .selector .btn {
+  .teaser-big .slider .swiper-pagination {
     position: relative;
-    cursor: pointer;
-    height: 1px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    top: 20px;
+    left: 0px;
     width: 100%;
-    background-color: #50565b;
-    margin: 5px;
+    left: auto !important;
+    margin: 0;
   }
-  .teaser-big .slider .selector .btn:after {
+  .teaser-big .slider .swiper-pagination-bullet {
+    margin: 5px;
+    border-radius: 0;
+    width: calc((100vw + -12vw)/5 - 5px);
+    height: 1px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: #50565b;
+  }
+  .teaser-big .slider .swiper-pagination-bullet:after {
     content: "";
-    position: absolute;
-    top: -15px;
-    bottom: -15px;
-    left: 0;
-    right: -0;
+    padding: 20px 50px;
+  }
+  .teaser-big .slider .swiper-pagination-bullet-active {
+    color: #fff;
+    background: #50565b;
+    height: 5px;
   }
 }
 
