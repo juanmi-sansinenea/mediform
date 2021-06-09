@@ -1335,6 +1335,7 @@ a {
     width: auto !important;
     left: auto !important;
     margin-bottom: 90px;
+    z-index: 0;
   }
   .teaser-big .slider .swiper-pagination-bullet {
     margin: 5px;
