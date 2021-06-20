@@ -1173,7 +1173,8 @@ a {
     margin-bottom: 45px;
   }
   .teaser-big .slider .swiper-slide img {
-    width: calc(100vw + -12vw);
+    height: calc(100vw + -12vw);
+    width: auto;
   }
   .teaser-big .slider .swiper-container {
     width: calc(100vw + -12vw);
@@ -1254,6 +1255,7 @@ a {
   }
   .teaser-big .slider .swiper-slide img {
     width: calc(100vw + -8vw);
+    height: auto;
   }
   .teaser-big .slider .swiper-container {
     width: calc(100vw + -8vw);

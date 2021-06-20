@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="./scss/index.css" />
     <link rel="shortcut icon" href="./mediform-symbol.ico" />
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
     <title>Mediform</title>
   </head>
   <body>
@@ -744,5 +742,19 @@
       </div>
     </div>
   </body>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper1 = new Swiper(".swiper-container", {
+      loop: true,
+      pagination: {
+        type: "bullets",
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+  
   <script src="./master.js"></script>
 </html>
