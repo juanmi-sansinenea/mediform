@@ -219,6 +219,7 @@ class TeaserSmall extends HTMLElement {
   constructor() {
     super();
     this.clickArea = this.querySelector(".click-area");
+    this.paddington = this.querySelector(".paddington");
     this.modal = this.querySelector(".teaser-small-modal");
     this.arrow = this.querySelector(".arrow-right");
     this.closeX = this.querySelector(".close-teaser");
@@ -242,9 +243,11 @@ class TeaserSmall extends HTMLElement {
       this.hovercolor = "rain";
     }
     this.clickArea.addEventListener("mouseover", () => {
+      this.classList.remove("unbloat");
+      this.classList.add("bloat");
       this.arrow.classList.add("anim-arrow-in");
       this.arrow.classList.remove("anim-arrow-out");
-      this.h2.style = "text-decoration: underline";
+      //this.h2.style = "text-decoration: underline";
       // uncomment the below 4 lines to activate mass hovers (in)
       // this.classList.add(`hover-${this.hovercolor}`);
       // this.classList.remove(`mouseout-${this.hovercolor}`);
@@ -252,9 +255,11 @@ class TeaserSmall extends HTMLElement {
       // this.small.classList.add("hover-white");
     });
     this.clickArea.addEventListener("mouseout", () => {
+      this.classList.remove("bloat");
+      this.classList.add("unbloat")
       this.arrow.classList.add("anim-arrow-out");
       this.arrow.classList.remove("anim-arrow-in");
-      this.h2.style = "text-decoration: none";
+      //this.h2.style = "text-decoration: none";
       // uncomment the below 4 lines to activate mass hovers (out)
       // this.classList.add(`mouseout-${this.hovercolor}`);
       // this.classList.remove(`hover-${this.hovercolor}`);

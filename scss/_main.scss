@@ -275,6 +275,30 @@ $delay: 0.25s;
   animation: 0.25s nav-expand ease;
   animation-fill-mode: forwards;
 }
+@keyframes bloat {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+@keyframes unbloat {
+  0% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.bloat {
+  animation: 0.25s bloat ease;
+  animation-fill-mode: forwards;
+}
+.unbloat {
+  animation: 0.25s unbloat ease;
+  animation-fill-mode: forwards;
+}
 
 
 // uncomment the below 4 lines to activate mass hovers
