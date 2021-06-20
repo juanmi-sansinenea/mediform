@@ -296,7 +296,7 @@
           <!-- Slider mainmost container -->
           <div class="slider">
             <!-- Slider main container -->
-            <div class="swiper-container">
+            <div class="swiper-container swiper1">
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper hidden">
                 <!-- Slides -->
@@ -325,9 +325,10 @@
               <!-- <div class="swiper-scrollbar"></div> -->
             </div>
             <!-- If we need pagination -->
-            <div class="swiper-pagination hidden will-roll-left delay"></div>
+            <div
+              class="swiper-pagination swp1 hidden will-roll-left delay"
+            ></div>
           </div>
-          </teaser-big-slider>
         </div>
         <!-- /////////////////  BODY-COPY-WITH-INTRO MODULE  ///////////////////////////////// -->
         <section class="body-copy-with-intro">
@@ -369,32 +370,42 @@
 
         <!-- /////////////////  BIG-SLIDER MODULE  ///////////////////////////////// -->
         <div class="teaser-big">
-          <teaser-big-slider class="slider hidden">
-            <div class="slider-content clip">
-              <div class="slide">
-                <img src="./img/large-2.jpg" alt="slide-1" />
+          <!-- Slider mainmost container -->
+          <div class="slider">
+            <!-- Slider main container -->
+            <div class="swiper-container swiper2">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper hidden">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <img src="./img/slide-1.jpg" alt="slide-1" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/slide-2.jpg" alt="slide-2" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/slide-3.jpg" alt="slide-3" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/slide-4.jpg" alt="slide-4" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/slide-5.jpg" alt="slide-5" />
+                </div>
               </div>
-              <div class="slide">
-                <img src="./img/large-3.jpg" alt="slide-2" />
-              </div>
-              <div class="slide">
-                <img src="./img/large-4.jpg" alt="slide-3" />
-              </div>
-              <div class="slide">
-                <img src="./img/large-5.jpg" alt="slide-4" />
-              </div>
-              <div class="slide">
-                <img src="./img/large-6.jpg" alt="slide-5" />
-              </div>
+
+              <!-- If we need navigation buttons -->
+              <!-- <div class="swiper-button-prev"></div> -->
+              <!-- <div class="swiper-button-next"></div> -->
+
+              <!-- If we need scrollbar -->
+              <!-- <div class="swiper-scrollbar"></div> -->
             </div>
-            <div class="selector hidden will-roll-left">
-              <div class="btn"></div>
-              <div class="btn"></div>
-              <div class="btn"></div>
-              <div class="btn"></div>
-              <div class="btn"></div>
-            </div>
-          </teaser-big-slider>
+            <!-- If we need pagination -->
+            <div
+              class="swiper-pagination swp2 hidden will-roll-left delay"
+            ></div>
+          </div>
         </div>
 
         <!-- /////////////////  FOOTER MODULE / CLOSE CONTENT TAG  ///////////////////////////////// -->
@@ -451,5 +462,21 @@
       </div>
     </div>
   </body>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper1 = new Swiper(".swiper1", {
+      pagination: {
+        el: ".swp1",
+        clickable: true,
+      },
+    });
+    var swiper2 = new Swiper(".swiper2", {
+      pagination: {
+        el: ".swp2",
+        clickable: true,
+      },
+    });
+  </script>
   <script src="./master.js"></script>
 </html>

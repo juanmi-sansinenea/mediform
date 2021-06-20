@@ -67,23 +67,6 @@
       width: 100vw;
       margin-bottom: vert-heights(md);
       .slider {
-        .slider-content {
-          width: calc(100vw + -8vw);
-          height: calc((100vw + -8vw) / 1.8);
-          overflow: hidden;
-          .slide {
-            img {
-              width: auto;
-              height: calc((100vw + -8vw) / 1.8);
-            }
-          }
-        }
-        .selector {
-          width: 33%;
-          height: vert-heights-half(md);
-        }
-      }
-      .slider {
         .swiper-slide img {
           width: calc(100vw + -8vw);
         }

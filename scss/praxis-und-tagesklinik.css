@@ -1252,19 +1252,6 @@ a {
     width: 100vw;
     margin-bottom: 120px;
   }
-  .teaser-big .slider .slider-content {
-    width: calc(100vw + -8vw);
-    height: calc((100vw + -8vw) / 1.8);
-    overflow: hidden;
-  }
-  .teaser-big .slider .slider-content .slide img {
-    width: auto;
-    height: calc((100vw + -8vw) / 1.8);
-  }
-  .teaser-big .slider .selector {
-    width: 33%;
-    height: 45px;
-  }
   .teaser-big .slider .swiper-slide img {
     width: calc(100vw + -8vw);
   }
