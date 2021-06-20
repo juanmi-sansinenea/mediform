@@ -3,9 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="./scss/praxis-und-tagesklinik.css" />
     <link rel="shortcut icon" href="./mediform-symbol.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <title>Praxis & Tagesklinik</title>
   </head>
   <body>
@@ -284,31 +293,40 @@
 
         <!-- /////////////////  BIG-SLIDER MODULE  ///////////////////////////////// -->
         <div class="teaser-big">
-          <teaser-big-slider class="slider hidden">
-            <div class="slider-content clip">
-              <div class="slide">
-                <img src="./img/large-1.jpg" alt="slide-1" />
+          <!-- Slider mainmost container -->
+          <div class="slider">
+            <!-- Slider main container -->
+            <div class="swiper-container">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper hidden">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <img src="./img/slide-1.jpg" alt="slide-1" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/slide-2.jpg" alt="slide-2" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/slide-3.jpg" alt="slide-3" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/slide-4.jpg" alt="slide-4" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/slide-5.jpg" alt="slide-5" />
+                </div>
               </div>
-              <div class="slide">
-                <img src="./img/large-2.jpg" alt="slide-2" />
-              </div>
-              <div class="slide">
-                <img src="./img/large-3.jpg" alt="slide-3" />
-              </div>
-              <div class="slide">
-                <img src="./img/large-1.jpg" alt="slide-4" />
-              </div>
-              <div class="slide">
-                <img src="./img/large-2.jpg" alt="slide-5" />
-              </div>
+
+              <!-- If we need navigation buttons -->
+              <!-- <div class="swiper-button-prev"></div> -->
+              <!-- <div class="swiper-button-next"></div> -->
+
+              <!-- If we need scrollbar -->
+              <!-- <div class="swiper-scrollbar"></div> -->
             </div>
-            <div class="selector hidden will-roll-left">
-              <div class="btn"></div>
-              <div class="btn"></div>
-              <div class="btn"></div>
-              <div class="btn"></div>
-              <div class="btn"></div>
-            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination hidden will-roll-left delay"></div>
+          </div>
           </teaser-big-slider>
         </div>
         <!-- /////////////////  BODY-COPY-WITH-INTRO MODULE  ///////////////////////////////// -->
