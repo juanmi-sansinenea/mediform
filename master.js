@@ -224,6 +224,10 @@ class TeaserSmall extends HTMLElement {
     this.closeX = this.querySelector(".close-teaser");
     this.h2 = this.querySelector("h2");
     this.small = this.querySelector(".small");
+    this.img = this.querySelector(".img");
+    this.closeTeaser = this.querySelector(".close-teaser");
+    this.h3 = this.querySelector("h3");
+    this.links = this.querySelector(".links");
     //
     if (this.classList.contains("background-forest")) {
       this.hovercolor = "forest";
@@ -240,7 +244,7 @@ class TeaserSmall extends HTMLElement {
     this.clickArea.addEventListener("mouseover", () => {
       this.arrow.classList.add("anim-arrow-in");
       this.arrow.classList.remove("anim-arrow-out");
-      this.h2.style=("text-decoration: underline");
+      this.h2.style = "text-decoration: underline";
       // uncomment the below 4 lines to activate mass hovers (in)
       // this.classList.add(`hover-${this.hovercolor}`);
       // this.classList.remove(`mouseout-${this.hovercolor}`);
@@ -250,7 +254,7 @@ class TeaserSmall extends HTMLElement {
     this.clickArea.addEventListener("mouseout", () => {
       this.arrow.classList.add("anim-arrow-out");
       this.arrow.classList.remove("anim-arrow-in");
-      this.h2.style=("text-decoration: none");
+      this.h2.style = "text-decoration: none";
       // uncomment the below 4 lines to activate mass hovers (out)
       // this.classList.add(`mouseout-${this.hovercolor}`);
       // this.classList.remove(`hover-${this.hovercolor}`);
@@ -268,14 +272,23 @@ class TeaserSmall extends HTMLElement {
     this.visibleTeaserModal = function () {
       this.modal.classList.add("visible");
       this.modal.classList.remove("invisible");
+      this.img.classList.add("fade-in");
+      this.closeTeaser.classList.add("fade-in");
+      this.h3.classList.add("roll-up-d012");
+      this.links.classList.add("roll-up-d025");
+
       this.clickArea.classList.add("invisible");
       this.clickArea.classList.remove("visible");
     };
     this.invisibleTeaserModal = function () {
       this.modal.classList.remove("visible");
       this.modal.classList.add("invisible");
+      this.img.classList.remove("fade-in");
       this.clickArea.classList.remove("invisible");
       this.clickArea.classList.add("visible");
+      this.closeTeaser.classList.remove("fade-in");
+      this.h3.classList.remove("roll-up-d012");
+      this.links.classList.remove("roll-up-d025");
     };
   }
   connectedCallback() {

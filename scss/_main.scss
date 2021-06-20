@@ -125,6 +125,9 @@ a {
     margin-left: 100vw;
   }
 }
+.transparent {
+  opacity: 0;
+}
 
 @keyframes fade-in {
   0% {
@@ -133,6 +136,22 @@ a {
   100% {
     opacity: 1;
   }
+}
+.fade-in {
+  animation: fade-in 0.5s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.fade-out {
+  animation: fade-out 0.5s ease;
 }
 
 @keyframes arrow-in {
@@ -168,6 +187,25 @@ a {
     margin-top: 0;
   }
 }
+@keyframes roll-up-small {
+  0% {
+    opacity: 0;
+    margin-top: 50px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+.roll-up-d012 {
+  animation: roll-up-small 0.75s ease 0.12s;
+  animation-fill-mode: forwards;
+}
+.roll-up-d025 {
+  animation: roll-up-small 0.75s ease 0.25s;
+  animation-fill-mode: forwards;
+}
+
 @keyframes roll-left {
   0% {
     opacity: 0;
@@ -193,6 +231,7 @@ $delay: 0.25s;
 .roll-up {
   animation: 1s roll-up $bezier;
 }
+
 .roll-up-delay {
   animation: 1s roll-up $bezier $delay;
   animation-fill-mode: backwards;
@@ -237,108 +276,110 @@ $delay: 0.25s;
   animation-fill-mode: forwards;
 }
 
-@keyframes hover-forest {
-  0% {
-    background-color: colors(forest-tint);
-  }
-  100% {
-    background-color: colors(forest);
-  }
-}
-@keyframes mouseout-forest {
-  0% {
-    background-color: colors(forest);
-  }
-  100% {
-    background-color: colors(forest-tint);
-  }
-}
-.hover-forest {
-  animation: 0.5s hover-forest ease;
-  animation-fill-mode: forwards;
-}
-.mouseout-forest {
-  animation: 0.5s mouseout-forest ease;
-  animation-fill-mode: forwards;
-}
-//
-@keyframes hover-lila {
-  0% {
-    background-color: colors(lila-tint);
-  }
-  100% {
-    background-color: colors(lila);
-  }
-}
-@keyframes mouseout-lila {
-  0% {
-    background-color: colors(lila);
-  }
-  100% {
-    background-color: colors(lila-tint);
-  }
-}
-.hover-lila {
-  animation: 0.5s hover-lila ease;
-  animation-fill-mode: forwards;
-}
-.mouseout-lila {
-  animation: 0.5s mouseout-lila ease;
-  animation-fill-mode: forwards;
-}
-//
-@keyframes hover-ocean {
-  0% {
-    background-color: colors(ocean-tint);
-  }
-  100% {
-    background-color: colors(ocean);
-  }
-}
-@keyframes mouseout-ocean {
-  0% {
-    background-color: colors(ocean);
-  }
-  100% {
-    background-color: colors(ocean-tint);
-  }
-}
-.hover-ocean {
-  animation: 0.5s hover-ocean ease;
-  animation-fill-mode: forwards;
-}
-.mouseout-ocean {
-  animation: 0.5s mouseout-ocean ease;
-  animation-fill-mode: forwards;
-}
-//
-@keyframes hover-rain {
-  0% {
-    background-color: colors(rain-tint);
-  }
-  100% {
-    background-color: colors(rain);
-  }
-}
-@keyframes mouseout-rain {
-  0% {
-    background-color: colors(rain);
-  }
-  100% {
-    background-color: colors(lila-rain);
-  }
-}
-.hover-rain {
-  animation: 0.5s hover-rain ease;
-  animation-fill-mode: forwards;
-}
-.mouseout-rain {
-  animation: 0.5s mouseout-rain ease;
-  animation-fill-mode: forwards;
-}
-.hover-white {
-  color: white;
-}
+
+// uncomment the below 4 lines to activate mass hovers
+// @keyframes hover-forest {
+//   0% {
+//     background-color: colors(forest-tint);
+//   }
+//   100% {
+//     background-color: colors(forest);
+//   }
+// }
+// @keyframes mouseout-forest {
+//   0% {
+//     background-color: colors(forest);
+//   }
+//   100% {
+//     background-color: colors(forest-tint);
+//   }
+// }
+// .hover-forest {
+//   animation: 0.5s hover-forest ease;
+//   animation-fill-mode: forwards;
+// }
+// .mouseout-forest {
+//   animation: 0.5s mouseout-forest ease;
+//   animation-fill-mode: forwards;
+// }
+// //
+// @keyframes hover-lila {
+//   0% {
+//     background-color: colors(lila-tint);
+//   }
+//   100% {
+//     background-color: colors(lila);
+//   }
+// }
+// @keyframes mouseout-lila {
+//   0% {
+//     background-color: colors(lila);
+//   }
+//   100% {
+//     background-color: colors(lila-tint);
+//   }
+// }
+// .hover-lila {
+//   animation: 0.5s hover-lila ease;
+//   animation-fill-mode: forwards;
+// }
+// .mouseout-lila {
+//   animation: 0.5s mouseout-lila ease;
+//   animation-fill-mode: forwards;
+// }
+// //
+// @keyframes hover-ocean {
+//   0% {
+//     background-color: colors(ocean-tint);
+//   }
+//   100% {
+//     background-color: colors(ocean);
+//   }
+// }
+// @keyframes mouseout-ocean {
+//   0% {
+//     background-color: colors(ocean);
+//   }
+//   100% {
+//     background-color: colors(ocean-tint);
+//   }
+// }
+// .hover-ocean {
+//   animation: 0.5s hover-ocean ease;
+//   animation-fill-mode: forwards;
+// }
+// .mouseout-ocean {
+//   animation: 0.5s mouseout-ocean ease;
+//   animation-fill-mode: forwards;
+// }
+// //
+// @keyframes hover-rain {
+//   0% {
+//     background-color: colors(rain-tint);
+//   }
+//   100% {
+//     background-color: colors(rain);
+//   }
+// }
+// @keyframes mouseout-rain {
+//   0% {
+//     background-color: colors(rain);
+//   }
+//   100% {
+//     background-color: colors(lila-rain);
+//   }
+// }
+// .hover-rain {
+//   animation: 0.5s hover-rain ease;
+//   animation-fill-mode: forwards;
+// }
+// .mouseout-rain {
+//   animation: 0.5s mouseout-rain ease;
+//   animation-fill-mode: forwards;
+// }
+// .hover-white {
+//   color: white;
+// }
 
 ////////////////////////////////////////////////////////////////////////////////////////
 //MOBILE (sm) --------------------------------------------------------------------------
