@@ -240,18 +240,22 @@ class TeaserSmall extends HTMLElement {
     this.clickArea.addEventListener("mouseover", () => {
       this.arrow.classList.add("anim-arrow-in");
       this.arrow.classList.remove("anim-arrow-out");
-      this.classList.add(`hover-${this.hovercolor}`);
-      this.classList.remove(`mouseout-${this.hovercolor}`);
-      this.h2.classList.add(`hover-white`);
-      this.small.classList.add("hover-white");
+      this.h2.style=("text-decoration: underline");
+      // uncomment the below 4 lines to activate mass hovers (in)
+      // this.classList.add(`hover-${this.hovercolor}`);
+      // this.classList.remove(`mouseout-${this.hovercolor}`);
+      // this.h2.classList.add(`hover-white`);
+      // this.small.classList.add("hover-white");
     });
     this.clickArea.addEventListener("mouseout", () => {
       this.arrow.classList.add("anim-arrow-out");
       this.arrow.classList.remove("anim-arrow-in");
-      this.classList.add(`mouseout-${this.hovercolor}`);
-      this.classList.remove(`hover-${this.hovercolor}`);
-      this.h2.classList.remove(`hover-white`);
-      this.small.classList.remove("hover-white");
+      this.h2.style=("text-decoration: none");
+      // uncomment the below 4 lines to activate mass hovers (out)
+      // this.classList.add(`mouseout-${this.hovercolor}`);
+      // this.classList.remove(`hover-${this.hovercolor}`);
+      // this.h2.classList.remove(`hover-white`);
+      // this.small.classList.remove("hover-white");
     });
     this.clickArea.addEventListener("click", () => {
       this.style.zIndex = 1;

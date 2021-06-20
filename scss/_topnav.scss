@@ -2,7 +2,7 @@
 @media (min-width: map-get($media-widths, sm)) {
   nav {
     justify-content: space-between;
-    position: fixed;
+    position: absolute;
     top: 0;
     z-index: 10;
     display: flex;
