@@ -222,14 +222,36 @@ class TeaserSmall extends HTMLElement {
     this.modal = this.querySelector(".teaser-small-modal");
     this.arrow = this.querySelector(".arrow-right");
     this.closeX = this.querySelector(".close-teaser");
+    this.h2 = this.querySelector("h2");
+    this.small = this.querySelector(".small");
     //
+    if (this.classList.contains("background-forest")) {
+      this.hovercolor = "forest";
+    }
+    if (this.classList.contains("background-lila")) {
+      this.hovercolor = "lila";
+    }
+    if (this.classList.contains("background-ocean")) {
+      this.hovercolor = "ocean";
+    }
+    if (this.classList.contains("background-rain")) {
+      this.hovercolor = "rain";
+    }
     this.clickArea.addEventListener("mouseover", () => {
       this.arrow.classList.add("anim-arrow-in");
       this.arrow.classList.remove("anim-arrow-out");
+      this.classList.add(`hover-${this.hovercolor}`);
+      this.classList.remove(`mouseout-${this.hovercolor}`);
+      this.h2.classList.add(`hover-white`);
+      this.small.classList.add("hover-white");
     });
     this.clickArea.addEventListener("mouseout", () => {
       this.arrow.classList.add("anim-arrow-out");
       this.arrow.classList.remove("anim-arrow-in");
+      this.classList.add(`mouseout-${this.hovercolor}`);
+      this.classList.remove(`hover-${this.hovercolor}`);
+      this.h2.classList.remove(`hover-white`);
+      this.small.classList.remove("hover-white");
     });
     this.clickArea.addEventListener("click", () => {
       this.style.zIndex = 1;
@@ -305,28 +327,26 @@ class TestimonialSlider extends HTMLElement {
 }
 customElements.define("testimonial-slider", TestimonialSlider);
 
-
 //////////////////////////////////////////////////////////////////////////////////////
 /////////////   SWIPER  ////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
 
-
-const swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper(".swiper-container", {
   // Optional parameters
-  direction: 'horizontal',
+  direction: "horizontal",
   loop: true,
 
   // If we need pagination
   pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-    clickable: 'true',
+    el: ".swiper-pagination",
+    type: "bullets",
+    clickable: "true",
   },
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 
   // And if we need scrollbar

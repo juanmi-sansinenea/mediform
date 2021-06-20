@@ -237,6 +237,109 @@ $delay: 0.25s;
   animation-fill-mode: forwards;
 }
 
+@keyframes hover-forest {
+  0% {
+    background-color: colors(forest-tint);
+  }
+  100% {
+    background-color: colors(forest);
+  }
+}
+@keyframes mouseout-forest {
+  0% {
+    background-color: colors(forest);
+  }
+  100% {
+    background-color: colors(forest-tint);
+  }
+}
+.hover-forest {
+  animation: 0.5s hover-forest ease;
+  animation-fill-mode: forwards;
+}
+.mouseout-forest {
+  animation: 0.5s mouseout-forest ease;
+  animation-fill-mode: forwards;
+}
+//
+@keyframes hover-lila {
+  0% {
+    background-color: colors(lila-tint);
+  }
+  100% {
+    background-color: colors(lila);
+  }
+}
+@keyframes mouseout-lila {
+  0% {
+    background-color: colors(lila);
+  }
+  100% {
+    background-color: colors(lila-tint);
+  }
+}
+.hover-lila {
+  animation: 0.5s hover-lila ease;
+  animation-fill-mode: forwards;
+}
+.mouseout-lila {
+  animation: 0.5s mouseout-lila ease;
+  animation-fill-mode: forwards;
+}
+//
+@keyframes hover-ocean {
+  0% {
+    background-color: colors(ocean-tint);
+  }
+  100% {
+    background-color: colors(ocean);
+  }
+}
+@keyframes mouseout-ocean {
+  0% {
+    background-color: colors(ocean);
+  }
+  100% {
+    background-color: colors(ocean-tint);
+  }
+}
+.hover-ocean {
+  animation: 0.5s hover-ocean ease;
+  animation-fill-mode: forwards;
+}
+.mouseout-ocean {
+  animation: 0.5s mouseout-ocean ease;
+  animation-fill-mode: forwards;
+}
+//
+@keyframes hover-rain {
+  0% {
+    background-color: colors(rain-tint);
+  }
+  100% {
+    background-color: colors(rain);
+  }
+}
+@keyframes mouseout-rain {
+  0% {
+    background-color: colors(rain);
+  }
+  100% {
+    background-color: colors(lila-rain);
+  }
+}
+.hover-rain {
+  animation: 0.5s hover-rain ease;
+  animation-fill-mode: forwards;
+}
+.mouseout-rain {
+  animation: 0.5s mouseout-rain ease;
+  animation-fill-mode: forwards;
+}
+.hover-white {
+  color: white;
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////
 //MOBILE (sm) --------------------------------------------------------------------------
 @media (min-width: map-get($media-widths, sm)) {

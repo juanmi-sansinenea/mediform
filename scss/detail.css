@@ -467,6 +467,208 @@ a {
           animation-fill-mode: forwards;
 }
 
+@-webkit-keyframes hover-forest {
+  0% {
+    background-color: #d7dacd;
+  }
+  100% {
+    background-color: #636951;
+  }
+}
+
+@keyframes hover-forest {
+  0% {
+    background-color: #d7dacd;
+  }
+  100% {
+    background-color: #636951;
+  }
+}
+
+@-webkit-keyframes mouseout-forest {
+  0% {
+    background-color: #636951;
+  }
+  100% {
+    background-color: #d7dacd;
+  }
+}
+
+@keyframes mouseout-forest {
+  0% {
+    background-color: #636951;
+  }
+  100% {
+    background-color: #d7dacd;
+  }
+}
+
+.hover-forest {
+  -webkit-animation: 0.5s hover-forest ease;
+          animation: 0.5s hover-forest ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.mouseout-forest {
+  -webkit-animation: 0.5s mouseout-forest ease;
+          animation: 0.5s mouseout-forest ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes hover-lila {
+  0% {
+    background-color: #d6d1db;
+  }
+  100% {
+    background-color: #5c3c78;
+  }
+}
+
+@keyframes hover-lila {
+  0% {
+    background-color: #d6d1db;
+  }
+  100% {
+    background-color: #5c3c78;
+  }
+}
+
+@-webkit-keyframes mouseout-lila {
+  0% {
+    background-color: #5c3c78;
+  }
+  100% {
+    background-color: #d6d1db;
+  }
+}
+
+@keyframes mouseout-lila {
+  0% {
+    background-color: #5c3c78;
+  }
+  100% {
+    background-color: #d6d1db;
+  }
+}
+
+.hover-lila {
+  -webkit-animation: 0.5s hover-lila ease;
+          animation: 0.5s hover-lila ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.mouseout-lila {
+  -webkit-animation: 0.5s mouseout-lila ease;
+          animation: 0.5s mouseout-lila ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes hover-ocean {
+  0% {
+    background-color: #c7d9dd;
+  }
+  100% {
+    background-color: #1e505f;
+  }
+}
+
+@keyframes hover-ocean {
+  0% {
+    background-color: #c7d9dd;
+  }
+  100% {
+    background-color: #1e505f;
+  }
+}
+
+@-webkit-keyframes mouseout-ocean {
+  0% {
+    background-color: #1e505f;
+  }
+  100% {
+    background-color: #c7d9dd;
+  }
+}
+
+@keyframes mouseout-ocean {
+  0% {
+    background-color: #1e505f;
+  }
+  100% {
+    background-color: #c7d9dd;
+  }
+}
+
+.hover-ocean {
+  -webkit-animation: 0.5s hover-ocean ease;
+          animation: 0.5s hover-ocean ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.mouseout-ocean {
+  -webkit-animation: 0.5s mouseout-ocean ease;
+          animation: 0.5s mouseout-ocean ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes hover-rain {
+  0% {
+    background-color: #ccd3d6;
+  }
+  100% {
+    background-color: #3b4c5b;
+  }
+}
+
+@keyframes hover-rain {
+  0% {
+    background-color: #ccd3d6;
+  }
+  100% {
+    background-color: #3b4c5b;
+  }
+}
+
+@-webkit-keyframes mouseout-rain {
+  0% {
+    background-color: #3b4c5b;
+  }
+  100% {
+  }
+}
+
+@keyframes mouseout-rain {
+  0% {
+    background-color: #3b4c5b;
+  }
+  100% {
+  }
+}
+
+.hover-rain {
+  -webkit-animation: 0.5s hover-rain ease;
+          animation: 0.5s hover-rain ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.mouseout-rain {
+  -webkit-animation: 0.5s mouseout-rain ease;
+          animation: 0.5s mouseout-rain ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.hover-white {
+  color: white;
+}
+
 @media (min-width: 0px) {
   body {
     position: fixed;
