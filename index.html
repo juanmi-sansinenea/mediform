@@ -506,55 +506,56 @@
         </div>
 
         <testimonial-slider class="testimonial hidden">
-          <div class="testimonial-content clip">
-            <div class="slide">
-              <img
-                src="./img/kundina.jpg"
-                class="profile-pic"
-                alt="testimonial-profile-pic"
-              />
-              <h3>
-                «One Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua.»
-              </h3>
+          <div class="testimonial-content">
+            <!-- Slider mainmost container -->
+            <div class="testim-slider">
+              <!-- Slider main container -->
+              <div class="swiper-container swiper1">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper hidden">
+                  <!-- Slides -->
+                  <div class="swiper-slide clip">
+                    <img
+                      src="./img/kundina.jpg"
+                      class="profile-pic"
+                      alt="testimonial-profile-pic"
+                    />
+                    <h3>
+                      «One Lorem ipsum dolor sit amet, consetetur sadipscing
+                      elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                      dolore magna aliquyam erat, sed diam voluptua.»
+                    </h3>
+                  </div>
+                  <div class="swiper-slide clip">
+                    <img
+                      src="./img/westend61-brunette.jpg"
+                      class="profile-pic"
+                      alt="testimonial-profile-pic"
+                    />
+                    <h3>
+                      «Two Lorem ipsum dolor sit amet, consetetur sadipscing
+                      elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                      dolore magna aliquyam erat»
+                    </h3>
+                  </div>
+                  <div class="swiper-slide clip">
+                    <img
+                      src="./img/kundina.jpg"
+                      class="profile-pic"
+                      alt="testimonial-profile-pic"
+                    />
+                    <h3>
+                      «Three Lorem ipsum dolor sit amet, consetetur sadipscing
+                      elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                      dolore magna aliquyam erat, sed diam voluptua.»
+                    </h3>
+                  </div>
+                </div>
+              </div>
             </div>
-
-            <div class="slide">
-              <img
-                src="./img/westend61-brunette.jpg"
-                class="profile-pic"
-                alt="testimonial-profile-pic"
-              />
-              <h3>
-                «Two Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat»
-              </h3>
-            </div>
-
-            <div class="slide">
-              <img
-                src="./img/kundina.jpg"
-                class="profile-pic"
-                alt="testimonial-profile-pic"
-              />
-              <h3>
-                «Three Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua.»
-              </h3>
-            </div>
-          </div>
-
-          <div class="module">
-            <div class="arrow prev">
-              <img src="./img/arrow-prev.svg" alt="arrow-left" />
-            </div>
-
-            <div class="arrow next">
-              <img src="./img/arrow-next.svg" alt="arrow-right" />
-            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
         </testimonial-slider>
 
@@ -582,7 +583,7 @@
           <!-- Slider mainmost container -->
           <div class="slider">
             <!-- Slider main container -->
-            <div class="swiper-container">
+            <div class="swiper-container swiper2">
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper hidden">
                 <!-- Slides -->
@@ -611,7 +612,9 @@
               <!-- <div class="swiper-scrollbar"></div> -->
             </div>
             <!-- If we need pagination -->
-            <div class="swiper-pagination hidden will-roll-left delay"></div>
+            <div
+              class="swiper-pagination swp2 hidden will-roll-left delay"
+            ></div>
           </div>
 
           <div class="teaser-big-text right delay">
@@ -746,15 +749,23 @@
 
   <!-- Initialize Swiper -->
   <script>
-    var swiper1 = new Swiper(".swiper-container", {
+    var swiper1 = new Swiper(".swiper1", {
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+    var swiper2 = new Swiper(".swiper2", {
       loop: true,
       pagination: {
         type: "bullets",
-        el: ".swiper-pagination",
+        el: ".swp2",
         clickable: true,
       },
     });
   </script>
-  
+
   <script src="./master.js"></script>
 </html>

@@ -6,7 +6,6 @@
     margin-bottom: 2vw;
     small {
       width: 76vw;
-      
     }
   }
 
@@ -15,36 +14,28 @@
     justify-content: center;
     margin-bottom: vert-heights-half(sm);
     .testimonial-content {
-      //position: absolute;
-      width: 76vw;
-
-      img {
-        display: block;
-        width: calc(76vw / 2);
-        margin-bottom: 6vw;
-      }
-      h3 {
-        display: block;
-        width: 76vw;
-        margin-bottom: 6vw;
-        height: calc(12rem);
-      }
-    }
-
-    .module {
+      width: 95vw;
+      
+      position: relative;
       display: flex;
-      justify-content: space-between;
-      position: absolute;
-      width: 100vw;
-      .arrow {
-        width: 12vw;
-        height: calc(76vw / 2);
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        img {
-          width: 3vw;
-          cursor: pointer;
+      justify-content: center;
+      .testim-slider {
+        width: 76vw;
+        .swiper-slide {
+          img {
+            display: block;
+            width: calc(76vw / 2);
+            margin-bottom: 6vw;
+          }
+          h3 {
+            display: block;
+            width: 76vw;
+            margin-bottom: 6vw;
+            height: calc(12rem);
+          }
+        }
+        .swiper-button-prev {
+          color: colors(steel);
         }
       }
     }
