@@ -23,6 +23,7 @@
       height: calc(100vw + -12vw);
     }
     .slider {
+      clip-path: inset(0px 1px 0px 0px);
       .swiper-slide img {
         width: calc(100vw + -12vw);
       }

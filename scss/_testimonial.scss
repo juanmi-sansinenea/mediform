@@ -18,6 +18,7 @@
       display: flex;
       justify-content: center;
       .testim-slider {
+        clip-path: inset(0px 1px 0px 0px);
         width: 76vw;
         .swiper-slide {
           img {
@@ -65,20 +66,22 @@
     .testimonial {
       margin-bottom: vert-heights-half(md);
       .testimonial-content {
-        width: calc(11.5vw * 6);
-        .slide {
-          display: flex;
-          align-items: center;
+        width: 90vw;
+        .testim-slider {
           width: calc(11.5vw * 6);
-          img {
-            width: calc(11.5vw * 1.5);
-            margin-right: 2vw;
-          }
-          h3 {
+          .swiper-slide {
             display: flex;
             align-items: center;
-            width: auto;
-            height: calc(11.5vw * 1.5);
+            img {
+              width: calc(11.5vw * 1.5);
+             margin-right: 2vw;
+            }
+            h3 {
+              display: flex;
+              align-items: center;
+              width: auto;
+              height: calc(11.5vw * 1.5);
+            }
           }
         }
       }

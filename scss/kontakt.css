@@ -1431,6 +1431,10 @@ a {
     width: calc(100vw + -12vw);
     height: calc(100vw + -12vw);
   }
+  .teaser-big .slider {
+    -webkit-clip-path: inset(0px 1px 0px 0px);
+            clip-path: inset(0px 1px 0px 0px);
+  }
   .teaser-big .slider .swiper-slide img {
     width: calc(100vw + -12vw);
   }
