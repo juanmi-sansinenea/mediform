@@ -13,7 +13,7 @@
     justify-content: center;
     margin-bottom: vert-heights-half(sm);
     .testimonial-content {
-      width: 100vw;
+      width: 95vw;
       position: relative;
       display: flex;
       justify-content: center;
@@ -35,19 +35,19 @@
       }
     }
     .swiper-button-prev {
-      left: 25px;
+      z-index: 0;
+      img {
+        width: 25px;
+      }
+    }
+    .swiper-button-next {
+      z-index: 0;
       img {
         width: 25px;
       }
     }
     .swiper-button-prev::after {
       visibility:hidden;
-    }
-    .swiper-button-next {
-      right: 25px;
-      img {
-        width: 25px;
-      }
     }
     .swiper-button-next::after {
       visibility:hidden;

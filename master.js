@@ -77,6 +77,7 @@ function dontAnimateOnScroll() {
     var element = elements[i];
     element.classList.remove("hidden");
   }
+  animateOnScroll();
 }
 
 //////////////////////////////////////////////////////////////////////////////////////

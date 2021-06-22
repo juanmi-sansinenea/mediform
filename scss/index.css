@@ -1423,7 +1423,7 @@ a {
     margin-bottom: 45px;
   }
   .testimonial .testimonial-content {
-    width: 100vw;
+    width: 95vw;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1447,19 +1447,19 @@ a {
     height: calc(12rem);
   }
   .testimonial .swiper-button-prev {
-    left: 25px;
+    z-index: 0;
   }
   .testimonial .swiper-button-prev img {
     width: 25px;
   }
-  .testimonial .swiper-button-prev::after {
-    visibility: hidden;
-  }
   .testimonial .swiper-button-next {
-    right: 25px;
+    z-index: 0;
   }
   .testimonial .swiper-button-next img {
     width: 25px;
+  }
+  .testimonial .swiper-button-prev::after {
+    visibility: hidden;
   }
   .testimonial .swiper-button-next::after {
     visibility: hidden;
