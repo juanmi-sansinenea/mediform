@@ -85,18 +85,6 @@
           }
         }
       }
-      .module {
-        .arrow {
-          height: calc(11.5vw * 1.5);
-          width: calc(4vw + 11.5vw);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          img {
-            width: 1.5vw;
-          }
-        }
-      }
     }
     //DESKTOP (LG) --------------------------------------------------------------------------
     @media (min-width: map-get($media-widths, lg)) {
@@ -114,25 +102,19 @@
         .testimonial {
           margin-bottom: vert-heights-half(xl);
           .testimonial-content {
-            width: calc(166px * 6);
-            .slide {
+            width: 1296px;
+            .testim-slider {
               width: calc(166px * 6);
-              img {
-                width: calc(166px * 1.5);
-                margin-right: 28px;
-              }
-              h3 {
-                height: calc(166px * 1.5);
-              }
-            }
-          }
-          .module {
-            width: calc(166px * 8);
-            .arrow {
-              height: calc(166px * 1.5);
-              width: calc(166px * 1);
-              img {
-                width: 21px;
+              .swiper-slide {
+                display: flex;
+                align-items: center;
+                img {
+                  width: calc(166px * 1.5);
+                  margin-right: 28px;
+                }
+                h3 {
+                  height: calc(166px * 1.5);
+                }
               }
             }
           }
