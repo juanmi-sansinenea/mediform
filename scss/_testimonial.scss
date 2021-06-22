@@ -8,14 +8,12 @@
       width: 76vw;
     }
   }
-
   .testimonial {
     display: flex;
     justify-content: center;
     margin-bottom: vert-heights-half(sm);
     .testimonial-content {
-      width: 95vw;
-      
+      width: 100vw;
       position: relative;
       display: flex;
       justify-content: center;
@@ -34,12 +32,29 @@
             height: calc(12rem);
           }
         }
-        .swiper-button-prev {
-          color: colors(steel);
-        }
       }
     }
+    .swiper-button-prev {
+      left: 25px;
+      img {
+        width: 25px;
+      }
+    }
+    .swiper-button-prev::after {
+      visibility:hidden;
+    }
+    .swiper-button-next {
+      right: 25px;
+      img {
+        width: 25px;
+      }
+    }
+    .swiper-button-next::after {
+      visibility:hidden;
+    }
+    
   }
+  
   //TABLET (MD) --------------------------------------------------------------------------
   @media (min-width: map-get($media-widths, md)) {
     .testimonial-header {

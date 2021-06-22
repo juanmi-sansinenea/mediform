@@ -1545,7 +1545,7 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: 2rem;
+    margin-bottom: 6rem;
   }
   footer .copyright img {
     width: 4rem;
@@ -1625,6 +1625,9 @@ a {
     height: 4rem;
     margin-top: -vert-heights-quarter(md);
     margin-right: 1rem;
+  }
+  footer .copyright {
+    margin-bottom: 2rem;
   }
 }
 

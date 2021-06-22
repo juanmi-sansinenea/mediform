@@ -1423,7 +1423,7 @@ a {
     margin-bottom: 45px;
   }
   .testimonial .testimonial-content {
-    width: 95vw;
+    width: 100vw;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1446,8 +1446,23 @@ a {
     margin-bottom: 6vw;
     height: calc(12rem);
   }
-  .testimonial .testimonial-content .testim-slider .swiper-button-prev {
-    color: #50565b;
+  .testimonial .swiper-button-prev {
+    left: 25px;
+  }
+  .testimonial .swiper-button-prev img {
+    width: 25px;
+  }
+  .testimonial .swiper-button-prev::after {
+    visibility: hidden;
+  }
+  .testimonial .swiper-button-next {
+    right: 25px;
+  }
+  .testimonial .swiper-button-next img {
+    width: 25px;
+  }
+  .testimonial .swiper-button-next::after {
+    visibility: hidden;
   }
 }
 
@@ -1962,7 +1977,7 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: 2rem;
+    margin-bottom: 6rem;
   }
   footer .copyright img {
     width: 4rem;
@@ -2042,6 +2057,9 @@ a {
     height: 4rem;
     margin-top: -vert-heights-quarter(md);
     margin-right: 1rem;
+  }
+  footer .copyright {
+    margin-bottom: 2rem;
   }
 }
 
